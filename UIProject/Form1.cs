@@ -22,5 +22,15 @@ namespace UIProject
         {
 
         }
+
+        private void ribbonControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExitButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
