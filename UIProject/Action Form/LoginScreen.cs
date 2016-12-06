@@ -12,6 +12,10 @@ namespace UIProject
             InitializeComponent();
         }
 
+        public void setLable(String lable)
+        {
+            Lable.Text = lable;
+        }
 
 
         public override void ProcessCommand(Enum cmd, object arg)
@@ -72,7 +76,7 @@ namespace UIProject
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            SignUp signUp = new SignUp();
+            var signUp = new SignUp();
             signUp.ShowDialog();
         }
     }
