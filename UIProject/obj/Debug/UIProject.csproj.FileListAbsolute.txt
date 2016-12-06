@@ -100,3 +100,12 @@ C:\Users\johnw\Desktop\Working\Windows\UIProject\UIProject\bin\Debug\de\DevExpre
 C:\Users\johnw\Desktop\Working\Windows\UIProject\UIProject\bin\Debug\es\DevExpress.Xpo.v15.1.resources.dll
 C:\Users\johnw\Desktop\Working\Windows\UIProject\UIProject\bin\Debug\ja\DevExpress.Xpo.v15.1.resources.dll
 C:\Users\johnw\Desktop\Working\Windows\UIProject\UIProject\bin\Debug\ru\DevExpress.Xpo.v15.1.resources.dll
+C:\Users\John Whisker\Desktop\Working\Windows\UIProject\UIProject\bin\Debug\DevExpress.Xpo.v15.1.dll
+C:\Users\John Whisker\Desktop\Working\Windows\UIProject\UIProject\bin\Debug\DevExpress.Xpo.v15.1.xml
+C:\Users\John Whisker\Desktop\Working\Windows\UIProject\UIProject\bin\Debug\de\DevExpress.Xpo.v15.1.resources.dll
+C:\Users\John Whisker\Desktop\Working\Windows\UIProject\UIProject\bin\Debug\es\DevExpress.Xpo.v15.1.resources.dll
+C:\Users\John Whisker\Desktop\Working\Windows\UIProject\UIProject\bin\Debug\ja\DevExpress.Xpo.v15.1.resources.dll
+C:\Users\John Whisker\Desktop\Working\Windows\UIProject\UIProject\bin\Debug\ru\DevExpress.Xpo.v15.1.resources.dll
+C:\Users\John Whisker\Desktop\Working\Windows\UIProject\UIProject\obj\Debug\UIProject.AddCase.resources
+C:\Users\John Whisker\Desktop\Working\Windows\UIProject\UIProject\obj\Debug\UIProject.LoadingScreen.resources
+C:\Users\John Whisker\Desktop\Working\Windows\UIProject\UIProject\obj\Debug\UIProject.ChangePassword.resources

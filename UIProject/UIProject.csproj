@@ -58,17 +58,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AddCase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AddCase.Designer.cs">
+      <DependentUpon>AddCase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScreen.Designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyCase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyCase.Designer.cs">
+      <DependentUpon>ModifyCase.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,8 +96,20 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="LoadingScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingScreen.Designer.cs">
+      <DependentUpon>LoadingScreen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddCase.resx">
+      <DependentUpon>AddCase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScreen.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
@@ -93,9 +123,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingScreen.resx">
+      <DependentUpon>LoadingScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -106,6 +140,39 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_ic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adddb_ic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_ic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_ic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_ic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_ic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_ic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_ic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removedb_ic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switchUser_ic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changePassword_ic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
