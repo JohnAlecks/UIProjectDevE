@@ -51,7 +51,6 @@ namespace UIProject
         {
             SplashScreenManager.ShowForm(ParentForm, typeof(LoadingScreen), true, true, false, true);
             SplashScreenManager.Default.SetWaitFormCaption(Caption);
-
             Application.DoEvents();
             System.Threading.Thread.Sleep(1000);
             SplashScreenManager.Default.SetWaitFormCaption("Complete");
