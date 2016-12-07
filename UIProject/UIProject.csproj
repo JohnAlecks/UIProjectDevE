@@ -58,60 +58,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddCase.cs">
+    <Compile Include="Action Forms\AddCase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddCase.Designer.cs">
+    <Compile Include="Action Forms\AddCase.Designer.cs">
       <DependentUpon>AddCase.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChangePassword.cs">
+    <Compile Include="Action Forms\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChangePassword.Designer.cs">
+    <Compile Include="Action Forms\ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainScreen.cs">
+    <Compile Include="Action Forms\MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainScreen.Designer.cs">
+    <Compile Include="Action Forms\MainScreen.Designer.cs">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginScreen.cs">
+    <Compile Include="Action Forms\LoginScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginScreen.Designer.cs">
+    <Compile Include="Action Forms\LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModifyCase.cs">
+    <Compile Include="Action Forms\ModifyCase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModifyCase.Designer.cs">
+    <Compile Include="Action Forms\ModifyCase.Designer.cs">
       <DependentUpon>ModifyCase.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SignUp.cs">
+    <Compile Include="Action Forms\SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignUp.Designer.cs">
+    <Compile Include="Action Forms\SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoadingScreen.cs">
+    <Compile Include="Fragments\LoadingScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoadingScreen.Designer.cs">
+    <Compile Include="Fragments\LoadingScreen.Designer.cs">
       <DependentUpon>LoadingScreen.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddCase.resx">
+    <EmbeddedResource Include="Action Forms\AddCase.resx">
       <DependentUpon>AddCase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangePassword.resx">
+    <EmbeddedResource Include="Action Forms\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainScreen.resx">
+    <EmbeddedResource Include="Action Forms\MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginScreen.resx">
+    <EmbeddedResource Include="Action Forms\LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -125,10 +125,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SignUp.resx">
+    <EmbeddedResource Include="Action Forms\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoadingScreen.resx">
+    <EmbeddedResource Include="Fragments\LoadingScreen.resx">
       <DependentUpon>LoadingScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -173,6 +173,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\changePassword_ic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\Data Type\" />
+    <Folder Include="Database\Database Controller\" />
+    <Folder Include="Handler\Exceptions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
