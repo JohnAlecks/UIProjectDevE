@@ -15,7 +15,7 @@ namespace UIProject
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog dlg = new OpenFileDialog())
+            using (var dlg = new OpenFileDialog())
             {
                 dlg.Title = "Open Image";
                 dlg.Filter = "Image Files(*.BMP;*.JPG;*.PNG)|*.BMP;*.JPG;*.PNG";
@@ -24,30 +24,15 @@ namespace UIProject
                 {
                     suspectPictureBox.Image = Image.FromFile(dlg.FileName);
                     suspectPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-                    //PictureBox PictureBox1 = new PictureBox();
-                    //PictureBox1.Image = new Bitmap(dlg.FileName);
-
-                    // Add the new control to its parent's controls collection
-                    this.Controls.Add(suspectPictureBox);
+                    Controls.Add(suspectPictureBox);
                 }
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AddCase_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            // save here 
-
-            this.Close();
+            Close();
         }
     }
 }

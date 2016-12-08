@@ -96,6 +96,7 @@
             this.doneButton.Size = new System.Drawing.Size(79, 26);
             this.doneButton.TabIndex = 6;
             this.doneButton.Text = "Done";
+            this.doneButton.Click += new System.EventHandler(this.doneButton_Click);
             // 
             // cancelButton
             // 
@@ -104,6 +105,7 @@
             this.cancelButton.Size = new System.Drawing.Size(79, 26);
             this.cancelButton.TabIndex = 7;
             this.cancelButton.Text = "Cancel";
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // ChangePassword
             // 

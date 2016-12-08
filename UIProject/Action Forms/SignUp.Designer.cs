@@ -91,7 +91,6 @@
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(340, 20);
             this.emailTextBox.TabIndex = 4;
-            this.emailTextBox.EditValueChanged += new System.EventHandler(this.textEdit3_EditValueChanged);
             // 
             // label3
             // 
@@ -101,7 +100,6 @@
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Email";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 

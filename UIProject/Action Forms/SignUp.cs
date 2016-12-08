@@ -10,13 +10,5 @@ namespace UIProject
         {
             InitializeComponent();
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void textEdit3_EditValueChanged(object sender, EventArgs e)
-        {
-        }
     }
 }

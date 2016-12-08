@@ -10,5 +10,16 @@ namespace UIProject
         {
             InitializeComponent();
         }
+
+        private void doneButton_Click(object sender, EventArgs e)
+        {
+            // save 
+            this.Close();
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

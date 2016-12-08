@@ -53,7 +53,7 @@
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Your Email";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+          
             // 
             // label2
             // 
@@ -65,7 +65,7 @@
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 11;
             this.label2.Text = "Password";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+    
             // 
             // forgetPasswordLink
             // 
@@ -79,7 +79,6 @@
             this.forgetPasswordLink.TabIndex = 12;
             this.forgetPasswordLink.TabStop = true;
             this.forgetPasswordLink.Text = "Forget password ?";
-            this.forgetPasswordLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // rememberCheckBox
             // 
@@ -92,7 +91,6 @@
             this.rememberCheckBox.TabIndex = 13;
             this.rememberCheckBox.Text = "Remember me ?";
             this.rememberCheckBox.UseVisualStyleBackColor = false;
-            this.rememberCheckBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // loginButton
             // 
@@ -115,7 +113,6 @@
             this.listView1.TabIndex = 15;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Tile;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // Lable
             // 
@@ -159,7 +156,6 @@
             this.emailTextBox.Size = new System.Drawing.Size(280, 20);
             this.emailTextBox.TabIndex = 8;
             this.emailTextBox.ToolTipTitle = "Enter Your Email";
-            this.emailTextBox.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
             // 
             // passwordTextBox
             // 
@@ -169,7 +165,6 @@
             this.passwordTextBox.Size = new System.Drawing.Size(280, 20);
             this.passwordTextBox.TabIndex = 10;
             this.passwordTextBox.ToolTipTitle = "Enter Your Password";
-            this.passwordTextBox.EditValueChanged += new System.EventHandler(this.textEdit2_EditValueChanged);
             // 
             // LoginScreen
             // 
@@ -191,7 +186,6 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Name = "LoginScreen";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.LoginScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.emailTextBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.passwordTextBox.Properties)).EndInit();
             this.ResumeLayout(false);
