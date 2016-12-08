@@ -112,3 +112,4 @@ C:\Users\John Whisker\Desktop\Working\Windows\UIProject\UIProject\obj\Debug\UIPr
 C:\Users\johnw\Desktop\Working\Windows\UIProject\UIProject\obj\Debug\UIProject.AddCase.resources
 C:\Users\johnw\Desktop\Working\Windows\UIProject\UIProject\obj\Debug\UIProject.ChangePassword.resources
 C:\Users\johnw\Desktop\Working\Windows\UIProject\UIProject\obj\Debug\UIProject.LoadingScreen.resources
+C:\Users\John Whisker\Desktop\Working\Windows\UIProject\UIProject\obj\Debug\UIProject.ModifyCase.resources

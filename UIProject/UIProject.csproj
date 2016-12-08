@@ -114,6 +114,9 @@
     <EmbeddedResource Include="Action Forms\LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Action Forms\ModifyCase.resx">
+      <DependentUpon>ModifyCase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

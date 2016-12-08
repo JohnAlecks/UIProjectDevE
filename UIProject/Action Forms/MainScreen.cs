@@ -18,10 +18,6 @@ namespace UIProject
         {
         }
 
-        private void ribbonControl1_Click(object sender, EventArgs e)
-        {
-        }
-
         private void ExitButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Application.Exit();
@@ -43,9 +39,7 @@ namespace UIProject
         {
             if (MessageBox.Show("Do you really want to delete this case ?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                // Delete action in here
             }
-            
         }
         public static void ShowLoading(Form ParentForm, String Caption)
         {
@@ -96,7 +90,7 @@ namespace UIProject
 
         private void HelpButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            MessageBox.Show("Contact your IT supporter for futher infomation.", "Contact", MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Contact your IT supporter for futher infomation.", "Contact", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

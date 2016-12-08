@@ -81,7 +81,6 @@
             this.Page1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
             this.ribbonControl1.Size = new System.Drawing.Size(795, 130);
-            this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
             // 
             // AddButtonItem
             // 
