@@ -63,7 +63,6 @@ namespace UIProject
             command.Parameters.Add("@fullname", SqlDbType.VarChar, 38).Value = firstNameTextBox.Text;
             command.Parameters.Add("@address", SqlDbType.VarChar, 38).Value = "528 Pham Van Hai";
             command.Parameters.Add("@phone", SqlDbType.VarChar, 38).Value = "";
-            Console.WriteLine("THE ID IS ");
             command.Parameters.Add("@email", SqlDbType.VarChar, 38).Value = emailTextBox.Text;
             string ePass = SaltPassword.ComputeHash(passwordTextBox.Text, "SHA512", null);
             //Console.WriteLine(ePass);
