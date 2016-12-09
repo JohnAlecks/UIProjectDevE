@@ -60,22 +60,22 @@ namespace UIProject
             }
             string sql = "INSERT INTO UserInformations (Fullname, Address, Phone) VALUES (@fullname, @address, @phone) SELECT @user_id = SCOPE_IDENTITY(); INSERT INTO LoginInformation(User_Login_ID, Email, Password) VALUES (@user_id, @email , @password)";
             SqlCommand command = new SqlCommand(sql, con);
-            //command.Parameters.Add("@id", SqlDbType.Int).Value = id
-            //command.Parameter;
-            command.Parameters.Add("@fullname", SqlDbType.VarChar, 38).Value = "AlecksJohanssen";
+            command.Parameters.Add("@fullname", SqlDbType.VarChar, 38).Value = firstNameTextBox.Text;
             command.Parameters.Add("@address", SqlDbType.VarChar, 38).Value = "528 Pham Van Hai";
             command.Parameters.Add("@phone", SqlDbType.VarChar, 38).Value = "";
-            //string ePass = SaltPassword.ComputeHash("JohnWick", "SHA512", null);
-            //command.Parameters.Add("@password", SqlDbType.VarChar).Value = ePass;
             Console.WriteLine("THE ID IS ");
-            command.Parameters.Add("@email", SqlDbType.VarChar, 38).Value = "quangminh3@gmail.com";
-            string ePass = SaltPassword.ComputeHash("JohnWick", "SHA512", null);
+            command.Parameters.Add("@email", SqlDbType.VarChar, 38).Value = emailTextBox.Text;
+            string ePass = SaltPassword.ComputeHash(passwordTextBox.Text, "SHA512", null);
             //Console.WriteLine(ePass);
             command.Parameters.Add("@user_id", SqlDbType.Int).Direction = ParameterDirection.Output;
-            //command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@password", SqlDbType.VarChar).Value = ePass;
             command.ExecuteNonQuery();
             Console.WriteLine("COMPLETE");
+        }
+
+        private void firstNameTextBox_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

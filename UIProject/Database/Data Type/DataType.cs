@@ -9,15 +9,14 @@ namespace UIProject
     class LoginInfo {
         private String email;
         private String password;
-        private int Login_ID;
-        private int User_Login;
+        private int user_login;
 
         public int UserLogin {
             get {
-                return User_Login;
+                return user_login;
             }
             set {
-                User_Login = value;
+                user_login = value;
             }
         }
         public String Email {
@@ -43,15 +42,6 @@ namespace UIProject
                 else {
                     throw (new PasswordIsTooShort("Password is too short. Password must be longer than 6 characters"));
                 }
-            }
-        }
-        public int LoginID 
-        {
-            get {
-                return Login_ID;
-            }
-            set {
-                Login_ID = value;
             }
         }
     }
@@ -94,7 +84,7 @@ namespace UIProject
         private String fullname;
         private String address;
         private String phone;
-        private int UserInfo_ID;
+        private int userinfo_id;
 
        public String Fullname {
             get {
@@ -136,11 +126,11 @@ namespace UIProject
         {
             get
             {
-                return UserInfo_ID;
+                return userinfo_id;
             }
             set
             {
-                UserInfo_ID = value;
+                userinfo_id = value;
             }
 
         }
