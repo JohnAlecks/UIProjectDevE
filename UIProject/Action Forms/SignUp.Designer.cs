@@ -44,6 +44,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.agreeCheckBox = new System.Windows.Forms.CheckBox();
             this.signUpButton = new DevExpress.XtraEditors.SimpleButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.addressTextBox = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.firstNameTextBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lastNameTextBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailTextBox.Properties)).BeginInit();
@@ -51,6 +53,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.departmentComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passwordTextBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.retypeTextBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addressTextBox.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -87,7 +90,7 @@
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(35, 104);
+            this.emailTextBox.Location = new System.Drawing.Point(35, 138);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(340, 20);
             this.emailTextBox.TabIndex = 4;
@@ -95,7 +98,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 88);
+            this.label3.Location = new System.Drawing.Point(32, 122);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 5;
@@ -104,7 +107,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 132);
+            this.label4.Location = new System.Drawing.Point(32, 166);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 13);
             this.label4.TabIndex = 6;
@@ -112,14 +115,14 @@
             // 
             // empCodeTextBox
             // 
-            this.empCodeTextBox.Location = new System.Drawing.Point(35, 148);
+            this.empCodeTextBox.Location = new System.Drawing.Point(35, 182);
             this.empCodeTextBox.Name = "empCodeTextBox";
             this.empCodeTextBox.Size = new System.Drawing.Size(100, 20);
             this.empCodeTextBox.TabIndex = 7;
             // 
             // departmentComboBox
             // 
-            this.departmentComboBox.Location = new System.Drawing.Point(141, 148);
+            this.departmentComboBox.Location = new System.Drawing.Point(141, 182);
             this.departmentComboBox.Name = "departmentComboBox";
             this.departmentComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -129,7 +132,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(138, 132);
+            this.label5.Location = new System.Drawing.Point(138, 166);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 13);
             this.label5.TabIndex = 9;
@@ -137,14 +140,14 @@
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(35, 197);
+            this.passwordTextBox.Location = new System.Drawing.Point(35, 231);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(340, 20);
             this.passwordTextBox.TabIndex = 10;
             // 
             // retypeTextBox
             // 
-            this.retypeTextBox.Location = new System.Drawing.Point(35, 244);
+            this.retypeTextBox.Location = new System.Drawing.Point(35, 278);
             this.retypeTextBox.Name = "retypeTextBox";
             this.retypeTextBox.Size = new System.Drawing.Size(340, 20);
             this.retypeTextBox.TabIndex = 11;
@@ -152,7 +155,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(32, 181);
+            this.label6.Location = new System.Drawing.Point(32, 215);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 13);
             this.label6.TabIndex = 12;
@@ -161,7 +164,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(32, 228);
+            this.label7.Location = new System.Drawing.Point(32, 262);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(99, 13);
             this.label7.TabIndex = 13;
@@ -170,7 +173,7 @@
             // agreeCheckBox
             // 
             this.agreeCheckBox.AutoSize = true;
-            this.agreeCheckBox.Location = new System.Drawing.Point(35, 280);
+            this.agreeCheckBox.Location = new System.Drawing.Point(35, 314);
             this.agreeCheckBox.Name = "agreeCheckBox";
             this.agreeCheckBox.Size = new System.Drawing.Size(278, 17);
             this.agreeCheckBox.TabIndex = 14;
@@ -180,17 +183,35 @@
             // signUpButton
             // 
             this.signUpButton.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.signUpButton.Location = new System.Drawing.Point(141, 303);
+            this.signUpButton.Location = new System.Drawing.Point(141, 337);
             this.signUpButton.Name = "signUpButton";
             this.signUpButton.Size = new System.Drawing.Size(95, 37);
             this.signUpButton.TabIndex = 15;
             this.signUpButton.Text = "Sign Up";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(32, 83);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Address";
+            // 
+            // addressTextBox
+            // 
+            this.addressTextBox.Location = new System.Drawing.Point(35, 99);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(340, 20);
+            this.addressTextBox.TabIndex = 16;
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 352);
+            this.ClientSize = new System.Drawing.Size(398, 399);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.addressTextBox);
             this.Controls.Add(this.signUpButton);
             this.Controls.Add(this.agreeCheckBox);
             this.Controls.Add(this.label7);
@@ -216,6 +237,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.departmentComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.passwordTextBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.retypeTextBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addressTextBox.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,5 +261,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox agreeCheckBox;
         private DevExpress.XtraEditors.SimpleButton signUpButton;
+        private System.Windows.Forms.Label label8;
+        private DevExpress.XtraEditors.TextEdit addressTextBox;
     }
 }
