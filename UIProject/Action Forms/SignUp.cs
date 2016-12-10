@@ -30,7 +30,7 @@ namespace UIProject
             {
                 con.Open();
             }
-            string sql = "SELECT A.UserInfo_ID, A.Fullname, A.Address FROM UserInformations as A";
+            string sql = "SELECT FROM Department ";
             SqlCommand command = new SqlCommand(sql, con);
             SqlDataReader read = command.ExecuteReader();
 
