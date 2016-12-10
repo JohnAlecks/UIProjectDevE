@@ -107,6 +107,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CriminalRecord.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Database\Data Type\DataType.cs" />
     <Compile Include="Handler\Exceptions\Execption.cs" />
@@ -161,14 +162,17 @@
     <None Include="app.config" />
     <None Include="CriminalRecord.xsc">
       <DependentUpon>CriminalRecord.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="CriminalRecord.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>CriminalRecord.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="CriminalRecord.xss">
       <DependentUpon>CriminalRecord.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -230,10 +234,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CriminalRecord.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="CriminalRecord_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>CriminalRecord.mdf</DependentUpon>
     </Content>
   </ItemGroup>

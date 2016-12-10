@@ -85,7 +85,16 @@ namespace UIProject
         private String address;
         private String phone;
         private int userinfo_id;
+        private String email;
 
+        public String Email {
+            get {
+                return email;
+            }
+            set {
+                email = value;
+            }
+        }
        public String Fullname {
             get {
                 return fullname;
