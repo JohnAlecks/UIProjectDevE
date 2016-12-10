@@ -42,9 +42,9 @@ namespace UIProject
             {
                 LoginInfo temp = new LoginInfo();
                 temp.UserLogin = read.GetInt32(0);
-                Console.WriteLine(temp.UserLogin);
+                //Console.WriteLine(temp.UserLogin);
                 temp.Email = read.GetString(1).Trim();
-                Console.WriteLine(temp.Email);
+                //Console.WriteLine(temp.Email);
                 temp.Password = read.GetString(2).Trim();
                 LoginTable.Add(temp);
             }

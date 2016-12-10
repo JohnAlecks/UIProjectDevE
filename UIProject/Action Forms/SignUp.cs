@@ -15,12 +15,14 @@ namespace UIProject
 {
     public partial class SignUp : DevExpress.XtraEditors.XtraForm
     {
+        List<UserInfo> UserTable = new List<UserInfo>();
+       
         public SignUp()
         {
             InitializeComponent();
             getData();
+            
         }
-        int id;
         private void getData()
         {
 
@@ -31,22 +33,44 @@ namespace UIProject
             {
                 con.Open();
             }
-            string sql = "SELECT A.UserInfo_ID, A.Fullname, A.Address FROM UserInformations as A";
+            string sql = "SELECT A.Email FROM LoginInformation as A";
             SqlCommand command = new SqlCommand(sql, con);
-            SqlDataReader read = command.ExecuteReader();
-
-
+            SqlDataReader read = command.ExecuteReader();    
             while (read.Read())
             {
                 UserInfo temp = new UserInfo();
-                temp.Fullname = read.GetString(1).Trim();
-                temp.Address = read.GetString(2).Trim();
-                //comboBox1.Items.Add(temp.Fullname);
-                //id = temp.UserInfoID = read.GetInt32(0);
-
+                temp.Email = read.GetString(0).Trim();
+                UserTable.Add(temp);
             }
             con.Close();
+  
+        }
 
+        private bool checkEmail(string data) {
+            UserInfo temp = UserTable.Find(item => item.Email == data);
+            try
+            {
+                if (temp.Email != null)
+                {
+                    if (temp.Email == data)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (NullReferenceException ex) {
+                return false;
+            }
+            return false;
         }
 
         private void signUpButton_Click_1(object sender, EventArgs e)
@@ -61,16 +85,21 @@ namespace UIProject
             }
             string sql = "INSERT INTO UserInformations (Fullname, Address, Phone) VALUES (@fullname, @address, @phone) SELECT @user_id = SCOPE_IDENTITY(); INSERT INTO LoginInformation(User_Login_ID, Email, Password) VALUES (@user_id, @email , @password)";
             SqlCommand command = new SqlCommand(sql, con);
-            command.Parameters.Add("@fullname", SqlDbType.VarChar, 38).Value = firstNameTextBox.Text;
-            command.Parameters.Add("@address", SqlDbType.VarChar, 38).Value = "528 Pham Van Hai";
-            command.Parameters.Add("@phone", SqlDbType.VarChar, 38).Value = "";
-            command.Parameters.Add("@email", SqlDbType.VarChar, 38).Value = emailTextBox.Text;
-            string ePass = SaltPassword.ComputeHash(passwordTextBox.Text, "SHA512", null);
-            //Console.WriteLine(ePass);
-            command.Parameters.Add("@user_id", SqlDbType.Int).Direction = ParameterDirection.Output;
-            command.Parameters.Add("@password", SqlDbType.VarChar).Value = ePass;
-            command.ExecuteNonQuery();
-            Console.WriteLine("COMPLETE");
+            if (checkEmail(emailTextBox.Text) == true){
+                MessageBox.Show("Email taken");
+            } else {
+                command.Parameters.Add("@fullname", SqlDbType.VarChar, 38).Value = firstNameTextBox.Text;
+                command.Parameters.Add("@address", SqlDbType.VarChar, 38).Value = "528 Pham Van Hai";
+                command.Parameters.Add("@phone", SqlDbType.VarChar, 38).Value = "";
+                command.Parameters.Add("@email", SqlDbType.VarChar, 38).Value = emailTextBox.Text;
+                string ePass = SaltPassword.ComputeHash(passwordTextBox.Text, "SHA512", null);
+                command.Parameters.Add("@user_id", SqlDbType.Int).Direction = ParameterDirection.Output;
+                command.Parameters.Add("@password", SqlDbType.VarChar).Value = ePass;
+                command.ExecuteNonQuery();
+                Console.WriteLine("COMPLETE");
+            }
+            
+           
         }
     }
 }
