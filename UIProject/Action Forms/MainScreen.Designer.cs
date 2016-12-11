@@ -59,9 +59,15 @@
             this.dateColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.statusColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
-            this.dashboardDesigner1 = new DevExpress.DashboardWin.DashboardDesigner();
+            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabbedMdiManager2 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
+            this.xtraTabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager2)).BeginInit();
             this.SuspendLayout();
             // 
             // barAndDockingController1
@@ -96,7 +102,9 @@
             this.Page1,
             this.ribbonPage2});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
-            this.ribbonControl1.Size = new System.Drawing.Size(1590, 220);
+            this.ribbonControl1.Size = new System.Drawing.Size(1590, 253);
+            this.ribbonControl1.SelectedPageChanged += new System.EventHandler(this.ribbonControl1_SelectedPageChanged);
+            this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
             // 
             // AddButtonItem
             // 
@@ -290,13 +298,12 @@
             this.nameColumn,
             this.dateColumn,
             this.statusColumn});
-            this.caseListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.caseListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
-            this.caseListView.Location = new System.Drawing.Point(0, 220);
+            this.caseListView.Location = new System.Drawing.Point(676, 291);
             this.caseListView.Margin = new System.Windows.Forms.Padding(6);
             this.caseListView.Name = "caseListView";
-            this.caseListView.Size = new System.Drawing.Size(1590, 713);
+            this.caseListView.Size = new System.Drawing.Size(1590, 680);
             this.caseListView.TabIndex = 1;
             this.caseListView.UseCompatibleStateImageBehavior = false;
             this.caseListView.View = System.Windows.Forms.View.Details;
@@ -317,19 +324,34 @@
             this.statusColumn.Text = "Status";
             this.statusColumn.Width = 104;
             // 
-            // dashboardDesigner1
+            // xtraTabControl1
             // 
-            this.dashboardDesigner1.CustomDBSchemaProvider = null;
-            this.dashboardDesigner1.Location = new System.Drawing.Point(112, 90);
-            this.dashboardDesigner1.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
-            this.dashboardDesigner1.MenuManager = this.ribbonControl1;
-            this.dashboardDesigner1.Name = "dashboardDesigner1";
-            this.dashboardDesigner1.PrintingOptions.DocumentContentOptions.FilterState = DevExpress.DashboardWin.DashboardPrintingFilterState.SeparatePage;
-            this.dashboardDesigner1.PrintingOptions.FontInfo.GdiCharSet = ((byte)(0));
-            this.dashboardDesigner1.PrintingOptions.FontInfo.Name = null;
-            this.dashboardDesigner1.Size = new System.Drawing.Size(1488, 1004);
-            this.dashboardDesigner1.TabIndex = 5;
-            this.dashboardDesigner1.Load += new System.EventHandler(this.dashboardDesigner1_Load_1);
+            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraTabControl1.Location = new System.Drawing.Point(0, 253);
+            this.xtraTabControl1.Name = "xtraTabControl1";
+            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
+            this.xtraTabControl1.Size = new System.Drawing.Size(1590, 680);
+            this.xtraTabControl1.TabIndex = 8;
+            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage1,
+            this.xtraTabPage2});
+            // 
+            // xtraTabPage1
+            // 
+            this.xtraTabPage1.Name = "xtraTabPage1";
+            this.xtraTabPage1.Size = new System.Drawing.Size(1578, 627);
+            this.xtraTabPage1.Text = "xtraTabPage1";
+            // 
+            // xtraTabPage2
+            // 
+            this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.Size = new System.Drawing.Size(934, 495);
+            this.xtraTabPage2.Text = "xtraTabPage2";
+            // 
+            // xtraTabbedMdiManager2
+            // 
+            this.xtraTabbedMdiManager2.Controller = this.barAndDockingController1;
+            this.xtraTabbedMdiManager2.MdiParent = this;
             // 
             // UIProject
             // 
@@ -337,17 +359,23 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1590, 933);
-            this.Controls.Add(this.dashboardDesigner1);
+            this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.caseListView);
             this.Controls.Add(this.ribbonControl1);
+            this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(6);
+            this.MinimizeBox = false;
             this.Name = "UIProject";
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UI Project";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.MdiChildActivate += new System.EventHandler(this.UIProject_MdiChildActivate);
             ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
+            this.xtraTabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,6 +408,9 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
         private DevExpress.XtraBars.BarAndDockingController barAndDockingController1;
-        private DevExpress.DashboardWin.DashboardDesigner dashboardDesigner1;
+        private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager2;
     }
 }
