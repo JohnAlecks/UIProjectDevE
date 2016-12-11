@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UIProject));
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Fuck Police",
             "Fuck Police",
             "Fuck CS"}, -1);
+            this.barAndDockingController1 = new DevExpress.XtraBars.BarAndDockingController(this.components);
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.AddButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.EditButtonItem = new DevExpress.XtraBars.BarButtonItem();
@@ -45,20 +47,31 @@
             this.LogoutButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.ExitButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.HelpButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.Page1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.CasePageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.DatabasePageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.UserPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.SystemPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.caseListView = new System.Windows.Forms.ListView();
             this.nameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dateColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.statusColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.dashboardDesigner1 = new DevExpress.DashboardWin.DashboardDesigner();
+            ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
+            // barAndDockingController1
+            // 
+            this.barAndDockingController1.PropertiesBar.DefaultGlyphSize = new System.Drawing.Size(16, 16);
+            this.barAndDockingController1.PropertiesBar.DefaultLargeGlyphSize = new System.Drawing.Size(32, 32);
+            // 
             // ribbonControl1
             // 
+            this.ribbonControl1.Controller = this.barAndDockingController1;
             this.ribbonControl1.ExpandCollapseItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
@@ -75,12 +88,15 @@
             this.ExitButtonItem,
             this.HelpButtonItem});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(6);
             this.ribbonControl1.MaxItemId = 1;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.Page1});
+            this.ribbonPage1,
+            this.Page1,
+            this.ribbonPage2});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
-            this.ribbonControl1.Size = new System.Drawing.Size(795, 130);
+            this.ribbonControl1.Size = new System.Drawing.Size(1590, 220);
             // 
             // AddButtonItem
             // 
@@ -214,6 +230,11 @@
             this.HelpButtonItem.Name = "HelpButtonItem";
             this.HelpButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.HelpButtonItem_ItemClick);
             // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "Dashboard";
+            // 
             // Page1
             // 
             this.Page1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -258,6 +279,11 @@
             this.SystemPageGroup.Name = "SystemPageGroup";
             this.SystemPageGroup.Text = "System";
             // 
+            // ribbonPage2
+            // 
+            this.ribbonPage2.Name = "ribbonPage2";
+            this.ribbonPage2.Text = "ribbonPage2";
+            // 
             // caseListView
             // 
             this.caseListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -266,13 +292,15 @@
             this.statusColumn});
             this.caseListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.caseListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
-            this.caseListView.Location = new System.Drawing.Point(0, 130);
+            listViewItem1});
+            this.caseListView.Location = new System.Drawing.Point(0, 220);
+            this.caseListView.Margin = new System.Windows.Forms.Padding(6);
             this.caseListView.Name = "caseListView";
-            this.caseListView.Size = new System.Drawing.Size(795, 355);
+            this.caseListView.Size = new System.Drawing.Size(1590, 713);
             this.caseListView.TabIndex = 1;
             this.caseListView.UseCompatibleStateImageBehavior = false;
             this.caseListView.View = System.Windows.Forms.View.Details;
+            this.caseListView.SelectedIndexChanged += new System.EventHandler(this.caseListView_SelectedIndexChanged);
             // 
             // nameColumn
             // 
@@ -289,19 +317,36 @@
             this.statusColumn.Text = "Status";
             this.statusColumn.Width = 104;
             // 
+            // dashboardDesigner1
+            // 
+            this.dashboardDesigner1.CustomDBSchemaProvider = null;
+            this.dashboardDesigner1.Location = new System.Drawing.Point(112, 90);
+            this.dashboardDesigner1.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.dashboardDesigner1.MenuManager = this.ribbonControl1;
+            this.dashboardDesigner1.Name = "dashboardDesigner1";
+            this.dashboardDesigner1.PrintingOptions.DocumentContentOptions.FilterState = DevExpress.DashboardWin.DashboardPrintingFilterState.SeparatePage;
+            this.dashboardDesigner1.PrintingOptions.FontInfo.GdiCharSet = ((byte)(0));
+            this.dashboardDesigner1.PrintingOptions.FontInfo.Name = null;
+            this.dashboardDesigner1.Size = new System.Drawing.Size(1488, 1004);
+            this.dashboardDesigner1.TabIndex = 5;
+            this.dashboardDesigner1.Load += new System.EventHandler(this.dashboardDesigner1_Load_1);
+            // 
             // UIProject
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 485);
+            this.ClientSize = new System.Drawing.Size(1590, 933);
+            this.Controls.Add(this.dashboardDesigner1);
             this.Controls.Add(this.caseListView);
             this.Controls.Add(this.ribbonControl1);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "UIProject";
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UI Project";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -331,6 +376,10 @@
         private System.Windows.Forms.ColumnHeader nameColumn;
         private System.Windows.Forms.ColumnHeader dateColumn;
         private System.Windows.Forms.ColumnHeader statusColumn;
+        private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private DevExpress.XtraBars.BarAndDockingController barAndDockingController1;
+        private DevExpress.DashboardWin.DashboardDesigner dashboardDesigner1;
     }
 }
-

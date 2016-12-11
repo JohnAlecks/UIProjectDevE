@@ -18,7 +18,7 @@ namespace UIProject
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            BonusSkins.Register();
+            //BonusSkins.Register();
             SkinManager.EnableFormSkins();
             Application.Run(new UIProject());
         }

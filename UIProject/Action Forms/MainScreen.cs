@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using DevExpress.XtraSplashScreen;
 
+
 namespace UIProject
 {
     public partial class UIProject : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -12,6 +13,8 @@ namespace UIProject
             var log = new LoginScreen();
             log.ShowMode = DevExpress.XtraSplashScreen.ShowMode.Form;
             log.ShowDialog();
+            dashboardDesigner1.CreateRibbon();
+            InitDatabaseDashboard();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -91,6 +94,25 @@ namespace UIProject
         private void HelpButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             MessageBox.Show("Contact your IT supporter for futher infomation.", "Contact", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void caseListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dashboardDesigner1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InitDatabaseDashboard() {
+            
+        }
+
+        private void dashboardDesigner1_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
