@@ -20,6 +20,7 @@ namespace UIProject
         public SignUp()
         {
             InitializeComponent();
+           
             getData();
             
         }
@@ -27,7 +28,8 @@ namespace UIProject
         {
 
             String appPath = Application.StartupPath;
-            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + appPath + "\\CriminalRecord.mdf;Integrated Security=True;Connect Timeout=30";
+            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + 
+                appPath + "\\CriminalRecord.mdf;Integrated Security=True;Connect Timeout=30";
             SqlConnection con = new SqlConnection(constring);
             if (con.State != ConnectionState.Open)
             {
@@ -72,34 +74,76 @@ namespace UIProject
             }
             return false;
         }
+        private bool isFilled(Object[] textboxs) {
 
-        private void signUpButton_Click_1(object sender, EventArgs e)
-        {
-            String appPath = Application.StartupPath;
-            Console.WriteLine(appPath);
-            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + appPath + "\\CriminalRecord.mdf;Integrated Security=True;Connect Timeout=30";
-            SqlConnection con = new SqlConnection(constring);
-            if (con.State != ConnectionState.Open)
-            {
-                con.Open();
+            foreach (Object textbox in textboxs) {
+                
+                try {
+                    DevExpress.XtraEditors.TextEdit tb = (DevExpress.XtraEditors.TextEdit)textbox;
+                    if (tb.Text == "") {
+                        return false;
+                    }
+                } catch {
+                    try {
+                        DevExpress.XtraEditors.ComboBoxEdit cb = (DevExpress.XtraEditors.ComboBoxEdit)textbox;
+                        if (cb.Text == "") {
+                            return false;
+                        }
+                    } catch {
+                        TextBox tb = (TextBox)textbox;
+                        if (tb.Text == "") {
+                            return false;
+                        }
+                    }
+                }
             }
-            string sql = "INSERT INTO UserInformations (Fullname, Address, Phone) VALUES (@fullname, @address, @phone) SELECT @user_id = SCOPE_IDENTITY(); INSERT INTO LoginInformation(User_Login_ID, Email, Password) VALUES (@user_id, @email , @password)";
-            SqlCommand command = new SqlCommand(sql, con);
-            if (checkEmail(emailTextBox.Text) == true){
-                MessageBox.Show("Email taken");
-            } else {
-                command.Parameters.Add("@fullname", SqlDbType.VarChar, 38).Value = firstNameTextBox.Text;
-                command.Parameters.Add("@address", SqlDbType.VarChar, 38).Value = "528 Pham Van Hai";
-                command.Parameters.Add("@phone", SqlDbType.VarChar, 38).Value = "";
-                command.Parameters.Add("@email", SqlDbType.VarChar, 38).Value = emailTextBox.Text;
-                string ePass = SaltPassword.ComputeHash(passwordTextBox.Text, "SHA512", null);
-                command.Parameters.Add("@user_id", SqlDbType.Int).Direction = ParameterDirection.Output;
-                command.Parameters.Add("@password", SqlDbType.VarChar).Value = ePass;
-                command.ExecuteNonQuery();
-                Console.WriteLine("COMPLETE");
-            }
-            
-           
+            return true;
         }
+        private void signUpButton_Click_1(object sender, EventArgs e) {
+            Object[] textboxs = { firstNameTextBox, lastNameTextBox, emailTextBox, departmentComboBox, passwordTextBox, retypePasswordTextBox, empCodeTextBox, addressTextBox };
+            if (!isFilled(textboxs))
+            {
+                MessageBox.Show("Please fill out the form", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } else { 
+                String appPath = Application.StartupPath;
+                Console.WriteLine(appPath);
+                string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="
+                + appPath + "\\CriminalRecord.mdf;Integrated Security=True;Connect Timeout=30";
+                SqlConnection con = new SqlConnection(constring);
+                if (con.State != ConnectionState.Open) {
+                    con.Open();
+                }
+                string sql = "INSERT INTO UserInformations (Fullname, Address, Phone) " +
+                        "VALUES (@fullname, @address, @phone)" +
+                        " SELECT @user_id = SCOPE_IDENTITY(); " +
+                        "INSERT INTO LoginInformation(User_Login_ID, Email, Password) " +
+                        "VALUES (@user_id, @email , @password)";
+                SqlCommand command = new SqlCommand(sql, con);
+                if (checkEmail(emailTextBox.Text) == true) {
+                    MessageBox.Show("Email taken");
+                }
+                else {
+                    if (!passwordTextBox.Text.Equals(retypePasswordTextBox.Text)) {
+                        MessageBox.Show("Retype password not match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else if (!agreeCheckBox.Checked) {
+                        MessageBox.Show("Please agree with terms and conditions", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else {
+                        command.Parameters.Add("@fullname", SqlDbType.VarChar, 38).Value = firstNameTextBox.Text;
+                        command.Parameters.Add("@address", SqlDbType.VarChar, 38).Value = addressTextBox.Text;
+                        command.Parameters.Add("@phone", SqlDbType.VarChar, 38).Value = "";
+                        command.Parameters.Add("@email", SqlDbType.VarChar, 38).Value = emailTextBox.Text;
+                        string ePass = SaltPassword.ComputeHash(passwordTextBox.Text, "SHA512", null);
+                        command.Parameters.Add("@user_id", SqlDbType.Int).Direction = ParameterDirection.Output;
+                        command.Parameters.Add("@password", SqlDbType.VarChar).Value = ePass;
+                        command.ExecuteNonQuery();
+                        Console.WriteLine("COMPLETE");
+                        this.Close();
+                    }
+                }
+            }
+        }
+        
     }
 }

@@ -97,17 +97,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Action Forms\AddCase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Action Forms\AddCase.Designer.cs">
-      <DependentUpon>AddCase.cs</DependentUpon>
-    </Compile>
     <Compile Include="Action Forms\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Action Forms\ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Action Forms\Commited_Target.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action Forms\Commited_Target.Designer.cs">
+      <DependentUpon>Commited_Target.cs</DependentUpon>
     </Compile>
     <Compile Include="Action Forms\MainScreen.cs">
       <SubType>Form</SubType>
@@ -149,12 +149,6 @@
     <Compile Include="Fragments\LoadingScreen.Designer.cs">
       <DependentUpon>LoadingScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="RibbonForm\AdministrativeLaw.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RibbonForm\AdministrativeLaw.Designer.cs">
-      <DependentUpon>AdministrativeLaw.cs</DependentUpon>
-    </Compile>
     <Compile Include="RibbonForm\Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -163,11 +157,11 @@
     </Compile>
     <Compile Include="Securities\Cookies.cs" />
     <Compile Include="Securities\SaltPassword.cs" />
-    <EmbeddedResource Include="Action Forms\AddCase.resx">
-      <DependentUpon>AddCase.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Action Forms\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action Forms\Commited_Target.resx">
+      <DependentUpon>Commited_Target.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Action Forms\MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
@@ -194,9 +188,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fragments\LoadingScreen.resx">
       <DependentUpon>LoadingScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RibbonForm\AdministrativeLaw.resx">
-      <DependentUpon>AdministrativeLaw.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RibbonForm\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
