@@ -19,52 +19,14 @@ namespace UIProject.RibbonForm
         public Dashboard()
         {
             InitializeComponent();
-            MsSqlConnectionParameters msSqlParams = new MsSqlConnectionParameters();
-            msSqlParams.AuthorizationType = MsSqlAuthorizationType.Windows;
-            msSqlParams.ServerName = "ALECKSJOHAN6632";
-            msSqlParams.DatabaseName = "CriminalRecord";
-
-            DashboardSqlDataSource sqlDataSource = new DashboardSqlDataSource("Data Source 1", msSqlParams);
-            SelectQuery selectQuery = SelectQueryFluentBuilder
-                .AddTable("AdministrativeLaw")
-                .SelectColumns("Criminal", "Address", "Punish_Level")
-                .Build("Query 1");
-            sqlDataSource.Queries.Add(selectQuery);
-            sqlDataSource.Fill();
-            
-            DashboardObjectDataSource dataSource = new DashboardObjectDataSource();
-            
-            dashboardViewer1.Dashboard.DataSources.Add(sqlDataSource);
-
-            // Creates a chart dashboard item with the specified data source 
-            // and adds it to the Items collection to display within the dashboard.
-            ChartDashboardItem chart = CreateChart(dataSource);
-            dashboardViewer1.Dashboard.Items.Add(chart);
-
-            // Reloads data in the data sources.
-            dashboardViewer1.ReloadData();
-
-        }
-     
-        private ChartDashboardItem CreateChart(DashboardObjectDataSource dataSource)
-        {
-
-            ChartDashboardItem chart = new ChartDashboardItem();
-            chart.DataSource = dataSource;
-            chart.Arguments.Add(new Dimension("Crime", DateTimeGroupInterval.Year));
-            chart.SeriesDimensions.Add(new Dimension("OrderDate"));
-            chart.Panes.Add(new ChartPane());
-            SimpleSeries salesAmountSeries = new SimpleSeries(SimpleSeriesType.Bar);
-            salesAmountSeries.Value = new Measure("Extended Price");
-            // Adds created series to the pane's Series collection to display within this pane.
-            chart.Panes[0].Series.Add(salesAmountSeries);
-
-            chart.Panes.Add(new ChartPane());
-            SimpleSeries taxesAmountSeries = new SimpleSeries(SimpleSeriesType.StackedBar);
-            taxesAmountSeries.Value = new Measure("Quantity");
-            chart.Panes[1].Series.Add(taxesAmountSeries);
-
-            return chart;
+           // dashboardDesigner1.CreateRibbon();
+            String appPath = Application.StartupPath;
+            dashboardDesigner1.LoadDashboard(appPath + "\\Dashboard1.xml");
+            //DashboardItem gridTicker = dashboardViewer.Dashboard.Items.FindFirst(c => c.Name == "By Ticker")
+            SplitContainerControl spliteControl = (SplitContainerControl)dashboardDesigner1.Controls[0];
+            spliteControl.PanelVisibility = SplitPanelVisibility.Panel2;
+            SplitContainerControl childSpliteControl = (SplitContainerControl)spliteControl.Panel2.Controls[0];
+            childSpliteControl.PanelVisibility = SplitPanelVisibility.Panel2;
         }
 
         private void dashboardDesigner1_Load(object sender, EventArgs e)
@@ -73,6 +35,11 @@ namespace UIProject.RibbonForm
         }
 
         private void dashboardViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pivotGridControl1_Click(object sender, EventArgs e)
         {
 
         }
