@@ -72,6 +72,7 @@
             // 
             // barAndDockingController1
             // 
+            this.barAndDockingController1.PropertiesBar.AllowLinkLighting = false;
             this.barAndDockingController1.PropertiesBar.DefaultGlyphSize = new System.Drawing.Size(16, 16);
             this.barAndDockingController1.PropertiesBar.DefaultLargeGlyphSize = new System.Drawing.Size(32, 32);
             // 
@@ -94,7 +95,6 @@
             this.ExitButtonItem,
             this.HelpButtonItem});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(6);
             this.ribbonControl1.MaxItemId = 1;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -102,7 +102,7 @@
             this.Page1,
             this.ribbonPage2});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
-            this.ribbonControl1.Size = new System.Drawing.Size(1590, 253);
+            this.ribbonControl1.Size = new System.Drawing.Size(721, 130);
             this.ribbonControl1.SelectedPageChanged += new System.EventHandler(this.ribbonControl1_SelectedPageChanged);
             this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
             // 
@@ -300,10 +300,9 @@
             this.statusColumn});
             this.caseListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
-            this.caseListView.Location = new System.Drawing.Point(676, 291);
-            this.caseListView.Margin = new System.Windows.Forms.Padding(6);
+            this.caseListView.Location = new System.Drawing.Point(338, 151);
             this.caseListView.Name = "caseListView";
-            this.caseListView.Size = new System.Drawing.Size(1590, 680);
+            this.caseListView.Size = new System.Drawing.Size(797, 356);
             this.caseListView.TabIndex = 1;
             this.caseListView.UseCompatibleStateImageBehavior = false;
             this.caseListView.View = System.Windows.Forms.View.Details;
@@ -327,10 +326,11 @@
             // xtraTabControl1
             // 
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl1.Location = new System.Drawing.Point(0, 253);
+            this.xtraTabControl1.Location = new System.Drawing.Point(0, 130);
+            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1590, 680);
+            this.xtraTabControl1.Size = new System.Drawing.Size(721, 342);
             this.xtraTabControl1.TabIndex = 8;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -338,14 +338,16 @@
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1578, 627);
+            this.xtraTabPage1.Size = new System.Drawing.Size(715, 314);
             this.xtraTabPage1.Text = "xtraTabPage1";
             // 
             // xtraTabPage2
             // 
+            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(934, 495);
+            this.xtraTabPage2.Size = new System.Drawing.Size(789, 326);
             this.xtraTabPage2.Text = "xtraTabPage2";
             // 
             // xtraTabbedMdiManager2
@@ -356,14 +358,13 @@
             // UIProject
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1590, 933);
+            this.ClientSize = new System.Drawing.Size(721, 472);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.caseListView);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.MinimizeBox = false;
             this.Name = "UIProject";
             this.Ribbon = this.ribbonControl1;

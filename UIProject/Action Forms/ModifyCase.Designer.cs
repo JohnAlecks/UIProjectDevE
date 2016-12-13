@@ -182,7 +182,7 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Suspect Detail";
-            
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -414,7 +414,6 @@
             this.label18.Size = new System.Drawing.Size(38, 13);
             this.label18.TabIndex = 42;
             this.label18.Text = "Status";
-       
             // 
             // comboBoxEdit2
             // 

@@ -22,12 +22,13 @@ namespace UIProject
             InitializeComponent();
             InitForm();
         }
-        private void InitForm()
+        public void InitForm()
         {
 
             String appPath = Application.StartupPath;
             Console.WriteLine(appPath + "Hello");
-            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + appPath + "\\CriminalRecord.mdf;Integrated Security=True;Connect Timeout=30";
+            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" +
+                appPath + "\\CriminalRecord.mdf;Integrated Security=True;Connect Timeout=30";
             SqlConnection con = new SqlConnection(constring);
 
             string sql = "SELECT User_Login_ID, Email, Password FROM LoginInformation";
@@ -107,10 +108,14 @@ namespace UIProject
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            var signUp = new SignUp();
+            var signUp = new SignUp();            
+            signUp.FormClosed += new FormClosedEventHandler(signUpFormClosed);
             signUp.ShowDialog();
         }
-
+        void signUpFormClosed(object sender, FormClosedEventArgs e)
+        {
+            InitForm();
+        }
         private void emailTextBox_EditValueChanged(object sender, EventArgs e)
         {
 
