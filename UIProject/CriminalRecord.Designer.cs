@@ -6135,8 +6135,8 @@ SELECT Law_ID, User_ID, Date_Punish, Punish_Level, Criminal, Address, DoB, Citiz
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[UserInformations] ([Fullname], [Address], [Phone]) VALUES (@Fu" +
-                "llname, @Address, @Phone);\r\nSELECT UserInfo_ID, Fullname, Address, Phone FROM Us" +
-                "erInformations WHERE (UserInfo_ID = SCOPE_IDENTITY())";
+                "llname, @Address, @Phone);\nSELECT UserInfo_ID, Fullname, Address, Phone FROM Use" +
+                "rInformations WHERE (UserInfo_ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fullname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fullname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7713,8 +7713,8 @@ SELECT Committed_Target_ID, Full_name, DoB, CMT_Address, Citizen_Verification, C
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Department] ([Department_Name], [Department_Law_ID]) VALUES (@" +
-                "Department_Name, @Department_Law_ID);\r\nSELECT Department_ID, Department_Name, De" +
-                "partment_Law_ID FROM Department WHERE (Department_ID = SCOPE_IDENTITY())";
+                "Department_Name, @Department_Law_ID);\nSELECT Department_ID, Department_Name, Dep" +
+                "artment_Law_ID FROM Department WHERE (Department_ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Department_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Department_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Department_Law_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Department_Law_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8066,8 +8066,8 @@ SELECT Department_ID, Department_Name, Department_Law_ID FROM Department WHERE (
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[LoginInformation] ([User_Login_ID], [Email], [Password]) VALUE" +
-                "S (@User_Login_ID, @Email, @Password);\r\nSELECT Login_ID, User_Login_ID, Email, P" +
-                "assword FROM LoginInformation WHERE (Login_ID = SCOPE_IDENTITY())";
+                "S (@User_Login_ID, @Email, @Password);\nSELECT Login_ID, User_Login_ID, Email, Pa" +
+                "ssword FROM LoginInformation WHERE (Login_ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@User_Login_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "User_Login_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8478,13 +8478,19 @@ SELECT Case_ID, Case_Content, Date_Happen, Date_Receive, Received_Number, Area, 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Case_ID, Case_Content, Date_Happen, Date_Receive, Received_Number, Area, N" +
                 "ote, Officer_ID, Date_Process, Case_Status, TT_Result, Last_Result FROM dbo.Case" +
                 "_Information";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT Case_ID, Case_Content, Date_Happen, Date_Receive, Received_Number, Area, N" +
+                "ote, Officer_ID, Date_Process, Case_Status, TT_Result, Last_Result FROM dbo.Case" +
+                "_Information";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8509,6 +8515,19 @@ SELECT Case_ID, Case_Content, Date_Happen, Date_Receive, Received_Number, Area, 
             CriminalRecord.Case_InformationDataTable dataTable = new CriminalRecord.Case_InformationDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(CriminalRecord.Case_InformationDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8939,9 +8958,9 @@ SELECT Case_ID, Case_Content, Date_Happen, Date_Receive, Received_Number, Area, 
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status_name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Suspect_Status] ([Status_name]) VALUES (@Status_name);\r\nSELECT" +
-                " SuspectStatus_ID, Status_name FROM Suspect_Status WHERE (SuspectStatus_ID = SCO" +
-                "PE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Suspect_Status] ([Status_name]) VALUES (@Status_name);\nSELECT " +
+                "SuspectStatus_ID, Status_name FROM Suspect_Status WHERE (SuspectStatus_ID = SCOP" +
+                "E_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
