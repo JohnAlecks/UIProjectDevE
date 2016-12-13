@@ -11,13 +11,12 @@ namespace UIProject
 
         private void doneButton_Click(object sender, EventArgs e)
         {
-            // save 
-            this.Close();
+            Close();
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

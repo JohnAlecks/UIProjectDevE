@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using DevExpress.UserSkins;
 using DevExpress.Skins;
 
 namespace UIProject
@@ -18,7 +17,7 @@ namespace UIProject
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //BonusSkins.Register();
+
             SkinManager.EnableFormSkins();
             Application.Run(new UIProject());
         }
