@@ -5,6 +5,7 @@ using DevExpress.XtraBars.Ribbon;
 
 using System.Drawing;
 using UIProject.RibbonForm;
+using UIProject.Action_Forms;
 
 namespace UIProject
 {
@@ -46,7 +47,7 @@ namespace UIProject
 
         private void AddButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var ac = new AddCase();
+            var ac = new Crime();
             ac.ShowDialog();
         }
 
