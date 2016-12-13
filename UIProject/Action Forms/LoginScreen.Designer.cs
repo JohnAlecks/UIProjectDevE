@@ -91,7 +91,7 @@
             // 
             // loginButton
             // 
-            this.loginButton.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.loginButton.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.loginButton.Location = new System.Drawing.Point(293, 293);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(91, 36);
@@ -125,7 +125,7 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.simpleButton2.Location = new System.Drawing.Point(152, 105);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(149, 28);
@@ -153,7 +153,6 @@
             this.emailTextBox.Size = new System.Drawing.Size(280, 20);
             this.emailTextBox.TabIndex = 8;
             this.emailTextBox.ToolTipTitle = "Enter Your Email";
-            this.emailTextBox.EditValueChanged += new System.EventHandler(this.emailTextBox_EditValueChanged);
             // 
             // passwordTextBox
             // 

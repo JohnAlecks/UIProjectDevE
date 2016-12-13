@@ -64,7 +64,6 @@
             this.dashboardDesigner1.Name = "dashboardDesigner1";
             this.dashboardDesigner1.Size = new System.Drawing.Size(1236, 700);
             this.dashboardDesigner1.TabIndex = 0;
-            this.dashboardDesigner1.Load += new System.EventHandler(this.dashboardDesigner1_Load);
             // 
             // sqlDataSource1
             // 
