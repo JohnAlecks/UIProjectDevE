@@ -10,30 +10,33 @@ namespace UIProject
 {
     public partial class SignUp : DevExpress.XtraEditors.XtraForm
     {
-        private List<UserInfo> UserTable = new List<UserInfo>();
+
+        List<UserInfo> UserTable = new List<UserInfo>();
 
         public SignUp()
         {
             InitializeComponent();
 
             getData();
+
         }
         private void getData()
         {
-            var appPath = Application.StartupPath;
-            var constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" +
+
+            String appPath = Application.StartupPath;
+            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" +
                 appPath + "\\CriminalRecord.mdf;Integrated Security=True;Connect Timeout=30";
-            var con = new SqlConnection(constring);
+            SqlConnection con = new SqlConnection(constring);
             if (con.State != ConnectionState.Open)
             {
                 con.Open();
             }
-            var sql = "SELECT A.Email FROM LoginInformation as A";
-            var command = new SqlCommand(sql, con);
-            var read = command.ExecuteReader();
+            string sql = "SELECT A.Email FROM LoginInformation as A";
+            SqlCommand command = new SqlCommand(sql, con);
+            SqlDataReader read = command.ExecuteReader();
             while (read.Read())
             {
-                var temp = new UserInfo();
+                UserInfo temp = new UserInfo();
                 temp.Email = read.GetString(0).Trim();
                 UserTable.Add(temp);
             }
@@ -42,7 +45,8 @@ namespace UIProject
 
         private bool checkEmail(string data)
         {
-            var temp = UserTable.Find(item => item.Email == data);
+        
+          UserInfo temp = UserTable.Find(item => item.Email == data);
             try
             {
                 if (temp.Email != null)
@@ -71,10 +75,11 @@ namespace UIProject
         {
             foreach (Object textbox in textboxs)
             {
+
                 try
                 {
-                    var tb = (DevExpress.XtraEditors.TextEdit)textbox;
-                    if (tb.Text == string.Empty)
+                    DevExpress.XtraEditors.TextEdit tb = (DevExpress.XtraEditors.TextEdit)textbox;
+                    if (tb.Text == "")
                     {
                         return false;
                     }
@@ -83,16 +88,19 @@ namespace UIProject
                 {
                     try
                     {
-                        var cb = (DevExpress.XtraEditors.ComboBoxEdit)textbox;
-                        if (cb.Text == string.Empty)
-                        {
+
+                        DevExpress.XtraEditors.ComboBoxEdit cb = (DevExpress.XtraEditors.ComboBoxEdit)textbox;
+                        if (cb.Text == "")
+                {
                             return false;
                         }
                     }
                     catch
                     {
-                        var tb = (TextBox)textbox;
-                        if (tb.Text == string.Empty)
+
+                        TextBox tb = (TextBox)textbox;
+                        if (tb.Text == "")
+
                         {
                             return false;
                         }
@@ -103,7 +111,9 @@ namespace UIProject
         }
         private void signUpButton_Click_1(object sender, EventArgs e)
         {
+
             var textboxs = new Object[] { firstNameTextBox, lastNameTextBox, emailTextBox, departmentComboBox, passwordTextBox, retypePasswordTextBox, empCodeTextBox, addressTextBox };
+
             if (!isFilled(textboxs))
             {
                 MessageBox.Show("Please fill out the form", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -134,6 +144,7 @@ namespace UIProject
                     {
                         MessageBox.Show("Retype password not match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+
                     else
                     {
                         if (!agreeCheckBox.Checked)
@@ -153,6 +164,7 @@ namespace UIProject
                             Console.WriteLine("COMPLETE");
                             Close();
                         }
+
                     }
                 }
             }
