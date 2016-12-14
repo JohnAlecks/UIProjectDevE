@@ -131,8 +131,8 @@ namespace UIProject
                 {
                     con.Open();
                 }
-                string sql = "INSERT INTO UserInformations (Fullname, Address, Phone) " +
-                        "VALUES (@fullname, @address, @phone)" +
+                string sql = "INSERT INTO UserInformations (First_name, Last_name, Address, Phone, Officer_Department_ID) " +
+                        "VALUES (@first_name, @last_name, @address, @phone, @officer)" +
                         " SELECT @user_id = SCOPE_IDENTITY(); " +
                         "INSERT INTO LoginInformation(User_Login_ID, Email, Password) " +
                         "VALUES (@user_id, @email , @password)";
@@ -153,9 +153,11 @@ namespace UIProject
                     }
                     else
                     {
-                        command.Parameters.Add("@fullname", SqlDbType.VarChar, 38).Value = firstNameTextBox.Text;
+                        command.Parameters.Add("@first_name", SqlDbType.VarChar, 38).Value = firstNameTextBox.Text;
+                        command.Parameters.Add("@last_name", SqlDbType.VarChar, 38).Value = lastNameTextBox.Text;
                         command.Parameters.Add("@address", SqlDbType.VarChar, 38).Value = addressTextBox.Text;
                         command.Parameters.Add("@phone", SqlDbType.VarChar, 38).Value = "";
+                        command.Parameters.Add("@officer", SqlDbType.Int).Value = 1;
                         command.Parameters.Add("@email", SqlDbType.VarChar, 38).Value = emailTextBox.Text;
                         string ePass = SaltPassword.ComputeHash(passwordTextBox.Text, "SHA512", null);
                         command.Parameters.Add("@user_id", SqlDbType.Int).Direction = ParameterDirection.Output;

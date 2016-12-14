@@ -28,7 +28,7 @@ namespace UIProject
             String appPath = Application.StartupPath;
             Console.WriteLine(appPath + "Hello");
             string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" +
-                appPath + "\\CriminalRecord.mdf;Integrated Security=True;Connect Timeout=30";
+                appPath + "\\CriminalRecord.mdf;Integrated Security=True";
             SqlConnection con = new SqlConnection(constring);
 
             string sql = "SELECT User_Login_ID, Email, Password FROM LoginInformation";

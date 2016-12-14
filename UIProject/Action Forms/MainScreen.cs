@@ -149,6 +149,8 @@ namespace UIProject
             }
         }
 
+
+
         private void UIProject_MdiChildActivate(object sender, EventArgs e)
         {
 
