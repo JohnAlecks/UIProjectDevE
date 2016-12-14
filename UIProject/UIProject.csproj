@@ -97,34 +97,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="Action Forms\Commited_Target.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Action Forms\Commited_Target.Designer.cs">
       <DependentUpon>Commited_Target.cs</DependentUpon>
     </Compile>
-=======
->>>>>>> 904983966feb2b6e288c0c2eecbaf03942ac8b62
     <Compile Include="Action Forms\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Action Forms\ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Action Forms\Crime.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Action Forms\Crime.Designer.cs">
       <DependentUpon>Crime.cs</DependentUpon>
-=======
-    <Compile Include="Action Forms\Commited_Target.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Action Forms\Commited_Target.Designer.cs">
-      <DependentUpon>Commited_Target.cs</DependentUpon>
->>>>>>> 904983966feb2b6e288c0c2eecbaf03942ac8b62
     </Compile>
     <Compile Include="Action Forms\MainScreen.cs">
       <SubType>Form</SubType>
@@ -174,23 +163,6 @@
     </Compile>
     <Compile Include="Securities\Cookies.cs" />
     <Compile Include="Securities\SaltPassword.cs" />
-<<<<<<< HEAD
-    <EmbeddedResource Include="Action Forms\Commited_Target.resx">
-      <DependentUpon>Commited_Target.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Action Forms\ChangePassword.resx">
-      <DependentUpon>ChangePassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Action Forms\Crime.resx">
-      <DependentUpon>Crime.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="Action Forms\ChangePassword.resx">
-      <DependentUpon>ChangePassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Action Forms\Commited_Target.resx">
-      <DependentUpon>Commited_Target.cs</DependentUpon>
->>>>>>> 904983966feb2b6e288c0c2eecbaf03942ac8b62
-    </EmbeddedResource>
     <EmbeddedResource Include="Action Forms\MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
