@@ -2,8 +2,6 @@
 using System.Windows.Forms;
 using DevExpress.XtraSplashScreen;
 using DevExpress.XtraBars.Ribbon;
-
-using System.Drawing;
 using UIProject.RibbonForm;
 using UIProject.Action_Forms;
 
@@ -11,33 +9,24 @@ namespace UIProject
 {
     public partial class UIProject : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        int ctr = 1;
-        DevExpress.XtraTab.XtraTabControl tabCtrl = new DevExpress.XtraTab.XtraTabControl();
+
         public UIProject()
         {
             InitializeComponent();
             var log = new LoginScreen();
             log.ShowMode = DevExpress.XtraSplashScreen.ShowMode.Form;
             log.ShowDialog();
-            //dashboardDesigner1.CreateRibbon();
-            InitDatabaseDashboard();
+            ribbonControl1.Minimized = true;
             InitializeRibbonControl();
         }
-        private void InitializeRibbonControl() {
-            RibbonPage group1 = new RibbonPage("Test Group");
+        private void InitializeRibbonControl()
+        {
+            var group1 = new RibbonPage("Test Group");
             ribbonControl1.Pages.Add(group1);
             xtraTabControl1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
-            Dashboard form = new Dashboard();
+            var form = new Dashboard();
             form.Dock = DockStyle.Fill;
-            //form.TopLevel = false;
             xtraTabPage1.Controls.Add(form);
-            //form.Show();
-
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-            
         }
 
         private void ExitButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -115,47 +104,56 @@ namespace UIProject
             MessageBox.Show("Contact your IT supporter for futher infomation.", "Contact", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void caseListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void InitDatabaseDashboard() {
-            
-        }
-
-        private void dashboardDesigner1_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ribbonControl1_Click(object sender, EventArgs e)
-        {
-            //Ribbon.SelectedPage = ribbonControl1.Pages[0];
-           
-        }
 
         private void ribbonControl1_SelectedPageChanged(object sender, EventArgs e)
         {
-            RibbonControl ribbon = sender as RibbonControl;
-            for (int i = 0; i < ribbonControl1.Pages.Count; i++) {
+            var ribbon = sender as RibbonControl;           
+            for (var i = 0; i < ribbonControl1.Pages.Count; i++)
+            {
+               
                 if (ribbon.SelectedPage == ribbonControl1.Pages[i])
                 {
-                    
                     xtraTabControl1.SelectedTabPageIndex = i;
-                    
+                   
                 }
-            
             }
         }
 
+<<<<<<< HEAD
 
 
         private void UIProject_MdiChildActivate(object sender, EventArgs e)
+=======
+        private void RibbonControl1_MouseClick(object sender, MouseEventArgs e)
+>>>>>>> 0ede2be48dfde9f4e702c42cb3013855d9ac008b
         {
-
+            throw new NotImplementedException();
         }
 
-        
+        private void ribbonControl1_MinimizedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ribbonControl1_SelectedPageChanging(object sender, RibbonPageChangingEventArgs e)
+        {
+            
+            var ribbon = sender as RibbonControl;
+            
+            Console.Write(ribbon.SelectedPage.ToString());
+            if (ribbon.SelectedPage == ribbonControl1.Pages[1])
+            {
+                this.Update();
+                ribbon.Minimized = true;
+                Application.DoEvents();
+            }
+            else
+            {
+                this.Update();
+                ribbon.Minimized = false;
+                Application.DoEvents();
+            }
+        }
     }
 }
