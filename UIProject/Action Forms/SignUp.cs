@@ -128,13 +128,8 @@ namespace UIProject
                 {
                     con.Open();
                 }
-<<<<<<< HEAD
                 string sql = "INSERT INTO UserInformations (First_name, Last_name, Address, Phone, Officer_Department_ID) " +
                         "VALUES (@first_name, @last_name, @address, @phone, @officer)" +
-=======
-                var sql = "INSERT INTO UserInformations (Fullname, Address, Phone) " +
-                        "VALUES (@fullname, @address, @phone)" +
->>>>>>> 0ede2be48dfde9f4e702c42cb3013855d9ac008b
                         " SELECT @user_id = SCOPE_IDENTITY(); " +
                         "INSERT INTO LoginInformation(User_Login_ID, Email, Password) " +
                         "VALUES (@user_id, @email , @password)";
@@ -152,7 +147,6 @@ namespace UIProject
 
                     else
                     {
-<<<<<<< HEAD
                         command.Parameters.Add("@first_name", SqlDbType.VarChar, 38).Value = firstNameTextBox.Text;
                         command.Parameters.Add("@last_name", SqlDbType.VarChar, 38).Value = lastNameTextBox.Text;
                         command.Parameters.Add("@address", SqlDbType.VarChar, 38).Value = addressTextBox.Text;
@@ -165,26 +159,6 @@ namespace UIProject
                         command.ExecuteNonQuery();
                         Console.WriteLine("COMPLETE");
                         this.Close();
-=======
-                        if (!agreeCheckBox.Checked)
-                        {
-                            MessageBox.Show("Please agree with terms and conditions", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        else
-                        {
-                            command.Parameters.Add("@fullname", SqlDbType.VarChar, 38).Value = firstNameTextBox.Text;
-                            command.Parameters.Add("@address", SqlDbType.VarChar, 38).Value = addressTextBox.Text;
-                            command.Parameters.Add("@phone", SqlDbType.VarChar, 38).Value = string.Empty;
-                            command.Parameters.Add("@email", SqlDbType.VarChar, 38).Value = emailTextBox.Text;
-                            var ePass = SaltPassword.ComputeHash(passwordTextBox.Text, "SHA512", null);
-                            command.Parameters.Add("@user_id", SqlDbType.Int).Direction = ParameterDirection.Output;
-                            command.Parameters.Add("@password", SqlDbType.VarChar).Value = ePass;
-                            command.ExecuteNonQuery();
-                            Console.WriteLine("COMPLETE");
-                            Close();
-                        }
-
->>>>>>> 0ede2be48dfde9f4e702c42cb3013855d9ac008b
                     }
                 }
             }

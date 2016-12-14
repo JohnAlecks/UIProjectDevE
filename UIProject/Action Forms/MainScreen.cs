@@ -120,13 +120,7 @@ namespace UIProject
             }
         }
 
-<<<<<<< HEAD
-
-
-        private void UIProject_MdiChildActivate(object sender, EventArgs e)
-=======
         private void RibbonControl1_MouseClick(object sender, MouseEventArgs e)
->>>>>>> 0ede2be48dfde9f4e702c42cb3013855d9ac008b
         {
             throw new NotImplementedException();
         }
