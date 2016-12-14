@@ -95,7 +95,6 @@ namespace UIProject
             string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + appPath + "\\CriminalRecord.mdf;Integrated Security=True";
             SqlConnection con = new SqlConnection(constring);
             con.Open();
-           
             string sql = "INSERT INTO Committed_Target (Full_name, Dob, CMT_Address, Citizen_Verification, Committed_Style, Temp_Number, Temp_Jaildate, Note, Gender, Build, Height, Hair, Eyes ) "
                 + "VALUES (@full_name, @dob, @address, @citizen_verification, @committed_style, @temp_number, @temp_jaildate, @note, @gender, @build, @height, @hair, @eyes) ";
 
@@ -117,9 +116,7 @@ namespace UIProject
             //command.Parameters.Add("@eyes", SqlDbType.VarChar).Value = "blue";
             command.ExecuteNonQuery();
             Console.WriteLine("COMPLETE");
-            Crime cm = new Crime();
-            cm.getData();
-            
+            con.Close();
             Close();
             
 
