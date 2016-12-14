@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.caseInformationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.caseInformationBindingSource = new System.Windows.Forms.BindingSource();
             this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
             this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -73,7 +72,7 @@
             // 
             this.listView1.Location = new System.Drawing.Point(43, 344);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(515, 321);
+            this.listView1.Size = new System.Drawing.Size(1231, 321);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
@@ -142,7 +141,7 @@
             // 
             // btn_Submit
             // 
-            this.btn_Submit.Location = new System.Drawing.Point(621, 641);
+            this.btn_Submit.Location = new System.Drawing.Point(571, 709);
             this.btn_Submit.Name = "btn_Submit";
             this.btn_Submit.Size = new System.Drawing.Size(190, 24);
             this.btn_Submit.TabIndex = 11;

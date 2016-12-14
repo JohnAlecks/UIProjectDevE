@@ -92,7 +92,7 @@ namespace UIProject
         {
             String appPath = Application.StartupPath;
             Console.WriteLine(appPath);
-            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + appPath + "\\CriminalRecord.mdf;Integrated Security=True;Connect Timeout=30";
+            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + appPath + "\\CriminalRecord.mdf;Integrated Security=True";
             SqlConnection con = new SqlConnection(constring);
             con.Open();
            
