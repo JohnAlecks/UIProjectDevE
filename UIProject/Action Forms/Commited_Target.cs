@@ -11,6 +11,7 @@ namespace UIProject
 {
     public partial class AddCase : DevExpress.XtraEditors.XtraForm
     {
+        public Crime crime = new Crime();
         public AddCase()
         {
             InitializeComponent();
@@ -18,26 +19,7 @@ namespace UIProject
             //InitTemporaryTable();
         }
 
-        private void InitTemporaryTable() {
-            String appPath = Application.StartupPath;
-            Console.WriteLine(appPath);
-            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + appPath + "\\CriminalRecord.mdf;Integrated Security=True";
-            SqlConnection con = new SqlConnection(constring);
-            if (con.State != ConnectionState.Open)
-            {
-                con.Open();
-            }
-            //string tableQuery = @"select 1 from INFORMATION_SCHEMA.TABLES where TABLE_NAME=##StoredDataID";
-            ;
-            
-            
-               
-        }
-
         private static bool wasExecuted = false;
-
-
-
         public void foo()
         {
             Console.WriteLine(wasExecuted + "1");
@@ -115,15 +97,45 @@ namespace UIProject
             command.Parameters.Add("@eyes", SqlDbType.Char).Value = "blue";
             //command.Parameters.Add("@eyes", SqlDbType.VarChar).Value = "blue";
             command.ExecuteNonQuery();
-            Console.WriteLine("COMPLETE");
             con.Close();
             Close();
             
+        }
+        public static List<string> getData()
+        {
 
-          
-       
+            //dataGridView1.DataSource = null;
+            DataTable dt = new DataTable();
+            String appPath = Application.StartupPath;
+            Console.WriteLine(appPath + "Hello");
+            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" +
+                appPath + "\\CriminalRecord.mdf;Integrated Security=True";
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            string sql = "SELECT * FROM ##StoredDataID, Committed_Target WHERE Record_ID = Committed_Target_ID";
+            SqlCommand com = new SqlCommand(sql, con);
+            SqlDataReader read = com.ExecuteReader();
+            List<string> a = new List<string>();
+            while (read.Read())
+            {
+                Console.WriteLine(read.GetValue(0).ToString());
+                a.Add(read.GetValue(0).ToString());
+                
+            }
+            con.Close();
+            Console.WriteLine(a.ToArray());
+            return a;
+            
+        }
 
-    }
+        public static SqlConnection getc()
+        {
+            String appPath = Application.StartupPath;
+            string sqlstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" +
+                appPath + "\\CriminalRecord.mdf;Integrated Security=True";
+            SqlConnection conn = new SqlConnection(sqlstr);
+            return conn;
+        }
 
         private void label6_Click(object sender, EventArgs e)
         {
