@@ -13,90 +13,63 @@ namespace UIProject.Action_Forms
 {
     public partial class Crime : Form
     {
+        
         public Crime()
         {
             InitializeComponent();
-            //foo();
             
-
         }
 
+       
+        public static DataGridView dgv = new DataGridView();
 
         private void treeList1_FocusedNodeChanged(object sender, DevExpress.XtraTreeList.FocusedNodeChangedEventArgs e)
         {
 
         }
 
-
-        public void getData()
+        public static SqlConnection getc()
         {
-            UserInfo temp = new UserInfo();
-            //ListViewItem item1 = new ListViewItem("Criminal Name");
-            Console.WriteLine("RUNNED");
             String appPath = Application.StartupPath;
-            Console.WriteLine(appPath + "Hello");
-            ColumnHeader columnHeader1 = new ColumnHeader();
-            columnHeader1.Text = "Name";
-            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1 });
-            ListViewItem item = new ListViewItem("1");
-            listView1.Items.Add(item);
-            listView1.View = View.Details;
-            listView1.BeginUpdate();
-            listView1.Items.Clear();
-            
-            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + appPath + "\\CriminalRecord.mdf;Integrated Security=True;Connect Timeout=30";
-            SqlConnection con = new SqlConnection(constring);
-
-            string sql = "SELECT Full_name FROM ##StoredDataID, Committed_Target WHERE Record_ID = Committed_Target_ID ";
-            SqlCommand com = new SqlCommand(sql, con);
-            con.Open();
-            try
-            {
-
-                
-                SqlDataReader read = com.ExecuteReader();
-                while (read.Read())
-                {
-                    Console.WriteLine("TRIGGER");
-                    
-                    temp.Email = read.GetString(0);
-                    //istViewItem itemz = new ListViewItem(temp.Email);
-                    this.listView1.Items.Add(read.GetString(0));
-                    Console.WriteLine(temp.Email + "ALLAHU AKBAR");
-
-                }
-            }
-            finally
-            {
-                listView1.EndUpdate();
-            }
-          
+            string sqlstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" +
+                appPath + "\\CriminalRecord.mdf;Integrated Security=True";
+            SqlConnection conn = new SqlConnection(sqlstr);
+            return conn;
         }
 
-
-        
-      
 
         private void btn_submit_suspect_Click(object sender, EventArgs e)
         {
             AddCase cmt = new AddCase();
+            cmt.FormClosed += new FormClosedEventHandler(cmtFormClosed);
             cmt.Show();
+
             //this.FormClosed += new FormClosedEventHandler(AddCase);
 
             
         }
+        
+        void cmtFormClosed(object sender, FormClosedEventArgs e) {
 
+            List<string> temp = AddCase.getData();
+                dataGridView1.Rows.Add(temp[temp.Count-1]);
+           
+            dataGridView1.AutoResizeColumns(
+                DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+        }
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+
+        
 
         private void btn_Submit_Click(object sender, EventArgs e)
         {
 
             String appPath = Application.StartupPath;
             Console.WriteLine(appPath);
-            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + appPath + "\\CriminalRecord.mdf;Integrated Security=True;Connect Timeout=30";
+            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + appPath + "\\CriminalRecord.mdf;Integrated Security=True";
             SqlConnection con = new SqlConnection(constring);
             
                 con.Open();
@@ -114,6 +87,11 @@ namespace UIProject.Action_Forms
             command.ExecuteNonQuery();
             Console.WriteLine("COMPLETE");
             
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
