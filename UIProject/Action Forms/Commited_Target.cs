@@ -98,6 +98,14 @@ namespace UIProject
             //command.Parameters.Add("@eyes", SqlDbType.VarChar).Value = "blue";
             command.ExecuteNonQuery();
             con.Close();
+            Crime parent = (Crime)this.Owner;
+            Dictionary<string, string> a = new Dictionary<string, string>();
+            a.Add("firstName",firstNameTextBox.Text);
+            a.Add("lastName", lastNameTextBox.Text);
+            a.Add("gender", genderComboBox.Text);
+            a.Add("id", idTextBox.Text);
+            a.Add("status", statusComboBox.Text);
+            parent.NotifyMe(a);
             Close();
             
         }

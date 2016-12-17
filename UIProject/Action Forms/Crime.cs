@@ -19,15 +19,9 @@ namespace UIProject.Action_Forms
             InitializeComponent();
             
         }
-
-       
+        
         public static DataGridView dgv = new DataGridView();
-
-        private void treeList1_FocusedNodeChanged(object sender, DevExpress.XtraTreeList.FocusedNodeChangedEventArgs e)
-        {
-
-        }
-
+       
         public static SqlConnection getc()
         {
             String appPath = Application.StartupPath;
@@ -40,36 +34,36 @@ namespace UIProject.Action_Forms
 
         private void btn_submit_suspect_Click(object sender, EventArgs e)
         {
-            AddCase cmt = new AddCase();
-            cmt.FormClosed += new FormClosedEventHandler(cmtFormClosed);
-            cmt.Show();
-
+            using (AddCase formOptions = new AddCase())
+            {
+                
+                formOptions.ShowDialog(this);
+            }
+           
             //this.FormClosed += new FormClosedEventHandler(AddCase);
 
             
         }
-        
-        void cmtFormClosed(object sender, FormClosedEventArgs e) {
-
-            List<string> temp = AddCase.getData();
-                dataGridView1.Rows.Add(temp[temp.Count-1]);
-           
-            dataGridView1.AutoResizeColumns(
-                DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
-        }
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        public void NotifyMe(Dictionary<string,string> suspectDetail)
         {
-
+            
+            List<string> temp = AddCase.getData();
+            dataGridView1.Rows.Add(temp[temp.Count - 1],suspectDetail["firstName"],suspectDetail["lastName"],suspectDetail["gender"],suspectDetail["status"]);
         }
-
-        
+        void cmtFormClosed(object sender, FormClosedEventArgs e)
+        {
+            List<string> temp = AddCase.getData();
+            dataGridView1.Rows.Add(temp[temp.Count - 1]);
+           
+        }
 
         private void btn_Submit_Click(object sender, EventArgs e)
         {
 
             String appPath = Application.StartupPath;
             Console.WriteLine(appPath);
-            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + appPath + "\\CriminalRecord.mdf;Integrated Security=True";
+            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" 
+            + appPath + "\\CriminalRecord.mdf;Integrated Security=True";
             SqlConnection con = new SqlConnection(constring);
             
                 con.Open();
@@ -77,7 +71,7 @@ namespace UIProject.Action_Forms
             string sql = "INSERT INTO Commit_Crime (Date_Commit, Content, Criminal, Note, Information_ID, Context, Result)"
                 + "VALUES (@date_commit, @content, @criminal, @note, @id, @context, @result) ";                
             SqlCommand command = new SqlCommand(sql, con);
-            command.Parameters.Add("@date_commit", SqlDbType.VarChar).Value = DateTime.Now;
+            command.Parameters.Add("@date_commit", SqlDbType.DateTime).Value = DateTime.Now;
             command.Parameters.Add("@content", SqlDbType.VarChar, 38).Value = "123";
             command.Parameters.Add("@criminal", SqlDbType.Int).Value = 1;
             command.Parameters.Add("@note", SqlDbType.VarChar, 38).Value = "123";
@@ -87,12 +81,29 @@ namespace UIProject.Action_Forms
             command.ExecuteNonQuery();
             Console.WriteLine("COMPLETE");
             
+            this.Close();
+            
+
+        }
+        
+        private void editOfficerButton_Click(object sender, EventArgs e)
+        {
+            if (officerIDTextBox.Text != "")
+            {
+
+            }
+            else {
+                MessageBox.Show("Please enter officer ID","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void removeSuspectButton_Click(object sender, EventArgs e)
         {
-
+            foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
+            {
+                dataGridView1.Rows.RemoveAt(item.Index);
+            }
         }
     }
 }
