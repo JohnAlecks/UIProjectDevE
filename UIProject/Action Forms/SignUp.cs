@@ -10,33 +10,30 @@ namespace UIProject
 {
     public partial class SignUp : DevExpress.XtraEditors.XtraForm
     {
-
-        List<UserInfo> UserTable = new List<UserInfo>();
+        private List<UserInfo> UserTable = new List<UserInfo>();
 
         public SignUp()
         {
             InitializeComponent();
 
             getData();
-
         }
         private void getData()
         {
-
-            String appPath = Application.StartupPath;
-            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" +
+            var appPath = Application.StartupPath;
+            var constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" +
                 appPath + "\\CriminalRecord.mdf;Integrated Security=True;Connect Timeout=30";
-            SqlConnection con = new SqlConnection(constring);
+            var con = new SqlConnection(constring);
             if (con.State != ConnectionState.Open)
             {
                 con.Open();
             }
-            string sql = "SELECT A.Email FROM LoginInformation as A";
-            SqlCommand command = new SqlCommand(sql, con);
-            SqlDataReader read = command.ExecuteReader();
+            var sql = "SELECT A.Email FROM LoginInformation as A";
+            var command = new SqlCommand(sql, con);
+            var read = command.ExecuteReader();
             while (read.Read())
             {
-                UserInfo temp = new UserInfo();
+                var temp = new UserInfo();
                 temp.Email = read.GetString(0).Trim();
                 UserTable.Add(temp);
             }
@@ -45,8 +42,7 @@ namespace UIProject
 
         private bool checkEmail(string data)
         {
-        
-          UserInfo temp = UserTable.Find(item => item.Email == data);
+            var temp = UserTable.Find(item => item.Email == data);
             try
             {
                 if (temp.Email != null)
@@ -65,21 +61,19 @@ namespace UIProject
                     return false;
                 }
             }
-            catch (NullReferenceException ex)
+            catch
             {
                 return false;
             }
-            return false;
         }
-        private bool isFilled(Object[] textboxs)
+        public static bool isFilled(Object[] textboxs)
         {
             foreach (Object textbox in textboxs)
             {
-
                 try
                 {
-                    DevExpress.XtraEditors.TextEdit tb = (DevExpress.XtraEditors.TextEdit)textbox;
-                    if (tb.Text == "")
+                    var tb = (DevExpress.XtraEditors.TextEdit)textbox;
+                    if (tb.Text == string.Empty)
                     {
                         return false;
                     }
@@ -88,21 +82,29 @@ namespace UIProject
                 {
                     try
                     {
-
-                        DevExpress.XtraEditors.ComboBoxEdit cb = (DevExpress.XtraEditors.ComboBoxEdit)textbox;
-                        if (cb.Text == "")
-                {
+                        var cb = (DevExpress.XtraEditors.ComboBoxEdit)textbox;
+                        if (cb.Text == string.Empty)
+                        {
                             return false;
                         }
                     }
                     catch
                     {
-
-                        TextBox tb = (TextBox)textbox;
-                        if (tb.Text == "")
-
+                        try
                         {
-                            return false;
+                            var de = (DevExpress.XtraEditors.DateEdit)textbox;
+                            if (de.Text == string.Empty)
+                            {
+                                return false;
+                            }
+                        }
+                        catch
+                        {
+                            var tb = (TextBox)textbox;
+                            if (tb.Text == string.Empty)
+                            {
+                                return false;
+                            }
                         }
                     }
                 }
@@ -111,7 +113,6 @@ namespace UIProject
         }
         private void signUpButton_Click_1(object sender, EventArgs e)
         {
-
             var textboxs = new Object[] { firstNameTextBox, lastNameTextBox, emailTextBox, departmentComboBox, passwordTextBox, retypePasswordTextBox, empCodeTextBox, addressTextBox };
 
             if (!isFilled(textboxs))
@@ -120,6 +121,10 @@ namespace UIProject
             }
             else
             {
+                if (!agreeCheckBox.Checked)
+                {
+                    MessageBox.Show("You must agree with conditions and terms", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 var appPath = Application.StartupPath;
                 Console.WriteLine(appPath);
                 var constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + appPath + "\\CriminalRecord.mdf;Integrated Security=True;Connect Timeout=30";
@@ -128,7 +133,7 @@ namespace UIProject
                 {
                     con.Open();
                 }
-                string sql = "INSERT INTO UserInformations (First_name, Last_name, Address, Phone, Officer_Department_ID) " +
+                var sql = "INSERT INTO UserInformations (First_name, Last_name, Address, Phone, Officer_Department_ID) " +
                         "VALUES (@first_name, @last_name, @address, @phone, @officer)" +
                         " SELECT @user_id = SCOPE_IDENTITY(); " +
                         "INSERT INTO LoginInformation(User_Login_ID, Email, Password) " +
@@ -136,7 +141,7 @@ namespace UIProject
                 var command = new SqlCommand(sql, con);
                 if (checkEmail(emailTextBox.Text) == true)
                 {
-                    MessageBox.Show("Email taken");
+                    MessageBox.Show("Email's already existed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -150,15 +155,15 @@ namespace UIProject
                         command.Parameters.Add("@first_name", SqlDbType.VarChar, 38).Value = firstNameTextBox.Text;
                         command.Parameters.Add("@last_name", SqlDbType.VarChar, 38).Value = lastNameTextBox.Text;
                         command.Parameters.Add("@address", SqlDbType.VarChar, 38).Value = addressTextBox.Text;
-                        command.Parameters.Add("@phone", SqlDbType.VarChar, 38).Value = "";
+                        command.Parameters.Add("@phone", SqlDbType.VarChar, 38).Value = string.Empty;
                         command.Parameters.Add("@officer", SqlDbType.Int).Value = 1;
                         command.Parameters.Add("@email", SqlDbType.VarChar, 38).Value = emailTextBox.Text;
-                        string ePass = SaltPassword.ComputeHash(passwordTextBox.Text, "SHA512", null);
+                        var ePass = SaltPassword.ComputeHash(passwordTextBox.Text, "SHA512", null);
                         command.Parameters.Add("@user_id", SqlDbType.Int).Direction = ParameterDirection.Output;
                         command.Parameters.Add("@password", SqlDbType.VarChar).Value = ePass;
                         command.ExecuteNonQuery();
                         Console.WriteLine("COMPLETE");
-                        this.Close();
+                        Close();
                     }
                 }
             }

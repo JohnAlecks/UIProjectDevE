@@ -11,7 +11,7 @@ Submitted by **Dang Khoi Nguyen** and **Dang Quang Minh**
 ## User Stories
 
 The following **required** functionality is completed :
-* [ ] User can add new record into the database
+* [X] User can add new record into the database
 * [ ] User can view record store in the database
 * [ ] User can delete record store in the database
 * [ ] User can search for record store in the database

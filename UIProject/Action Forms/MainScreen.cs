@@ -9,7 +9,6 @@ namespace UIProject
 {
     public partial class UIProject : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-
         public UIProject()
         {
             InitializeComponent();
@@ -108,14 +107,12 @@ namespace UIProject
 
         private void ribbonControl1_SelectedPageChanged(object sender, EventArgs e)
         {
-            var ribbon = sender as RibbonControl;           
+            var ribbon = sender as RibbonControl;
             for (var i = 0; i < ribbonControl1.Pages.Count; i++)
             {
-               
                 if (ribbon.SelectedPage == ribbonControl1.Pages[i])
                 {
                     xtraTabControl1.SelectedTabPageIndex = i;
-                   
                 }
             }
         }
@@ -127,24 +124,22 @@ namespace UIProject
 
         private void ribbonControl1_MinimizedChanged(object sender, EventArgs e)
         {
-            
         }
 
         private void ribbonControl1_SelectedPageChanging(object sender, RibbonPageChangingEventArgs e)
         {
-            
             var ribbon = sender as RibbonControl;
-            
+
             Console.Write(ribbon.SelectedPage.ToString());
             if (ribbon.SelectedPage == ribbonControl1.Pages[1])
             {
-                this.Update();
+                Update();
                 ribbon.Minimized = true;
                 Application.DoEvents();
             }
             else
             {
-                this.Update();
+                Update();
                 ribbon.Minimized = false;
                 Application.DoEvents();
             }
