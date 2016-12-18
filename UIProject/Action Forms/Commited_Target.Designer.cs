@@ -47,17 +47,16 @@
             this.statusComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.crimesTextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.heightTextBox = new DevExpress.XtraEditors.TextEdit();
+            this.buildTextBox = new DevExpress.XtraEditors.TextEdit();
             this.label11 = new System.Windows.Forms.Label();
             this.hairTextBox = new DevExpress.XtraEditors.TextEdit();
             this.label12 = new System.Windows.Forms.Label();
-            this.eyesTextBox = new DevExpress.XtraEditors.TextEdit();
+            this.heightTextBox = new DevExpress.XtraEditors.TextEdit();
             this.label13 = new System.Windows.Forms.Label();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.eyesTextBox = new System.Windows.Forms.TextBox();
+            this.jailNumberTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.Style = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.suspectPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstNameTextBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lastNameTextBox.Properties)).BeginInit();
@@ -68,9 +67,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.trialDayDatePicker.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trialDayDatePicker.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusComboBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.heightTextBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buildTextBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hairTextBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eyesTextBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heightTextBox.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // suspectPictureBox
@@ -193,7 +192,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(158, 264);
+            this.label6.Location = new System.Drawing.Point(160, 238);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 13);
             this.label6.TabIndex = 12;
@@ -252,7 +251,7 @@
             // 
             // crimesTextBox
             // 
-            this.crimesTextBox.Location = new System.Drawing.Point(159, 288);
+            this.crimesTextBox.Location = new System.Drawing.Point(161, 262);
             this.crimesTextBox.Multiline = true;
             this.crimesTextBox.Name = "crimesTextBox";
             this.crimesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -268,15 +267,15 @@
             this.label10.TabIndex = 23;
             this.label10.Text = "Build";
             // 
-            // heightTextBox
+            // buildTextBox
             // 
-            this.heightTextBox.Location = new System.Drawing.Point(161, 167);
-            this.heightTextBox.Name = "heightTextBox";
-            this.heightTextBox.Properties.Mask.BeepOnError = true;
-            this.heightTextBox.Properties.Mask.EditMask = "n2";
-            this.heightTextBox.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.heightTextBox.Size = new System.Drawing.Size(102, 20);
-            this.heightTextBox.TabIndex = 26;
+            this.buildTextBox.Location = new System.Drawing.Point(161, 167);
+            this.buildTextBox.Name = "buildTextBox";
+            this.buildTextBox.Properties.Mask.BeepOnError = true;
+            this.buildTextBox.Properties.Mask.EditMask = "n2";
+            this.buildTextBox.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.buildTextBox.Size = new System.Drawing.Size(102, 20);
+            this.buildTextBox.TabIndex = 26;
             // 
             // label11
             // 
@@ -304,14 +303,14 @@
             this.label12.TabIndex = 27;
             this.label12.Text = "Hair";
             // 
-            // eyesTextBox
+            // heightTextBox
             // 
-            this.eyesTextBox.Location = new System.Drawing.Point(272, 167);
-            this.eyesTextBox.Name = "eyesTextBox";
-            this.eyesTextBox.Properties.Mask.BeepOnError = true;
-            this.eyesTextBox.Properties.Mask.EditMask = "n2";
-            this.eyesTextBox.Size = new System.Drawing.Size(105, 20);
-            this.eyesTextBox.TabIndex = 30;
+            this.heightTextBox.Location = new System.Drawing.Point(272, 167);
+            this.heightTextBox.Name = "heightTextBox";
+            this.heightTextBox.Properties.Mask.BeepOnError = true;
+            this.heightTextBox.Properties.Mask.EditMask = "n2";
+            this.heightTextBox.Size = new System.Drawing.Size(105, 20);
+            this.heightTextBox.TabIndex = 30;
             // 
             // label13
             // 
@@ -324,28 +323,28 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(381, 455);
+            this.simpleButton2.Location = new System.Drawing.Point(383, 437);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(105, 29);
             this.simpleButton2.TabIndex = 31;
             this.simpleButton2.Text = "Done";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
-            // textBox1
+            // eyesTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(387, 167);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(94, 21);
-            this.textBox1.TabIndex = 32;
+            this.eyesTextBox.Location = new System.Drawing.Point(387, 167);
+            this.eyesTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.eyesTextBox.Name = "eyesTextBox";
+            this.eyesTextBox.Size = new System.Drawing.Size(94, 21);
+            this.eyesTextBox.TabIndex = 32;
             // 
-            // textBox2
+            // jailNumberTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(352, 126);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 21);
-            this.textBox2.TabIndex = 33;
+            this.jailNumberTextBox.Location = new System.Drawing.Point(352, 126);
+            this.jailNumberTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.jailNumberTextBox.Name = "jailNumberTextBox";
+            this.jailNumberTextBox.Size = new System.Drawing.Size(136, 21);
+            this.jailNumberTextBox.TabIndex = 33;
             // 
             // label8
             // 
@@ -357,29 +356,20 @@
             this.label8.Text = "Jail Number";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // Style
-            // 
-            this.Style.Location = new System.Drawing.Point(160, 239);
-            this.Style.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Style.Name = "Style";
-            this.Style.Size = new System.Drawing.Size(320, 21);
-            this.Style.TabIndex = 35;
-            // 
             // AddCase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 500);
-            this.Controls.Add(this.Style);
+            this.ClientSize = new System.Drawing.Size(498, 477);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.simpleButton2);
+            this.Controls.Add(this.jailNumberTextBox);
             this.Controls.Add(this.eyesTextBox);
+            this.Controls.Add(this.simpleButton2);
+            this.Controls.Add(this.heightTextBox);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.hairTextBox);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.heightTextBox);
+            this.Controls.Add(this.buildTextBox);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.crimesTextBox);
@@ -414,9 +404,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.trialDayDatePicker.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trialDayDatePicker.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusComboBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.heightTextBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buildTextBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hairTextBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eyesTextBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heightTextBox.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -443,16 +433,15 @@
         private DevExpress.XtraEditors.ComboBoxEdit statusComboBox;
         private System.Windows.Forms.TextBox crimesTextBox;
         private System.Windows.Forms.Label label10;
-        private DevExpress.XtraEditors.TextEdit heightTextBox;
+        private DevExpress.XtraEditors.TextEdit buildTextBox;
         private System.Windows.Forms.Label label11;
         private DevExpress.XtraEditors.TextEdit hairTextBox;
         private System.Windows.Forms.Label label12;
-        private DevExpress.XtraEditors.TextEdit eyesTextBox;
+        private DevExpress.XtraEditors.TextEdit heightTextBox;
         private System.Windows.Forms.Label label13;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox eyesTextBox;
+        private System.Windows.Forms.TextBox jailNumberTextBox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox Style;
     }
 }

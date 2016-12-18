@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UIProject));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "Fuck Police",
             "Fuck Police",
             "Fuck CS"}, -1);
@@ -63,11 +63,15 @@
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabbedMdiManager2 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.caseDataGridView = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
+            this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.caseDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // barAndDockingController1
@@ -81,8 +85,8 @@
             // ribbonControl1
             // 
             this.ribbonControl1.Controller = this.barAndDockingController1;
-            this.ribbonControl1.ExpandCollapseItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
+            this.ribbonControl1.ExpandCollapseItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
             this.AddButtonItem,
@@ -113,11 +117,11 @@
             // 
             this.AddButtonItem.Caption = "Add";
             this.AddButtonItem.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.AddButtonItem.Glyph = global::UIProject.Properties.Resources.add_ic;
-            this.AddButtonItem.GlyphDisabled = global::UIProject.Properties.Resources.add_ic;
             this.AddButtonItem.Id = 1;
-            this.AddButtonItem.LargeGlyph = global::UIProject.Properties.Resources.add_ic;
-            this.AddButtonItem.LargeGlyphDisabled = global::UIProject.Properties.Resources.add_ic;
+            this.AddButtonItem.ImageOptions.DisabledImage = global::UIProject.Properties.Resources.add_ic;
+            this.AddButtonItem.ImageOptions.DisabledLargeImage = global::UIProject.Properties.Resources.add_ic;
+            this.AddButtonItem.ImageOptions.Image = global::UIProject.Properties.Resources.add_ic;
+            this.AddButtonItem.ImageOptions.LargeImage = global::UIProject.Properties.Resources.add_ic;
             this.AddButtonItem.Name = "AddButtonItem";
             this.AddButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.AddButtonItem_ItemClick);
             // 
@@ -125,11 +129,11 @@
             // 
             this.EditButtonItem.Caption = "Edit";
             this.EditButtonItem.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.EditButtonItem.Glyph = global::UIProject.Properties.Resources.edit_ic;
-            this.EditButtonItem.GlyphDisabled = global::UIProject.Properties.Resources.edit_ic;
             this.EditButtonItem.Id = 2;
-            this.EditButtonItem.LargeGlyph = global::UIProject.Properties.Resources.edit_ic;
-            this.EditButtonItem.LargeGlyphDisabled = global::UIProject.Properties.Resources.edit_ic;
+            this.EditButtonItem.ImageOptions.DisabledImage = global::UIProject.Properties.Resources.edit_ic;
+            this.EditButtonItem.ImageOptions.DisabledLargeImage = global::UIProject.Properties.Resources.edit_ic;
+            this.EditButtonItem.ImageOptions.Image = global::UIProject.Properties.Resources.edit_ic;
+            this.EditButtonItem.ImageOptions.LargeImage = global::UIProject.Properties.Resources.edit_ic;
             this.EditButtonItem.Name = "EditButtonItem";
             this.EditButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.EditButtonItem_ItemClick);
             // 
@@ -137,11 +141,11 @@
             // 
             this.DeleteButtonIteem.Caption = "Delete";
             this.DeleteButtonIteem.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.DeleteButtonIteem.Glyph = global::UIProject.Properties.Resources.delete_ic;
-            this.DeleteButtonIteem.GlyphDisabled = global::UIProject.Properties.Resources.delete_ic;
             this.DeleteButtonIteem.Id = 3;
-            this.DeleteButtonIteem.LargeGlyph = global::UIProject.Properties.Resources.delete_ic;
-            this.DeleteButtonIteem.LargeGlyphDisabled = global::UIProject.Properties.Resources.delete_ic;
+            this.DeleteButtonIteem.ImageOptions.DisabledImage = global::UIProject.Properties.Resources.delete_ic;
+            this.DeleteButtonIteem.ImageOptions.DisabledLargeImage = global::UIProject.Properties.Resources.delete_ic;
+            this.DeleteButtonIteem.ImageOptions.Image = global::UIProject.Properties.Resources.delete_ic;
+            this.DeleteButtonIteem.ImageOptions.LargeImage = global::UIProject.Properties.Resources.delete_ic;
             this.DeleteButtonIteem.Name = "DeleteButtonIteem";
             this.DeleteButtonIteem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.DeleteButtonIteem_ItemClick);
             // 
@@ -149,11 +153,11 @@
             // 
             this.ConnectDatabaseButtonItem.Caption = "Connect Database";
             this.ConnectDatabaseButtonItem.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.ConnectDatabaseButtonItem.Glyph = global::UIProject.Properties.Resources.adddb_ic;
-            this.ConnectDatabaseButtonItem.GlyphDisabled = global::UIProject.Properties.Resources.adddb_ic;
             this.ConnectDatabaseButtonItem.Id = 4;
-            this.ConnectDatabaseButtonItem.LargeGlyph = global::UIProject.Properties.Resources.adddb_ic;
-            this.ConnectDatabaseButtonItem.LargeGlyphDisabled = global::UIProject.Properties.Resources.adddb_ic;
+            this.ConnectDatabaseButtonItem.ImageOptions.DisabledImage = global::UIProject.Properties.Resources.adddb_ic;
+            this.ConnectDatabaseButtonItem.ImageOptions.DisabledLargeImage = global::UIProject.Properties.Resources.adddb_ic;
+            this.ConnectDatabaseButtonItem.ImageOptions.Image = global::UIProject.Properties.Resources.adddb_ic;
+            this.ConnectDatabaseButtonItem.ImageOptions.LargeImage = global::UIProject.Properties.Resources.adddb_ic;
             this.ConnectDatabaseButtonItem.Name = "ConnectDatabaseButtonItem";
             this.ConnectDatabaseButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ConnectDatabaseButtonItem_ItemClick);
             // 
@@ -161,11 +165,11 @@
             // 
             this.RefreshDatabaseButtonItem.Caption = "Refresh Database";
             this.RefreshDatabaseButtonItem.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.RefreshDatabaseButtonItem.Glyph = global::UIProject.Properties.Resources.refresh_ic;
-            this.RefreshDatabaseButtonItem.GlyphDisabled = global::UIProject.Properties.Resources.refresh_ic;
             this.RefreshDatabaseButtonItem.Id = 5;
-            this.RefreshDatabaseButtonItem.LargeGlyph = global::UIProject.Properties.Resources.refresh_ic;
-            this.RefreshDatabaseButtonItem.LargeGlyphDisabled = global::UIProject.Properties.Resources.refresh_ic;
+            this.RefreshDatabaseButtonItem.ImageOptions.DisabledImage = global::UIProject.Properties.Resources.refresh_ic;
+            this.RefreshDatabaseButtonItem.ImageOptions.DisabledLargeImage = global::UIProject.Properties.Resources.refresh_ic;
+            this.RefreshDatabaseButtonItem.ImageOptions.Image = global::UIProject.Properties.Resources.refresh_ic;
+            this.RefreshDatabaseButtonItem.ImageOptions.LargeImage = global::UIProject.Properties.Resources.refresh_ic;
             this.RefreshDatabaseButtonItem.Name = "RefreshDatabaseButtonItem";
             this.RefreshDatabaseButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.RefreshDatabaseButtonItem_ItemClick);
             // 
@@ -173,11 +177,11 @@
             // 
             this.DisconnectDatabaseButtonItem.Caption = "Disconnect Database";
             this.DisconnectDatabaseButtonItem.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.DisconnectDatabaseButtonItem.Glyph = global::UIProject.Properties.Resources.removedb_ic;
-            this.DisconnectDatabaseButtonItem.GlyphDisabled = global::UIProject.Properties.Resources.removedb_ic;
             this.DisconnectDatabaseButtonItem.Id = 6;
-            this.DisconnectDatabaseButtonItem.LargeGlyph = global::UIProject.Properties.Resources.removedb_ic;
-            this.DisconnectDatabaseButtonItem.LargeGlyphDisabled = global::UIProject.Properties.Resources.removedb_ic;
+            this.DisconnectDatabaseButtonItem.ImageOptions.DisabledImage = global::UIProject.Properties.Resources.removedb_ic;
+            this.DisconnectDatabaseButtonItem.ImageOptions.DisabledLargeImage = global::UIProject.Properties.Resources.removedb_ic;
+            this.DisconnectDatabaseButtonItem.ImageOptions.Image = global::UIProject.Properties.Resources.removedb_ic;
+            this.DisconnectDatabaseButtonItem.ImageOptions.LargeImage = global::UIProject.Properties.Resources.removedb_ic;
             this.DisconnectDatabaseButtonItem.Name = "DisconnectDatabaseButtonItem";
             this.DisconnectDatabaseButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.DisconnectDatabaseButtonItem_ItemClick);
             // 
@@ -185,11 +189,11 @@
             // 
             this.ChangeUserButtonItem.Caption = "Change User";
             this.ChangeUserButtonItem.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.ChangeUserButtonItem.Glyph = global::UIProject.Properties.Resources.switchUser_ic;
-            this.ChangeUserButtonItem.GlyphDisabled = global::UIProject.Properties.Resources.switchUser_ic;
             this.ChangeUserButtonItem.Id = 7;
-            this.ChangeUserButtonItem.LargeGlyph = global::UIProject.Properties.Resources.switchUser_ic;
-            this.ChangeUserButtonItem.LargeGlyphDisabled = global::UIProject.Properties.Resources.switchUser_ic;
+            this.ChangeUserButtonItem.ImageOptions.DisabledImage = global::UIProject.Properties.Resources.switchUser_ic;
+            this.ChangeUserButtonItem.ImageOptions.DisabledLargeImage = global::UIProject.Properties.Resources.switchUser_ic;
+            this.ChangeUserButtonItem.ImageOptions.Image = global::UIProject.Properties.Resources.switchUser_ic;
+            this.ChangeUserButtonItem.ImageOptions.LargeImage = global::UIProject.Properties.Resources.switchUser_ic;
             this.ChangeUserButtonItem.Name = "ChangeUserButtonItem";
             this.ChangeUserButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ChangeUserButtonItem_ItemClick);
             // 
@@ -197,11 +201,11 @@
             // 
             this.ChangePasswordButtonItem.Caption = "Change Password";
             this.ChangePasswordButtonItem.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.ChangePasswordButtonItem.Glyph = global::UIProject.Properties.Resources.changePassword_ic;
-            this.ChangePasswordButtonItem.GlyphDisabled = global::UIProject.Properties.Resources.changePassword_ic;
             this.ChangePasswordButtonItem.Id = 8;
-            this.ChangePasswordButtonItem.LargeGlyph = global::UIProject.Properties.Resources.changePassword_ic;
-            this.ChangePasswordButtonItem.LargeGlyphDisabled = global::UIProject.Properties.Resources.changePassword_ic;
+            this.ChangePasswordButtonItem.ImageOptions.DisabledImage = global::UIProject.Properties.Resources.changePassword_ic;
+            this.ChangePasswordButtonItem.ImageOptions.DisabledLargeImage = global::UIProject.Properties.Resources.changePassword_ic;
+            this.ChangePasswordButtonItem.ImageOptions.Image = global::UIProject.Properties.Resources.changePassword_ic;
+            this.ChangePasswordButtonItem.ImageOptions.LargeImage = global::UIProject.Properties.Resources.changePassword_ic;
             this.ChangePasswordButtonItem.Name = "ChangePasswordButtonItem";
             this.ChangePasswordButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ChangePasswordButtonItem_ItemClick);
             // 
@@ -209,11 +213,11 @@
             // 
             this.LogoutButtonItem.Caption = "Log Out";
             this.LogoutButtonItem.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.LogoutButtonItem.Glyph = global::UIProject.Properties.Resources.logout_ic;
-            this.LogoutButtonItem.GlyphDisabled = global::UIProject.Properties.Resources.logout_ic;
             this.LogoutButtonItem.Id = 9;
-            this.LogoutButtonItem.LargeGlyph = global::UIProject.Properties.Resources.logout_ic;
-            this.LogoutButtonItem.LargeGlyphDisabled = global::UIProject.Properties.Resources.logout_ic;
+            this.LogoutButtonItem.ImageOptions.DisabledImage = global::UIProject.Properties.Resources.logout_ic;
+            this.LogoutButtonItem.ImageOptions.DisabledLargeImage = global::UIProject.Properties.Resources.logout_ic;
+            this.LogoutButtonItem.ImageOptions.Image = global::UIProject.Properties.Resources.logout_ic;
+            this.LogoutButtonItem.ImageOptions.LargeImage = global::UIProject.Properties.Resources.logout_ic;
             this.LogoutButtonItem.Name = "LogoutButtonItem";
             this.LogoutButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.LogoutButtonItem_ItemClick);
             // 
@@ -221,11 +225,11 @@
             // 
             this.ExitButtonItem.Caption = "Exit";
             this.ExitButtonItem.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.ExitButtonItem.Glyph = global::UIProject.Properties.Resources.exit_ic;
-            this.ExitButtonItem.GlyphDisabled = global::UIProject.Properties.Resources.exit_ic;
             this.ExitButtonItem.Id = 10;
-            this.ExitButtonItem.LargeGlyph = global::UIProject.Properties.Resources.exit_ic;
-            this.ExitButtonItem.LargeGlyphDisabled = global::UIProject.Properties.Resources.exit_ic;
+            this.ExitButtonItem.ImageOptions.DisabledImage = global::UIProject.Properties.Resources.exit_ic;
+            this.ExitButtonItem.ImageOptions.DisabledLargeImage = global::UIProject.Properties.Resources.exit_ic;
+            this.ExitButtonItem.ImageOptions.Image = global::UIProject.Properties.Resources.exit_ic;
+            this.ExitButtonItem.ImageOptions.LargeImage = global::UIProject.Properties.Resources.exit_ic;
             this.ExitButtonItem.Name = "ExitButtonItem";
             this.ExitButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ExitButtonItem_ItemClick);
             // 
@@ -233,11 +237,11 @@
             // 
             this.HelpButtonItem.Caption = "Help";
             this.HelpButtonItem.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.HelpButtonItem.Glyph = global::UIProject.Properties.Resources.help_ic;
-            this.HelpButtonItem.GlyphDisabled = global::UIProject.Properties.Resources.help_ic;
             this.HelpButtonItem.Id = 11;
-            this.HelpButtonItem.LargeGlyph = global::UIProject.Properties.Resources.help_ic;
-            this.HelpButtonItem.LargeGlyphDisabled = global::UIProject.Properties.Resources.help_ic;
+            this.HelpButtonItem.ImageOptions.DisabledImage = global::UIProject.Properties.Resources.help_ic;
+            this.HelpButtonItem.ImageOptions.DisabledLargeImage = global::UIProject.Properties.Resources.help_ic;
+            this.HelpButtonItem.ImageOptions.Image = global::UIProject.Properties.Resources.help_ic;
+            this.HelpButtonItem.ImageOptions.LargeImage = global::UIProject.Properties.Resources.help_ic;
             this.HelpButtonItem.Name = "HelpButtonItem";
             this.HelpButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.HelpButtonItem_ItemClick);
             // 
@@ -303,7 +307,7 @@
             this.dateColumn,
             this.statusColumn});
             this.caseListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.caseListView.Location = new System.Drawing.Point(338, 151);
             this.caseListView.Name = "caseListView";
             this.caseListView.Size = new System.Drawing.Size(797, 356);
@@ -350,6 +354,7 @@
             // 
             // xtraTabPage2
             // 
+            this.xtraTabPage2.Controls.Add(this.caseDataGridView);
             this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(715, 314);
@@ -359,6 +364,27 @@
             // 
             this.xtraTabbedMdiManager2.Controller = this.barAndDockingController1;
             this.xtraTabbedMdiManager2.MdiParent = this;
+            // 
+            // caseDataGridView
+            // 
+            this.caseDataGridView.AllowUserToAddRows = false;
+            this.caseDataGridView.AllowUserToDeleteRows = false;
+            this.caseDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.caseDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID});
+            this.caseDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.caseDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.caseDataGridView.Name = "caseDataGridView";
+            this.caseDataGridView.ReadOnly = true;
+            this.caseDataGridView.RowHeadersVisible = false;
+            this.caseDataGridView.Size = new System.Drawing.Size(715, 314);
+            this.caseDataGridView.TabIndex = 2;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "Case ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
             // UIProject
             // 
@@ -380,7 +406,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
+            this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.caseDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,5 +445,7 @@
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager2;
+        private System.Windows.Forms.DataGridView caseDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
     }
 }

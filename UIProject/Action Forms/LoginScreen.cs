@@ -1,13 +1,8 @@
 ﻿using DevExpress.XtraSplashScreen;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using UIProject.Securities;
 using static UIProject.Securities.Cookies;
@@ -16,7 +11,7 @@ namespace UIProject
 {
     public partial class LoginScreen : SplashScreen
     {
-        List<LoginInfo> LoginTable = new List<LoginInfo>();
+        private List<LoginInfo> LoginTable = new List<LoginInfo>();
         public LoginScreen()
         {
             InitializeComponent();
@@ -24,28 +19,27 @@ namespace UIProject
         }
         public void InitForm()
         {
-
-            String appPath = Application.StartupPath;
+            var appPath = Application.StartupPath;
             Console.WriteLine(appPath + "Hello");
-            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" +
+            var constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" +
                 appPath + "\\CriminalRecord.mdf;Integrated Security=True";
-            SqlConnection con = new SqlConnection(constring);
+            var con = new SqlConnection(constring);
 
-            string sql = "SELECT User_Login_ID, Email, Password FROM LoginInformation";
-            SqlCommand com = new SqlCommand(sql, con);
+            var sql = "SELECT User_Login_ID, Email, Password FROM LoginInformation";
+            var com = new SqlCommand(sql, con);
 
             if (con.State != ConnectionState.Open)
             {
                 con.Open();
             }
-            SqlDataReader read = com.ExecuteReader();
+            var read = com.ExecuteReader();
             while (read.Read())
             {
-                LoginInfo temp = new LoginInfo();
+                var temp = new LoginInfo();
                 temp.UserLogin = read.GetInt32(0);
-                //Console.WriteLine(temp.UserLogin);
+
                 temp.Email = read.GetString(1).Trim();
-                //Console.WriteLine(temp.Email);
+
                 temp.Password = read.GetString(2).Trim();
                 LoginTable.Add(temp);
             }
@@ -56,7 +50,7 @@ namespace UIProject
         {
             try
             {
-                LoginInfo temp = LoginTable.Find(item => item.Email == email);
+                var temp = LoginTable.Find(item => item.Email == email);
                 Console.Write(temp.Password);
                 if (SaltPassword.VerifyHash(passwordTextBox.Text, "SHA512", temp.Password) == true)
                 {
@@ -67,9 +61,8 @@ namespace UIProject
                 else
                 {
                     return false;
-                };
-
-
+                }
+                ;
             }
             catch (Exception e)
             {
@@ -96,29 +89,23 @@ namespace UIProject
         {
             if (checkRecord(emailTextBox.Text, passwordTextBox.Text) == true)
             {
-                MessageBox.Show("Login Completed");
                 Close();
             }
             else
             {
                 MessageBox.Show("Incorect username or password!!!");
             }
-            
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            var signUp = new SignUp();            
+            var signUp = new SignUp();
             signUp.FormClosed += new FormClosedEventHandler(signUpFormClosed);
             signUp.ShowDialog();
         }
-        void signUpFormClosed(object sender, FormClosedEventArgs e)
+        private void signUpFormClosed(object sender, FormClosedEventArgs e)
         {
             InitForm();
-        }
-        private void emailTextBox_EditValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
