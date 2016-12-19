@@ -20,7 +20,7 @@ namespace UIProject.Action_Forms
         }
 
         public static DataGridView dgv = new DataGridView();
-
+        public static string index;
         public static SqlConnection getc()
         {
             var appPath = Application.StartupPath;
@@ -113,6 +113,7 @@ namespace UIProject.Action_Forms
                 MessageBox.Show("Please enter officer ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        
 
         private void removeSuspectButton_Click(object sender, EventArgs e)
         {
@@ -120,6 +121,18 @@ namespace UIProject.Action_Forms
             {
                 dataGridView1.Rows.RemoveAt(item.Index);
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            index = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            Console.Write(index);
+        }
+
+        private void modifySuspectButton_Click(object sender, EventArgs e)
+        {
+            Edit_CommittedTarget edit_target = new Edit_CommittedTarget(index);
+            edit_target.Show();
         }
     }
 }

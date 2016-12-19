@@ -100,13 +100,14 @@
             this.lastName,
             this.gender,
             this.status});
-            this.dataGridView1.Location = new System.Drawing.Point(117, 18);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(234, 35);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(566, 151);
+            this.dataGridView1.Size = new System.Drawing.Size(1132, 290);
             this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ID
             // 
@@ -146,9 +147,11 @@
             this.groupBox1.Controls.Add(this.comboBoxEdit1);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(24, 23);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(689, 218);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Size = new System.Drawing.Size(1378, 419);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Case Information";
@@ -156,15 +159,17 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(349, 174);
+            this.label6.Location = new System.Drawing.Point(698, 335);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 13);
+            this.label6.Size = new System.Drawing.Size(111, 25);
             this.label6.TabIndex = 51;
             this.label6.Text = "Date Take";
             // 
             // comboBoxEdit2
             // 
-            this.comboBoxEdit2.Location = new System.Drawing.Point(352, 190);
+            this.comboBoxEdit2.Location = new System.Drawing.Point(704, 365);
+            this.comboBoxEdit2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.comboBoxEdit2.Name = "comboBoxEdit2";
             this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -203,21 +208,23 @@
             "8",
             "9"});
             this.comboBoxEdit2.Properties.Sorted = true;
-            this.comboBoxEdit2.Size = new System.Drawing.Size(149, 20);
+            this.comboBoxEdit2.Size = new System.Drawing.Size(298, 34);
             this.comboBoxEdit2.TabIndex = 50;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(522, 177);
+            this.label5.Location = new System.Drawing.Point(1044, 340);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 13);
+            this.label5.Size = new System.Drawing.Size(141, 25);
             this.label5.TabIndex = 9;
             this.label5.Text = "Date Process";
             // 
             // comboBoxEdit1
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(525, 193);
+            this.comboBoxEdit1.Location = new System.Drawing.Point(1050, 371);
+            this.comboBoxEdit1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.comboBoxEdit1.Name = "comboBoxEdit1";
             this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -256,7 +263,7 @@
             "8",
             "9"});
             this.comboBoxEdit1.Properties.Sorted = true;
-            this.comboBoxEdit1.Size = new System.Drawing.Size(149, 20);
+            this.comboBoxEdit1.Size = new System.Drawing.Size(298, 34);
             this.comboBoxEdit1.TabIndex = 8;
             // 
             // groupBox4
@@ -271,18 +278,21 @@
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Controls.Add(this.label16);
             this.groupBox4.Controls.Add(this.officerDepartmentComboBox);
-            this.groupBox4.Location = new System.Drawing.Point(0, 19);
+            this.groupBox4.Location = new System.Drawing.Point(0, 37);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(345, 194);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox4.Size = new System.Drawing.Size(690, 373);
             this.groupBox4.TabIndex = 49;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Officer Info";
             // 
             // editOfficerButton
             // 
-            this.editOfficerButton.Location = new System.Drawing.Point(6, 142);
+            this.editOfficerButton.Location = new System.Drawing.Point(12, 273);
+            this.editOfficerButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.editOfficerButton.Name = "editOfficerButton";
-            this.editOfficerButton.Size = new System.Drawing.Size(112, 29);
+            this.editOfficerButton.Size = new System.Drawing.Size(224, 56);
             this.editOfficerButton.TabIndex = 42;
             this.editOfficerButton.Text = "Change Officer";
             this.editOfficerButton.Click += new System.EventHandler(this.editOfficerButton_Click);
@@ -290,9 +300,10 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(127, 131);
+            this.label17.Location = new System.Drawing.Point(254, 252);
+            this.label17.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(59, 13);
+            this.label17.Size = new System.Drawing.Size(117, 25);
             this.label17.TabIndex = 49;
             this.label17.Text = "Deparment";
             // 
@@ -301,9 +312,10 @@
             this.officerPictureBox.BackColor = System.Drawing.Color.White;
             this.officerPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.officerPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.officerPictureBox.Location = new System.Drawing.Point(6, 17);
+            this.officerPictureBox.Location = new System.Drawing.Point(12, 33);
+            this.officerPictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.officerPictureBox.Name = "officerPictureBox";
-            this.officerPictureBox.Size = new System.Drawing.Size(112, 116);
+            this.officerPictureBox.Size = new System.Drawing.Size(222, 221);
             this.officerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.officerPictureBox.TabIndex = 42;
             this.officerPictureBox.TabStop = false;
@@ -311,62 +323,69 @@
             // officerLastNameTextBox
             // 
             this.officerLastNameTextBox.Enabled = false;
-            this.officerLastNameTextBox.Location = new System.Drawing.Point(130, 69);
+            this.officerLastNameTextBox.Location = new System.Drawing.Point(260, 133);
+            this.officerLastNameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.officerLastNameTextBox.Name = "officerLastNameTextBox";
             this.officerLastNameTextBox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.officerLastNameTextBox.Size = new System.Drawing.Size(140, 20);
+            this.officerLastNameTextBox.Size = new System.Drawing.Size(280, 34);
             this.officerLastNameTextBox.TabIndex = 21;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(126, 14);
+            this.label14.Location = new System.Drawing.Point(252, 27);
+            this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(57, 13);
+            this.label14.Size = new System.Drawing.Size(116, 25);
             this.label14.TabIndex = 18;
             this.label14.Text = "First Name";
             // 
             // officerFirstNameTextBox
             // 
             this.officerFirstNameTextBox.Enabled = false;
-            this.officerFirstNameTextBox.Location = new System.Drawing.Point(129, 30);
+            this.officerFirstNameTextBox.Location = new System.Drawing.Point(258, 58);
+            this.officerFirstNameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.officerFirstNameTextBox.Name = "officerFirstNameTextBox";
             this.officerFirstNameTextBox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.officerFirstNameTextBox.Size = new System.Drawing.Size(141, 20);
+            this.officerFirstNameTextBox.Size = new System.Drawing.Size(282, 34);
             this.officerFirstNameTextBox.TabIndex = 19;
             // 
             // officerIDTextBox
             // 
-            this.officerIDTextBox.Location = new System.Drawing.Point(129, 108);
+            this.officerIDTextBox.Location = new System.Drawing.Point(258, 208);
+            this.officerIDTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.officerIDTextBox.Name = "officerIDTextBox";
             this.officerIDTextBox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.officerIDTextBox.Size = new System.Drawing.Size(109, 20);
+            this.officerIDTextBox.Size = new System.Drawing.Size(218, 34);
             this.officerIDTextBox.TabIndex = 23;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(126, 92);
+            this.label15.Location = new System.Drawing.Point(252, 177);
+            this.label15.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(58, 13);
+            this.label15.Size = new System.Drawing.Size(113, 25);
             this.label15.TabIndex = 22;
             this.label15.Text = "ID Number";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(127, 53);
+            this.label16.Location = new System.Drawing.Point(254, 102);
+            this.label16.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(58, 13);
+            this.label16.Size = new System.Drawing.Size(115, 25);
             this.label16.TabIndex = 20;
             this.label16.Text = "Last Name";
             // 
             // officerDepartmentComboBox
             // 
             this.officerDepartmentComboBox.Enabled = false;
-            this.officerDepartmentComboBox.Location = new System.Drawing.Point(130, 147);
+            this.officerDepartmentComboBox.Location = new System.Drawing.Point(260, 283);
+            this.officerDepartmentComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.officerDepartmentComboBox.Name = "officerDepartmentComboBox";
-            this.officerDepartmentComboBox.Size = new System.Drawing.Size(187, 20);
+            this.officerDepartmentComboBox.Size = new System.Drawing.Size(374, 34);
             this.officerDepartmentComboBox.TabIndex = 50;
             // 
             // groupBox2
@@ -379,9 +398,11 @@
             this.groupBox2.Controls.Add(this.textEdit2);
             this.groupBox2.Controls.Add(this.textEdit4);
             this.groupBox2.Controls.Add(this.textEdit3);
-            this.groupBox2.Location = new System.Drawing.Point(352, 19);
+            this.groupBox2.Location = new System.Drawing.Point(704, 37);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(331, 152);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox2.Size = new System.Drawing.Size(662, 292);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Location";
@@ -389,49 +410,55 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 97);
+            this.label4.Location = new System.Drawing.Point(48, 187);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.Size = new System.Drawing.Size(63, 25);
             this.label4.TabIndex = 7;
             this.label4.Text = "Ward";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(170, 97);
+            this.label3.Location = new System.Drawing.Point(340, 187);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 13);
+            this.label3.Size = new System.Drawing.Size(78, 25);
             this.label3.TabIndex = 5;
             this.label3.Text = "District";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 58);
+            this.label2.Location = new System.Drawing.Point(48, 112);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 13);
+            this.label2.Size = new System.Drawing.Size(49, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "City";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 19);
+            this.label1.Location = new System.Drawing.Point(48, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.Size = new System.Drawing.Size(91, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Address";
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(27, 35);
+            this.textEdit1.Location = new System.Drawing.Point(54, 67);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(295, 20);
+            this.textEdit1.Size = new System.Drawing.Size(590, 34);
             this.textEdit1.TabIndex = 0;
             // 
             // textEdit2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(27, 74);
+            this.textEdit2.Location = new System.Drawing.Point(54, 142);
+            this.textEdit2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -477,12 +504,13 @@
             "Vinh Long",
             "Vung Tau"});
             this.textEdit2.Properties.Sorted = true;
-            this.textEdit2.Size = new System.Drawing.Size(295, 20);
+            this.textEdit2.Size = new System.Drawing.Size(590, 34);
             this.textEdit2.TabIndex = 2;
             // 
             // textEdit4
             // 
-            this.textEdit4.Location = new System.Drawing.Point(27, 113);
+            this.textEdit4.Location = new System.Drawing.Point(54, 217);
+            this.textEdit4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -521,12 +549,13 @@
             "8",
             "9"});
             this.textEdit4.Properties.Sorted = true;
-            this.textEdit4.Size = new System.Drawing.Size(137, 20);
+            this.textEdit4.Size = new System.Drawing.Size(274, 34);
             this.textEdit4.TabIndex = 6;
             // 
             // textEdit3
             // 
-            this.textEdit3.Location = new System.Drawing.Point(173, 113);
+            this.textEdit3.Location = new System.Drawing.Point(346, 217);
+            this.textEdit3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -555,31 +584,35 @@
             "Quận Tân Phú",
             "Quận Thủ Đức"});
             this.textEdit3.Properties.Sorted = true;
-            this.textEdit3.Size = new System.Drawing.Size(149, 20);
+            this.textEdit3.Size = new System.Drawing.Size(298, 34);
             this.textEdit3.TabIndex = 4;
             // 
             // addSuspectButton
             // 
-            this.addSuspectButton.Location = new System.Drawing.Point(16, 19);
+            this.addSuspectButton.Location = new System.Drawing.Point(32, 37);
+            this.addSuspectButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.addSuspectButton.Name = "addSuspectButton";
-            this.addSuspectButton.Size = new System.Drawing.Size(96, 23);
+            this.addSuspectButton.Size = new System.Drawing.Size(192, 44);
             this.addSuspectButton.TabIndex = 14;
             this.addSuspectButton.Text = "Add Suspect";
             this.addSuspectButton.Click += new System.EventHandler(this.btn_submit_suspect_Click);
             // 
             // modifySuspectButton
             // 
-            this.modifySuspectButton.Location = new System.Drawing.Point(16, 48);
+            this.modifySuspectButton.Location = new System.Drawing.Point(32, 92);
+            this.modifySuspectButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.modifySuspectButton.Name = "modifySuspectButton";
-            this.modifySuspectButton.Size = new System.Drawing.Size(96, 23);
+            this.modifySuspectButton.Size = new System.Drawing.Size(192, 44);
             this.modifySuspectButton.TabIndex = 15;
             this.modifySuspectButton.Text = "Modify Suspect";
+            this.modifySuspectButton.Click += new System.EventHandler(this.modifySuspectButton_Click);
             // 
             // removeSuspectButton
             // 
-            this.removeSuspectButton.Location = new System.Drawing.Point(16, 77);
+            this.removeSuspectButton.Location = new System.Drawing.Point(32, 148);
+            this.removeSuspectButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.removeSuspectButton.Name = "removeSuspectButton";
-            this.removeSuspectButton.Size = new System.Drawing.Size(96, 23);
+            this.removeSuspectButton.Size = new System.Drawing.Size(192, 44);
             this.removeSuspectButton.TabIndex = 16;
             this.removeSuspectButton.Text = "Remove Suspect";
             this.removeSuspectButton.Click += new System.EventHandler(this.removeSuspectButton_Click);
@@ -590,32 +623,35 @@
             this.groupBox3.Controls.Add(this.dataGridView1);
             this.groupBox3.Controls.Add(this.modifySuspectButton);
             this.groupBox3.Controls.Add(this.addSuspectButton);
-            this.groupBox3.Location = new System.Drawing.Point(12, 231);
+            this.groupBox3.Location = new System.Drawing.Point(24, 444);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(689, 178);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox3.Size = new System.Drawing.Size(1378, 342);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Suspect Info";
             // 
             // simpleButton3
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(603, 415);
+            this.simpleButton3.Location = new System.Drawing.Point(1206, 798);
+            this.simpleButton3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(98, 32);
+            this.simpleButton3.Size = new System.Drawing.Size(196, 62);
             this.simpleButton3.TabIndex = 17;
             this.simpleButton3.Text = "Done";
             this.simpleButton3.Click += new System.EventHandler(this.btn_Submit_Click);
             // 
             // Crime
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(713, 457);
+            this.ClientSize = new System.Drawing.Size(1426, 879);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Crime";
             this.Text = "Crime";
             ((System.ComponentModel.ISupportInitialize)(this.caseInformationBindingSource)).EndInit();
