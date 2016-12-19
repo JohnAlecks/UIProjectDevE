@@ -77,18 +77,20 @@
             this.suspectPictureBox.BackColor = System.Drawing.Color.White;
             this.suspectPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.suspectPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.suspectPictureBox.Location = new System.Drawing.Point(12, 21);
+            this.suspectPictureBox.Location = new System.Drawing.Point(38, 57);
+            this.suspectPictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.suspectPictureBox.Name = "suspectPictureBox";
-            this.suspectPictureBox.Size = new System.Drawing.Size(112, 116);
+            this.suspectPictureBox.Size = new System.Drawing.Size(222, 221);
             this.suspectPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.suspectPictureBox.TabIndex = 0;
             this.suspectPictureBox.TabStop = false;
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(12, 143);
+            this.simpleButton1.Location = new System.Drawing.Point(38, 307);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(112, 29);
+            this.simpleButton1.Size = new System.Drawing.Size(224, 56);
             this.simpleButton1.TabIndex = 1;
             this.simpleButton1.Text = "Suspect Picture";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -96,63 +98,71 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(156, 21);
+            this.label1.Location = new System.Drawing.Point(304, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.Size = new System.Drawing.Size(113, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "First Name";
             // 
             // firstNameTextBox
             // 
-            this.firstNameTextBox.Location = new System.Drawing.Point(159, 37);
+            this.firstNameTextBox.Location = new System.Drawing.Point(310, 53);
+            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(127, 20);
+            this.firstNameTextBox.Size = new System.Drawing.Size(254, 34);
             this.firstNameTextBox.TabIndex = 3;
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(292, 37);
+            this.lastNameTextBox.Location = new System.Drawing.Point(576, 53);
+            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(194, 20);
+            this.lastNameTextBox.Size = new System.Drawing.Size(388, 34);
             this.lastNameTextBox.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(289, 21);
+            this.label2.Location = new System.Drawing.Point(570, 22);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.Size = new System.Drawing.Size(110, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Last Name";
             // 
             // idTextBox
             // 
-            this.idTextBox.Location = new System.Drawing.Point(159, 82);
+            this.idTextBox.Location = new System.Drawing.Point(310, 140);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(127, 20);
+            this.idTextBox.Size = new System.Drawing.Size(254, 34);
             this.idTextBox.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(156, 66);
+            this.label3.Location = new System.Drawing.Point(304, 109);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.Size = new System.Drawing.Size(116, 25);
             this.label3.TabIndex = 6;
             this.label3.Text = "ID Number";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(289, 66);
+            this.label4.Location = new System.Drawing.Point(570, 109);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.Size = new System.Drawing.Size(80, 25);
             this.label4.TabIndex = 8;
             this.label4.Text = "Gender";
             // 
             // genderComboBox
             // 
-            this.genderComboBox.Location = new System.Drawing.Point(292, 82);
+            this.genderComboBox.Location = new System.Drawing.Point(576, 140);
+            this.genderComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.genderComboBox.Name = "genderComboBox";
             this.genderComboBox.Properties.AutoComplete = false;
             this.genderComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -161,22 +171,24 @@
             this.genderComboBox.Properties.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.genderComboBox.Size = new System.Drawing.Size(54, 20);
+            this.genderComboBox.Size = new System.Drawing.Size(108, 34);
             this.genderComboBox.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(349, 66);
+            this.label5.Location = new System.Drawing.Point(690, 109);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.Size = new System.Drawing.Size(90, 25);
             this.label5.TabIndex = 10;
             this.label5.Text = "Birthday";
             // 
             // birthdayDatePicker
             // 
             this.birthdayDatePicker.EditValue = null;
-            this.birthdayDatePicker.Location = new System.Drawing.Point(352, 82);
+            this.birthdayDatePicker.Location = new System.Drawing.Point(696, 140);
+            this.birthdayDatePicker.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.birthdayDatePicker.Name = "birthdayDatePicker";
             this.birthdayDatePicker.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -186,15 +198,16 @@
             this.birthdayDatePicker.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.birthdayDatePicker.Properties.EditFormat.FormatString = "";
             this.birthdayDatePicker.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.birthdayDatePicker.Size = new System.Drawing.Size(134, 20);
+            this.birthdayDatePicker.Size = new System.Drawing.Size(268, 34);
             this.birthdayDatePicker.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(160, 238);
+            this.label6.Location = new System.Drawing.Point(312, 440);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 13);
+            this.label6.Size = new System.Drawing.Size(55, 25);
             this.label6.TabIndex = 12;
             this.label6.Text = "Note";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -202,16 +215,18 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(158, 109);
+            this.label7.Location = new System.Drawing.Point(308, 192);
+            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 13);
+            this.label7.Size = new System.Drawing.Size(95, 25);
             this.label7.TabIndex = 14;
             this.label7.Text = "Trial Day";
             // 
             // trialDayDatePicker
             // 
             this.trialDayDatePicker.EditValue = null;
-            this.trialDayDatePicker.Location = new System.Drawing.Point(160, 125);
+            this.trialDayDatePicker.Location = new System.Drawing.Point(312, 222);
+            this.trialDayDatePicker.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.trialDayDatePicker.Name = "trialDayDatePicker";
             this.trialDayDatePicker.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -221,21 +236,23 @@
             this.trialDayDatePicker.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.trialDayDatePicker.Properties.EditFormat.FormatString = "";
             this.trialDayDatePicker.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.trialDayDatePicker.Size = new System.Drawing.Size(186, 20);
+            this.trialDayDatePicker.Size = new System.Drawing.Size(372, 34);
             this.trialDayDatePicker.TabIndex = 15;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(291, 193);
+            this.label9.Location = new System.Drawing.Point(574, 353);
+            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 13);
+            this.label9.Size = new System.Drawing.Size(70, 25);
             this.label9.TabIndex = 18;
             this.label9.Text = "Status";
             // 
             // statusComboBox
             // 
-            this.statusComboBox.Location = new System.Drawing.Point(294, 209);
+            this.statusComboBox.Location = new System.Drawing.Point(580, 384);
+            this.statusComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.statusComboBox.Name = "statusComboBox";
             this.statusComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -246,121 +263,131 @@
             "In Trail",
             "K.I.A",
             "M.I.A"});
-            this.statusComboBox.Size = new System.Drawing.Size(185, 20);
+            this.statusComboBox.Size = new System.Drawing.Size(370, 34);
             this.statusComboBox.TabIndex = 19;
             // 
             // crimesTextBox
             // 
-            this.crimesTextBox.Location = new System.Drawing.Point(161, 262);
+            this.crimesTextBox.Location = new System.Drawing.Point(314, 486);
+            this.crimesTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.crimesTextBox.Multiline = true;
             this.crimesTextBox.Name = "crimesTextBox";
             this.crimesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.crimesTextBox.Size = new System.Drawing.Size(327, 160);
+            this.crimesTextBox.Size = new System.Drawing.Size(650, 304);
             this.crimesTextBox.TabIndex = 22;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(158, 151);
+            this.label10.Location = new System.Drawing.Point(308, 272);
+            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(29, 13);
+            this.label10.Size = new System.Drawing.Size(59, 25);
             this.label10.TabIndex = 23;
             this.label10.Text = "Build";
             // 
             // buildTextBox
             // 
-            this.buildTextBox.Location = new System.Drawing.Point(161, 167);
+            this.buildTextBox.Location = new System.Drawing.Point(314, 303);
+            this.buildTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buildTextBox.Name = "buildTextBox";
             this.buildTextBox.Properties.Mask.BeepOnError = true;
             this.buildTextBox.Properties.Mask.EditMask = "n2";
             this.buildTextBox.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.buildTextBox.Size = new System.Drawing.Size(102, 20);
+            this.buildTextBox.Size = new System.Drawing.Size(204, 34);
             this.buildTextBox.TabIndex = 26;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(270, 151);
+            this.label11.Location = new System.Drawing.Point(532, 272);
+            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(62, 13);
+            this.label11.Size = new System.Drawing.Size(124, 25);
             this.label11.TabIndex = 25;
             this.label11.Text = "Height (cm)";
             // 
             // hairTextBox
             // 
-            this.hairTextBox.Location = new System.Drawing.Point(161, 209);
+            this.hairTextBox.Location = new System.Drawing.Point(314, 384);
+            this.hairTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.hairTextBox.Name = "hairTextBox";
             this.hairTextBox.Properties.Mask.BeepOnError = true;
-            this.hairTextBox.Size = new System.Drawing.Size(127, 20);
+            this.hairTextBox.Size = new System.Drawing.Size(254, 34);
             this.hairTextBox.TabIndex = 28;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(158, 193);
+            this.label12.Location = new System.Drawing.Point(308, 353);
+            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(26, 13);
+            this.label12.Size = new System.Drawing.Size(50, 25);
             this.label12.TabIndex = 27;
             this.label12.Text = "Hair";
             // 
             // heightTextBox
             // 
-            this.heightTextBox.Location = new System.Drawing.Point(272, 167);
+            this.heightTextBox.Location = new System.Drawing.Point(536, 303);
+            this.heightTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.heightTextBox.Name = "heightTextBox";
             this.heightTextBox.Properties.Mask.BeepOnError = true;
             this.heightTextBox.Properties.Mask.EditMask = "n2";
-            this.heightTextBox.Size = new System.Drawing.Size(105, 20);
+            this.heightTextBox.Size = new System.Drawing.Size(210, 34);
             this.heightTextBox.TabIndex = 30;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(392, 151);
+            this.label13.Location = new System.Drawing.Point(776, 272);
+            this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(30, 13);
+            this.label13.Size = new System.Drawing.Size(54, 25);
             this.label13.TabIndex = 29;
             this.label13.Text = "Eyes";
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(383, 437);
+            this.simpleButton2.Location = new System.Drawing.Point(754, 802);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(105, 29);
+            this.simpleButton2.Size = new System.Drawing.Size(210, 56);
             this.simpleButton2.TabIndex = 31;
             this.simpleButton2.Text = "Done";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // eyesTextBox
             // 
-            this.eyesTextBox.Location = new System.Drawing.Point(387, 167);
-            this.eyesTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.eyesTextBox.Location = new System.Drawing.Point(766, 303);
+            this.eyesTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.eyesTextBox.Name = "eyesTextBox";
-            this.eyesTextBox.Size = new System.Drawing.Size(94, 21);
+            this.eyesTextBox.Size = new System.Drawing.Size(184, 33);
             this.eyesTextBox.TabIndex = 32;
             // 
             // jailNumberTextBox
             // 
-            this.jailNumberTextBox.Location = new System.Drawing.Point(352, 126);
-            this.jailNumberTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.jailNumberTextBox.Location = new System.Drawing.Point(696, 224);
+            this.jailNumberTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.jailNumberTextBox.Name = "jailNumberTextBox";
-            this.jailNumberTextBox.Size = new System.Drawing.Size(136, 21);
+            this.jailNumberTextBox.Size = new System.Drawing.Size(268, 33);
             this.jailNumberTextBox.TabIndex = 33;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(350, 109);
+            this.label8.Location = new System.Drawing.Point(692, 192);
+            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 13);
+            this.label8.Size = new System.Drawing.Size(124, 25);
             this.label8.TabIndex = 34;
             this.label8.Text = "Jail Number";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // AddCase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 477);
+            this.ClientSize = new System.Drawing.Size(996, 917);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.jailNumberTextBox);
             this.Controls.Add(this.eyesTextBox);
@@ -391,6 +418,7 @@
             this.Controls.Add(this.birthdayDatePicker);
             this.Controls.Add(this.trialDayDatePicker);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "AddCase";
             this.Text = "Add Case";
             this.Load += new System.EventHandler(this.AddCase_Load);
