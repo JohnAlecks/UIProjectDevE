@@ -55,12 +55,16 @@ namespace UIProject
     internal class UserInfo
     {
         public String Email { get; set; }
-        public String Fullname { get; set; }
-
+        public String First_name { get; set; }
+        public String Last_name { get; set; }
+       
         public String Address { get; set; }
 
         public String Phone { get; set; }
-
+        public int Officer_Department { get; set; }
+        public String Link { get; set; }
         public int UserInfoID { get; set; }
     }
+
+
 }

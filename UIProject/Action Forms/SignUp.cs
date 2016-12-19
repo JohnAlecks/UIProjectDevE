@@ -1,17 +1,20 @@
-﻿using System;
+﻿using DevExpress.XtraSplashScreen;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using UIProject.Securities;
+using UIProject.Tools;
 
 namespace UIProject
 {
     public partial class SignUp : DevExpress.XtraEditors.XtraForm
     {
         private List<UserInfo> UserTable = new List<UserInfo>();
-
+        string image = "";
         public SignUp()
         {
             InitializeComponent();
@@ -133,8 +136,8 @@ namespace UIProject
                 {
                     con.Open();
                 }
-                var sql = "INSERT INTO UserInformations (First_name, Last_name, Address, Phone, Officer_Department_ID) " +
-                        "VALUES (@first_name, @last_name, @address, @phone, @officer)" +
+                var sql = "INSERT INTO UserInformations (First_name, Last_name, Address, Phone, Officer_Department_ID, profile_image) " +
+                        "VALUES (@first_name, @last_name, @address, @phone, @officer, @profile_image)" +
                         " SELECT @user_id = SCOPE_IDENTITY(); " +
                         "INSERT INTO LoginInformation(User_Login_ID, Email, Password) " +
                         "VALUES (@user_id, @email , @password)";
@@ -161,10 +164,34 @@ namespace UIProject
                         var ePass = SaltPassword.ComputeHash(passwordTextBox.Text, "SHA512", null);
                         command.Parameters.Add("@user_id", SqlDbType.Int).Direction = ParameterDirection.Output;
                         command.Parameters.Add("@password", SqlDbType.VarChar).Value = ePass;
+                        command.Parameters.Add("@profile_image", SqlDbType.VarChar).Value = image;
                         command.ExecuteNonQuery();
                         Console.WriteLine("COMPLETE");
                         Close();
                     }
+                }
+            }
+        }
+
+        private void editOfficerButton_Click(object sender, EventArgs e)
+        {
+            using (var dlg = new OpenFileDialog())
+            {
+                dlg.Title = "Open Image";
+                dlg.Filter = "Image Files(*.BMP;*.JPG;*.PNG)|*.BMP;*.JPG;*.PNG";
+
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    officerPictureBox.Image = Image.FromFile(dlg.FileName);
+                    Image imgInput = Image.FromFile(dlg.FileName);
+                    Graphics gInput = Graphics.FromImage(imgInput);
+                    System.Drawing.Imaging.ImageFormat thisFormat = imgInput.RawFormat;
+                    SplashScreenManager.ShowForm(this, typeof(LoadingScreen), true, true, false, true);
+                    SplashScreenManager.Default.SetWaitFormCaption("Loading image...");
+                    image = ImageTools.ImageToBase64(Image.FromFile(dlg.FileName), thisFormat);
+                    SplashScreenManager.CloseForm();
+                    officerPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                    Controls.Add(officerPictureBox);
                 }
             }
         }

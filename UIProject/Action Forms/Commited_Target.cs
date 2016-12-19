@@ -87,8 +87,8 @@ namespace UIProject
                 var constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + appPath + "\\CriminalRecord.mdf;Integrated Security=True";
                 var con = new SqlConnection(constring);
                 con.Open();
-                var sql = "INSERT INTO Committed_Target (Full_name, Dob, CMT_Address, Citizen_Verification, Committed_Style, Temp_Number, Temp_Jaildate, Note, Gender, Build, Height, Hair, Eyes ) "
-                + "VALUES (@full_name, @dob, @address, @citizen_verification, @committed_style, @temp_number, @temp_jaildate, @note, @gender, @build, @height, @hair, @eyes) ";
+                var sql = "INSERT INTO Committed_Target (Full_name, Dob, CMT_Address, Citizen_Verification, Committed_Style, Temp_Number, Temp_Jaildate, Note, Gender, Build, Height, Hair, Eyes, suspect_image ) "
+                + "VALUES (@full_name, @dob, @address, @citizen_verification, @committed_style, @temp_number, @temp_jaildate, @note, @gender, @build, @height, @hair, @eyes, @suspect_image) ";
 
                 var command = new SqlCommand(sql, con);
 
@@ -105,6 +105,7 @@ namespace UIProject
                 command.Parameters.Add("@build", SqlDbType.VarChar).Value = "123";
                 command.Parameters.Add("@hair", SqlDbType.Char).Value = "black";
                 command.Parameters.Add("@eyes", SqlDbType.Char).Value = "blue";
+                command.Parameters.Add("@suspect_image", SqlDbType.VarChar).Value = a["Image"];
                 command.ExecuteNonQuery();
                 con.Close();
                 var parent = (Crime)Owner;
