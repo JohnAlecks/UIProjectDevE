@@ -93,6 +93,7 @@ namespace UIProject
             }
             else
             {
+                Close();
                 MessageBox.Show("Incorect username or password!!!");
             }
         }

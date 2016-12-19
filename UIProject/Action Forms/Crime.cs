@@ -7,6 +7,8 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using UIProject.Tools;
+using UIProject.Database;
+using UIProject.Database.Database_Controller;
 
 namespace UIProject.Action_Forms
 {
@@ -41,8 +43,9 @@ namespace UIProject.Action_Forms
         {
             var temp = AddCase.getData();
             dataGridView1.Rows.Add(temp[temp.Count - 1], suspectDetail["firstName"], suspectDetail["lastName"], suspectDetail["gender"], suspectDetail["status"]);
-            officerPictureBox.Image = ImageTools.Base64ToImage(suspectDetail["Image"]);
-            officerPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            //officerPictureBox.Image = ImageTools.Base64ToImage(suspectDetail["Image"]);
+            
         }
         private void cmtFormClosed(object sender, FormClosedEventArgs e)
         {
@@ -79,6 +82,31 @@ namespace UIProject.Action_Forms
         {
             if (officerIDTextBox.Text != string.Empty)
             {
+                List<UserInfo> temp = DataQuery.runQuery(officerIDTextBox.Text);
+                try {
+                    UserInfo officer = temp.First();
+                    officerFirstNameTextBox.Text = officer.First_name;
+                    officerLastNameTextBox.Text = officer.Last_name;
+                    officerPictureBox.Image = ImageTools.Base64ToImage(officer.Link);
+                    officerPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                    var appPath = Application.StartupPath;
+                    Console.WriteLine(appPath + "Hello");
+                    var constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" +
+                        appPath + "\\CriminalRecord.mdf;Integrated Security=True";
+                    var con = new SqlConnection(constring);
+                    string sql = "SELECT Department_Name FROM Department WHERE Department_ID=" + officer.Officer_Department;
+                    var com = new SqlCommand(sql, con);
+                    con.Open();
+                    var read = com.ExecuteReader();
+                    while (read.Read()) {
+                        officerDepartmentComboBox.Text = read.GetString(0);
+                        
+                    }
+                    con.Close();
+                } catch {
+                    MessageBox.Show("No Officer found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
             }
             else
             {
