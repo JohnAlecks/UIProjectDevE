@@ -109,9 +109,10 @@
             this.suspectPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.suspectPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.suspectPictureBox.Enabled = false;
-            this.suspectPictureBox.Location = new System.Drawing.Point(12, 28);
+            this.suspectPictureBox.Location = new System.Drawing.Point(24, 54);
+            this.suspectPictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.suspectPictureBox.Name = "suspectPictureBox";
-            this.suspectPictureBox.Size = new System.Drawing.Size(112, 116);
+            this.suspectPictureBox.Size = new System.Drawing.Size(222, 221);
             this.suspectPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.suspectPictureBox.TabIndex = 1;
             this.suspectPictureBox.TabStop = false;
@@ -119,9 +120,10 @@
             // 
             // editSuspectButton
             // 
-            this.editSuspectButton.Location = new System.Drawing.Point(12, 169);
+            this.editSuspectButton.Location = new System.Drawing.Point(24, 325);
+            this.editSuspectButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.editSuspectButton.Name = "editSuspectButton";
-            this.editSuspectButton.Size = new System.Drawing.Size(112, 29);
+            this.editSuspectButton.Size = new System.Drawing.Size(224, 56);
             this.editSuspectButton.TabIndex = 2;
             this.editSuspectButton.Text = "Edit Suspect Detail";
             this.editSuspectButton.Click += new System.EventHandler(this.editSuspectButton_Click);
@@ -129,36 +131,40 @@
             // suspectLastNameTextBox
             // 
             this.suspectLastNameTextBox.Enabled = false;
-            this.suspectLastNameTextBox.Location = new System.Drawing.Point(181, 37);
+            this.suspectLastNameTextBox.Location = new System.Drawing.Point(362, 71);
+            this.suspectLastNameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.suspectLastNameTextBox.Name = "suspectLastNameTextBox";
             this.suspectLastNameTextBox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.suspectLastNameTextBox.Size = new System.Drawing.Size(194, 20);
+            this.suspectLastNameTextBox.Size = new System.Drawing.Size(388, 34);
             this.suspectLastNameTextBox.TabIndex = 9;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(178, 21);
+            this.label2.Location = new System.Drawing.Point(356, 40);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.Size = new System.Drawing.Size(110, 25);
             this.label2.TabIndex = 8;
             this.label2.Text = "Last Name";
             // 
             // suspectFirstNameTextBox
             // 
             this.suspectFirstNameTextBox.Enabled = false;
-            this.suspectFirstNameTextBox.Location = new System.Drawing.Point(20, 37);
+            this.suspectFirstNameTextBox.Location = new System.Drawing.Point(40, 71);
+            this.suspectFirstNameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.suspectFirstNameTextBox.Name = "suspectFirstNameTextBox";
             this.suspectFirstNameTextBox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.suspectFirstNameTextBox.Size = new System.Drawing.Size(155, 20);
+            this.suspectFirstNameTextBox.Size = new System.Drawing.Size(310, 34);
             this.suspectFirstNameTextBox.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 21);
+            this.label1.Location = new System.Drawing.Point(34, 40);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.Size = new System.Drawing.Size(113, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "First Name";
             // 
@@ -176,9 +182,11 @@
             this.groupBox1.Controls.Add(this.suspectGenderComboBox);
             this.groupBox1.Controls.Add(this.suspectFirstNameTextBox);
             this.groupBox1.Controls.Add(this.suspectBirthdayDatePicker);
-            this.groupBox1.Location = new System.Drawing.Point(130, 12);
+            this.groupBox1.Location = new System.Drawing.Point(260, 23);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(387, 202);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Size = new System.Drawing.Size(774, 388);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Suspect Detail";
@@ -186,43 +194,48 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(210, 60);
+            this.label5.Location = new System.Drawing.Point(420, 115);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.Size = new System.Drawing.Size(90, 25);
             this.label5.TabIndex = 16;
             this.label5.Text = "Birthday";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(150, 60);
+            this.label4.Location = new System.Drawing.Point(300, 115);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.Size = new System.Drawing.Size(80, 25);
             this.label4.TabIndex = 14;
             this.label4.Text = "Gender";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(187, 150);
+            this.label9.Location = new System.Drawing.Point(374, 288);
+            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 13);
+            this.label9.Size = new System.Drawing.Size(70, 25);
             this.label9.TabIndex = 37;
             this.label9.Text = "Status";
             // 
             // suspectIDTextBox
             // 
             this.suspectIDTextBox.Enabled = false;
-            this.suspectIDTextBox.Location = new System.Drawing.Point(20, 76);
+            this.suspectIDTextBox.Location = new System.Drawing.Point(40, 146);
+            this.suspectIDTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.suspectIDTextBox.Name = "suspectIDTextBox";
             this.suspectIDTextBox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.suspectIDTextBox.Size = new System.Drawing.Size(127, 20);
+            this.suspectIDTextBox.Size = new System.Drawing.Size(254, 34);
             this.suspectIDTextBox.TabIndex = 13;
             // 
             // suspectStatusComboBox
             // 
             this.suspectStatusComboBox.Enabled = false;
-            this.suspectStatusComboBox.Location = new System.Drawing.Point(190, 166);
+            this.suspectStatusComboBox.Location = new System.Drawing.Point(380, 319);
+            this.suspectStatusComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.suspectStatusComboBox.Name = "suspectStatusComboBox";
             this.suspectStatusComboBox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.suspectStatusComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -234,22 +247,24 @@
             "In Trail",
             "K.I.A",
             "M.I.A"});
-            this.suspectStatusComboBox.Size = new System.Drawing.Size(185, 20);
+            this.suspectStatusComboBox.Size = new System.Drawing.Size(370, 34);
             this.suspectStatusComboBox.TabIndex = 38;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 60);
+            this.label3.Location = new System.Drawing.Point(34, 115);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.Size = new System.Drawing.Size(116, 25);
             this.label3.TabIndex = 12;
             this.label3.Text = "ID Number";
             // 
             // suspectGenderComboBox
             // 
             this.suspectGenderComboBox.Enabled = false;
-            this.suspectGenderComboBox.Location = new System.Drawing.Point(153, 76);
+            this.suspectGenderComboBox.Location = new System.Drawing.Point(306, 146);
+            this.suspectGenderComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.suspectGenderComboBox.Name = "suspectGenderComboBox";
             this.suspectGenderComboBox.Properties.AutoComplete = false;
             this.suspectGenderComboBox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
@@ -259,14 +274,15 @@
             this.suspectGenderComboBox.Properties.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.suspectGenderComboBox.Size = new System.Drawing.Size(54, 20);
+            this.suspectGenderComboBox.Size = new System.Drawing.Size(108, 34);
             this.suspectGenderComboBox.TabIndex = 15;
             // 
             // suspectBirthdayDatePicker
             // 
             this.suspectBirthdayDatePicker.EditValue = null;
             this.suspectBirthdayDatePicker.Enabled = false;
-            this.suspectBirthdayDatePicker.Location = new System.Drawing.Point(213, 76);
+            this.suspectBirthdayDatePicker.Location = new System.Drawing.Point(426, 146);
+            this.suspectBirthdayDatePicker.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.suspectBirthdayDatePicker.Name = "suspectBirthdayDatePicker";
             this.suspectBirthdayDatePicker.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.suspectBirthdayDatePicker.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -277,84 +293,92 @@
             this.suspectBirthdayDatePicker.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.suspectBirthdayDatePicker.Properties.EditFormat.FormatString = "";
             this.suspectBirthdayDatePicker.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.suspectBirthdayDatePicker.Size = new System.Drawing.Size(162, 20);
+            this.suspectBirthdayDatePicker.Size = new System.Drawing.Size(324, 34);
             this.suspectBirthdayDatePicker.TabIndex = 17;
             // 
             // suspectEyesTextBox
             // 
             this.suspectEyesTextBox.Enabled = false;
-            this.suspectEyesTextBox.Location = new System.Drawing.Point(371, 131);
+            this.suspectEyesTextBox.Location = new System.Drawing.Point(742, 252);
+            this.suspectEyesTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.suspectEyesTextBox.Name = "suspectEyesTextBox";
             this.suspectEyesTextBox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.suspectEyesTextBox.Properties.Mask.BeepOnError = true;
             this.suspectEyesTextBox.Properties.Mask.EditMask = "n2";
-            this.suspectEyesTextBox.Size = new System.Drawing.Size(134, 20);
+            this.suspectEyesTextBox.Size = new System.Drawing.Size(268, 34);
             this.suspectEyesTextBox.TabIndex = 36;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(368, 115);
+            this.label13.Location = new System.Drawing.Point(736, 221);
+            this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(30, 13);
+            this.label13.Size = new System.Drawing.Size(54, 25);
             this.label13.TabIndex = 35;
             this.label13.Text = "Eyes";
             // 
             // suspectHeightTextBox
             // 
             this.suspectHeightTextBox.Enabled = false;
-            this.suspectHeightTextBox.Location = new System.Drawing.Point(263, 131);
+            this.suspectHeightTextBox.Location = new System.Drawing.Point(526, 252);
+            this.suspectHeightTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.suspectHeightTextBox.Name = "suspectHeightTextBox";
             this.suspectHeightTextBox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.suspectHeightTextBox.Properties.Mask.BeepOnError = true;
             this.suspectHeightTextBox.Properties.Mask.EditMask = "n2";
             this.suspectHeightTextBox.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.suspectHeightTextBox.Size = new System.Drawing.Size(102, 20);
+            this.suspectHeightTextBox.Size = new System.Drawing.Size(204, 34);
             this.suspectHeightTextBox.TabIndex = 34;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(260, 115);
+            this.label11.Location = new System.Drawing.Point(520, 221);
+            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(62, 13);
+            this.label11.Size = new System.Drawing.Size(124, 25);
             this.label11.TabIndex = 33;
             this.label11.Text = "Height (cm)";
             // 
             // suspectBuildTextBox
             // 
             this.suspectBuildTextBox.Enabled = false;
-            this.suspectBuildTextBox.Location = new System.Drawing.Point(151, 131);
+            this.suspectBuildTextBox.Location = new System.Drawing.Point(302, 252);
+            this.suspectBuildTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.suspectBuildTextBox.Name = "suspectBuildTextBox";
             this.suspectBuildTextBox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.suspectBuildTextBox.Size = new System.Drawing.Size(106, 20);
+            this.suspectBuildTextBox.Size = new System.Drawing.Size(212, 34);
             this.suspectBuildTextBox.TabIndex = 32;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(148, 115);
+            this.label10.Location = new System.Drawing.Point(296, 221);
+            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(29, 13);
+            this.label10.Size = new System.Drawing.Size(59, 25);
             this.label10.TabIndex = 31;
             this.label10.Text = "Build";
             // 
             // suspectHairTextBox
             // 
             this.suspectHairTextBox.Enabled = false;
-            this.suspectHairTextBox.Location = new System.Drawing.Point(151, 178);
+            this.suspectHairTextBox.Location = new System.Drawing.Point(302, 342);
+            this.suspectHairTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.suspectHairTextBox.Name = "suspectHairTextBox";
             this.suspectHairTextBox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.suspectHairTextBox.Properties.Mask.BeepOnError = true;
-            this.suspectHairTextBox.Size = new System.Drawing.Size(163, 20);
+            this.suspectHairTextBox.Size = new System.Drawing.Size(326, 34);
             this.suspectHairTextBox.TabIndex = 40;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(148, 162);
+            this.label12.Location = new System.Drawing.Point(296, 312);
+            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(26, 13);
+            this.label12.Size = new System.Drawing.Size(50, 25);
             this.label12.TabIndex = 39;
             this.label12.Text = "Hair";
             // 
@@ -372,9 +396,11 @@
             this.groupBox2.Controls.Add(this.departmentComboBox);
             this.groupBox2.Controls.Add(this.textEdit1);
             this.groupBox2.Controls.Add(this.trialDayDatePicker);
-            this.groupBox2.Location = new System.Drawing.Point(12, 221);
+            this.groupBox2.Location = new System.Drawing.Point(24, 425);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(505, 260);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox2.Size = new System.Drawing.Size(1010, 500);
             this.groupBox2.TabIndex = 41;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Case Info";
@@ -382,42 +408,47 @@
             // simpleButton5
             // 
             this.simpleButton5.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.simpleButton5.Location = new System.Drawing.Point(360, 223);
+            this.simpleButton5.Location = new System.Drawing.Point(720, 429);
+            this.simpleButton5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(75, 27);
+            this.simpleButton5.Size = new System.Drawing.Size(150, 52);
             this.simpleButton5.TabIndex = 51;
             this.simpleButton5.Text = "Cancel";
             // 
             // simpleButton4
             // 
             this.simpleButton4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.simpleButton4.Location = new System.Drawing.Point(360, 164);
+            this.simpleButton4.Location = new System.Drawing.Point(720, 315);
+            this.simpleButton4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(75, 27);
+            this.simpleButton4.Size = new System.Drawing.Size(150, 52);
             this.simpleButton4.TabIndex = 50;
             this.simpleButton4.Text = "Clear";
             // 
             // simpleButton3
             // 
             this.simpleButton3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.simpleButton3.Location = new System.Drawing.Point(359, 106);
+            this.simpleButton3.Location = new System.Drawing.Point(718, 204);
+            this.simpleButton3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(74, 27);
+            this.simpleButton3.Size = new System.Drawing.Size(148, 52);
             this.simpleButton3.TabIndex = 49;
             this.simpleButton3.Text = "Save";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(356, 58);
+            this.label18.Location = new System.Drawing.Point(712, 112);
+            this.label18.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(38, 13);
+            this.label18.Size = new System.Drawing.Size(70, 25);
             this.label18.TabIndex = 42;
             this.label18.Text = "Status";
             // 
             // comboBoxEdit2
             // 
-            this.comboBoxEdit2.Location = new System.Drawing.Point(359, 74);
+            this.comboBoxEdit2.Location = new System.Drawing.Point(718, 142);
+            this.comboBoxEdit2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.comboBoxEdit2.Name = "comboBoxEdit2";
             this.comboBoxEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -429,7 +460,7 @@
             "In Trail",
             "K.I.A",
             "M.I.A"});
-            this.comboBoxEdit2.Size = new System.Drawing.Size(134, 20);
+            this.comboBoxEdit2.Size = new System.Drawing.Size(268, 34);
             this.comboBoxEdit2.TabIndex = 43;
             // 
             // groupBox3
@@ -444,18 +475,21 @@
             this.groupBox3.Controls.Add(this.officerIDTextBox);
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Location = new System.Drawing.Point(9, 60);
+            this.groupBox3.Location = new System.Drawing.Point(18, 115);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(345, 190);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox3.Size = new System.Drawing.Size(690, 365);
             this.groupBox3.TabIndex = 48;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Officer Info";
             // 
             // editOfficerButton
             // 
-            this.editOfficerButton.Location = new System.Drawing.Point(6, 142);
+            this.editOfficerButton.Location = new System.Drawing.Point(12, 273);
+            this.editOfficerButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.editOfficerButton.Name = "editOfficerButton";
-            this.editOfficerButton.Size = new System.Drawing.Size(112, 29);
+            this.editOfficerButton.Size = new System.Drawing.Size(224, 56);
             this.editOfficerButton.TabIndex = 42;
             this.editOfficerButton.Text = "Change Officer";
             this.editOfficerButton.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -463,16 +497,18 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(127, 131);
+            this.label17.Location = new System.Drawing.Point(254, 252);
+            this.label17.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(60, 13);
+            this.label17.Size = new System.Drawing.Size(116, 25);
             this.label17.TabIndex = 49;
             this.label17.Text = "Deparment";
             // 
             // officerDepartmentComboBox
             // 
             this.officerDepartmentComboBox.Enabled = false;
-            this.officerDepartmentComboBox.Location = new System.Drawing.Point(130, 147);
+            this.officerDepartmentComboBox.Location = new System.Drawing.Point(260, 283);
+            this.officerDepartmentComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.officerDepartmentComboBox.Name = "officerDepartmentComboBox";
             this.officerDepartmentComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -483,7 +519,7 @@
             " United States Marshals Service",
             " Federal Air Marshal Service",
             " Immigration and Customs Enforcement"});
-            this.officerDepartmentComboBox.Size = new System.Drawing.Size(187, 20);
+            this.officerDepartmentComboBox.Size = new System.Drawing.Size(374, 34);
             this.officerDepartmentComboBox.TabIndex = 50;
             // 
             // officerPictureBox
@@ -491,9 +527,10 @@
             this.officerPictureBox.BackColor = System.Drawing.Color.White;
             this.officerPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.officerPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.officerPictureBox.Location = new System.Drawing.Point(6, 17);
+            this.officerPictureBox.Location = new System.Drawing.Point(12, 33);
+            this.officerPictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.officerPictureBox.Name = "officerPictureBox";
-            this.officerPictureBox.Size = new System.Drawing.Size(112, 116);
+            this.officerPictureBox.Size = new System.Drawing.Size(222, 221);
             this.officerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.officerPictureBox.TabIndex = 42;
             this.officerPictureBox.TabStop = false;
@@ -502,87 +539,97 @@
             // officerLastNameTextBox
             // 
             this.officerLastNameTextBox.Enabled = false;
-            this.officerLastNameTextBox.Location = new System.Drawing.Point(130, 69);
+            this.officerLastNameTextBox.Location = new System.Drawing.Point(260, 133);
+            this.officerLastNameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.officerLastNameTextBox.Name = "officerLastNameTextBox";
             this.officerLastNameTextBox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.officerLastNameTextBox.Size = new System.Drawing.Size(140, 20);
+            this.officerLastNameTextBox.Size = new System.Drawing.Size(280, 34);
             this.officerLastNameTextBox.TabIndex = 21;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(126, 14);
+            this.label14.Location = new System.Drawing.Point(252, 27);
+            this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(58, 13);
+            this.label14.Size = new System.Drawing.Size(113, 25);
             this.label14.TabIndex = 18;
             this.label14.Text = "First Name";
             // 
             // officerFirstNameTextBox
             // 
             this.officerFirstNameTextBox.Enabled = false;
-            this.officerFirstNameTextBox.Location = new System.Drawing.Point(129, 30);
+            this.officerFirstNameTextBox.Location = new System.Drawing.Point(258, 58);
+            this.officerFirstNameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.officerFirstNameTextBox.Name = "officerFirstNameTextBox";
             this.officerFirstNameTextBox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.officerFirstNameTextBox.Size = new System.Drawing.Size(141, 20);
+            this.officerFirstNameTextBox.Size = new System.Drawing.Size(282, 34);
             this.officerFirstNameTextBox.TabIndex = 19;
             // 
             // officerIDTextBox
             // 
             this.officerIDTextBox.Enabled = false;
-            this.officerIDTextBox.Location = new System.Drawing.Point(129, 108);
+            this.officerIDTextBox.Location = new System.Drawing.Point(258, 208);
+            this.officerIDTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.officerIDTextBox.Name = "officerIDTextBox";
             this.officerIDTextBox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.officerIDTextBox.Size = new System.Drawing.Size(109, 20);
+            this.officerIDTextBox.Size = new System.Drawing.Size(218, 34);
             this.officerIDTextBox.TabIndex = 23;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(126, 92);
+            this.label15.Location = new System.Drawing.Point(252, 177);
+            this.label15.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(58, 13);
+            this.label15.Size = new System.Drawing.Size(116, 25);
             this.label15.TabIndex = 22;
             this.label15.Text = "ID Number";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(127, 53);
+            this.label16.Location = new System.Drawing.Point(254, 102);
+            this.label16.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(57, 13);
+            this.label16.Size = new System.Drawing.Size(110, 25);
             this.label16.TabIndex = 20;
             this.label16.Text = "Last Name";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(164, 17);
+            this.label8.Location = new System.Drawing.Point(328, 33);
+            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 13);
+            this.label8.Size = new System.Drawing.Size(196, 25);
             this.label8.TabIndex = 46;
             this.label8.Text = "Deparment Handler";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 17);
+            this.label6.Location = new System.Drawing.Point(12, 33);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 13);
+            this.label6.Size = new System.Drawing.Size(116, 25);
             this.label6.TabIndex = 42;
             this.label6.Text = "ID Number";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(356, 17);
+            this.label7.Location = new System.Drawing.Point(712, 33);
+            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 13);
+            this.label7.Size = new System.Drawing.Size(95, 25);
             this.label7.TabIndex = 44;
             this.label7.Text = "Trial Day";
             // 
             // departmentComboBox
             // 
-            this.departmentComboBox.Location = new System.Drawing.Point(167, 33);
+            this.departmentComboBox.Location = new System.Drawing.Point(334, 63);
+            this.departmentComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.departmentComboBox.Name = "departmentComboBox";
             this.departmentComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -593,21 +640,23 @@
             " United States Marshals Service",
             " Federal Air Marshal Service",
             " Immigration and Customs Enforcement"});
-            this.departmentComboBox.Size = new System.Drawing.Size(187, 20);
+            this.departmentComboBox.Size = new System.Drawing.Size(374, 34);
             this.departmentComboBox.TabIndex = 47;
             // 
             // textEdit1
             // 
             this.textEdit1.Enabled = false;
-            this.textEdit1.Location = new System.Drawing.Point(9, 33);
+            this.textEdit1.Location = new System.Drawing.Point(18, 63);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(153, 20);
+            this.textEdit1.Size = new System.Drawing.Size(306, 34);
             this.textEdit1.TabIndex = 43;
             // 
             // trialDayDatePicker
             // 
             this.trialDayDatePicker.EditValue = null;
-            this.trialDayDatePicker.Location = new System.Drawing.Point(359, 33);
+            this.trialDayDatePicker.Location = new System.Drawing.Point(718, 63);
+            this.trialDayDatePicker.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.trialDayDatePicker.Name = "trialDayDatePicker";
             this.trialDayDatePicker.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -617,32 +666,34 @@
             this.trialDayDatePicker.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.trialDayDatePicker.Properties.EditFormat.FormatString = "";
             this.trialDayDatePicker.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.trialDayDatePicker.Size = new System.Drawing.Size(134, 20);
+            this.trialDayDatePicker.Size = new System.Drawing.Size(268, 34);
             this.trialDayDatePicker.TabIndex = 45;
             // 
             // crimesTextBox
             // 
-            this.crimesTextBox.Location = new System.Drawing.Point(526, 28);
+            this.crimesTextBox.Location = new System.Drawing.Point(1052, 54);
+            this.crimesTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.crimesTextBox.Multiline = true;
             this.crimesTextBox.Name = "crimesTextBox";
             this.crimesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.crimesTextBox.Size = new System.Drawing.Size(365, 453);
+            this.crimesTextBox.Size = new System.Drawing.Size(726, 867);
             this.crimesTextBox.TabIndex = 43;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(523, 12);
+            this.label19.Location = new System.Drawing.Point(1046, 23);
+            this.label19.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(39, 13);
+            this.label19.Size = new System.Drawing.Size(76, 25);
             this.label19.TabIndex = 42;
             this.label19.Text = "Crimes";
             // 
             // ModifyCase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(903, 493);
+            this.ClientSize = new System.Drawing.Size(1806, 950);
             this.Controls.Add(this.crimesTextBox);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.groupBox2);
@@ -657,6 +708,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.editSuspectButton);
             this.Controls.Add(this.suspectPictureBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "ModifyCase";
             this.Text = "Modify Case";
             ((System.ComponentModel.ISupportInitialize)(this.suspectPictureBox)).EndInit();

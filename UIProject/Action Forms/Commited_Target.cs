@@ -15,6 +15,7 @@ namespace UIProject
     {
         public Crime crime = new Crime();
         public Dictionary<string,string> a = new Dictionary<string, string>();
+        
         public AddCase()
         {
             InitializeComponent();
@@ -115,9 +116,11 @@ namespace UIProject
                 a.Add("id", idTextBox.Text);
                 a.Add("status", statusComboBox.Text);
                 parent.NotifyMe(a);
+
                 Close();
             }
         }
+
         public static List<string> getData()
         {
             var appPath = Application.StartupPath;
