@@ -39,7 +39,7 @@ namespace UIProject
                 temp.UserLogin = read.GetInt32(0);
 
                 temp.Email = read.GetString(1).Trim();
-
+        
                 temp.Password = read.GetString(2).Trim();
                 LoginTable.Add(temp);
             }
@@ -55,6 +55,8 @@ namespace UIProject
                 if (SaltPassword.VerifyHash(passwordTextBox.Text, "SHA512", temp.Password) == true)
                 {
                     SessionInfo.UserID = temp.UserLogin;
+                    SessionInfo.UserName = temp.Email;
+                    
                     Console.WriteLine(SessionInfo.UserID);
                     return true;
                 }

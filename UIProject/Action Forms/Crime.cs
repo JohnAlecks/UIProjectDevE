@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using UIProject.Tools;
 using UIProject.Database;
 using UIProject.Database.Database_Controller;
+using UIProject.Securities;
 
 namespace UIProject.Action_Forms
 {
@@ -17,10 +18,14 @@ namespace UIProject.Action_Forms
         public Crime()
         {
             InitializeComponent();
+            getLoginData();
         }
 
         public static DataGridView dgv = new DataGridView();
-        public static string index;
+        public static int index;
+        public string getId = "";
+        public int current = 0;
+        public Dictionary<int, Dictionary<string, string>> suspects = new Dictionary<int, Dictionary<string, string>>(); 
         public static SqlConnection getc()
         {
             var appPath = Application.StartupPath;
@@ -28,6 +33,13 @@ namespace UIProject.Action_Forms
                 appPath + "\\CriminalRecord.mdf;Integrated Security=True";
             var conn = new SqlConnection(sqlstr);
             return conn;
+        }
+        private void getLoginData() {
+            officerFirstNameTextBox.Text = Cookies.SessionInfo.UserName;
+            officerLastNameTextBox.Text = Cookies.SessionInfo.UserName;
+            officerIDTextBox.Text = Cookies.SessionInfo.UserID.ToString();
+            officerDepartmentComboBox.Text = Cookies.SessionInfo.Department;
+
         }
 
 
@@ -39,20 +51,26 @@ namespace UIProject.Action_Forms
             }
         }
 
+        public void NotifyMeEdit(int index,Dictionary<string, string> suspectDetail)
+        {
+            dataGridView1.Rows[index].Cells[1].Value = suspectDetail["firstname"];
+            dataGridView1.Rows[index].Cells[0].Value = suspectDetail["id"];
+            dataGridView1.Rows[index].Cells[2].Value = suspectDetail["lastname"];
+            dataGridView1.Rows[index].Cells[3].Value = suspectDetail["gender"];
+            suspects[index] = suspectDetail;
+            dataGridView1.Refresh();
+            
+        }
         public void NotifyMe(Dictionary<string, string> suspectDetail)
         {
             var temp = AddCase.getData();
             dataGridView1.Rows.Add(temp[temp.Count - 1], suspectDetail["firstName"], suspectDetail["lastName"], suspectDetail["gender"], suspectDetail["status"]);
-
+            suspects.Add(dataGridView1.Rows.Count - 1, suspectDetail);
+            current = dataGridView1.Rows.Count - 1;
             //officerPictureBox.Image = ImageTools.Base64ToImage(suspectDetail["Image"]);
-            
-        }
-        private void cmtFormClosed(object sender, FormClosedEventArgs e)
-        {
-            var temp = AddCase.getData();
-            dataGridView1.Rows.Add(temp[temp.Count - 1]);
-        }
 
+        }
+        
         private void btn_Submit_Click(object sender, EventArgs e)
         {
             var appPath = Application.StartupPath;
@@ -125,14 +143,22 @@ namespace UIProject.Action_Forms
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            index = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            Console.Write(index);
+            index = dataGridView1.CurrentRow.Index;
+            getId = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            Console.Write(getId);
         }
 
         private void modifySuspectButton_Click(object sender, EventArgs e)
         {
-            Edit_CommittedTarget edit_target = new Edit_CommittedTarget(index);
-            edit_target.Show();
+            using (var formOptions = new Edit_CommittedTarget(getId, index, suspects[index]))
+            {
+                formOptions.ShowDialog(this);
+            }
+        }
+
+        private void officerLastNameTextBox_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

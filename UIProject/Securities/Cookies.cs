@@ -9,6 +9,9 @@ namespace UIProject.Securities
         public static class SessionInfo
         {
             public static int UserID;
+            public static string UserName;
+            public static string image;
+            public static string Department = "Drugs and Alcohol Enforcement";
         }
     }
 }

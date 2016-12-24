@@ -78,7 +78,7 @@
             this.suspectPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.suspectPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.suspectPictureBox.Location = new System.Drawing.Point(38, 57);
-            this.suspectPictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.suspectPictureBox.Margin = new System.Windows.Forms.Padding(6);
             this.suspectPictureBox.Name = "suspectPictureBox";
             this.suspectPictureBox.Size = new System.Drawing.Size(222, 221);
             this.suspectPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -88,7 +88,7 @@
             // simpleButton1
             // 
             this.simpleButton1.Location = new System.Drawing.Point(38, 307);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(6);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(224, 56);
             this.simpleButton1.TabIndex = 1;
@@ -108,7 +108,7 @@
             // firstNameTextBox
             // 
             this.firstNameTextBox.Location = new System.Drawing.Point(310, 53);
-            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(254, 34);
             this.firstNameTextBox.TabIndex = 3;
@@ -116,7 +116,7 @@
             // lastNameTextBox
             // 
             this.lastNameTextBox.Location = new System.Drawing.Point(576, 53);
-            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(388, 34);
             this.lastNameTextBox.TabIndex = 5;
@@ -134,7 +134,7 @@
             // idTextBox
             // 
             this.idTextBox.Location = new System.Drawing.Point(310, 140);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(254, 34);
             this.idTextBox.TabIndex = 7;
@@ -162,7 +162,7 @@
             // genderComboBox
             // 
             this.genderComboBox.Location = new System.Drawing.Point(576, 140);
-            this.genderComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.genderComboBox.Margin = new System.Windows.Forms.Padding(6);
             this.genderComboBox.Name = "genderComboBox";
             this.genderComboBox.Properties.AutoComplete = false;
             this.genderComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -188,7 +188,7 @@
             // 
             this.birthdayDatePicker.EditValue = null;
             this.birthdayDatePicker.Location = new System.Drawing.Point(696, 140);
-            this.birthdayDatePicker.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.birthdayDatePicker.Margin = new System.Windows.Forms.Padding(6);
             this.birthdayDatePicker.Name = "birthdayDatePicker";
             this.birthdayDatePicker.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -226,7 +226,7 @@
             // 
             this.trialDayDatePicker.EditValue = null;
             this.trialDayDatePicker.Location = new System.Drawing.Point(312, 222);
-            this.trialDayDatePicker.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.trialDayDatePicker.Margin = new System.Windows.Forms.Padding(6);
             this.trialDayDatePicker.Name = "trialDayDatePicker";
             this.trialDayDatePicker.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -252,7 +252,7 @@
             // statusComboBox
             // 
             this.statusComboBox.Location = new System.Drawing.Point(580, 384);
-            this.statusComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.statusComboBox.Margin = new System.Windows.Forms.Padding(6);
             this.statusComboBox.Name = "statusComboBox";
             this.statusComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -269,7 +269,7 @@
             // crimesTextBox
             // 
             this.crimesTextBox.Location = new System.Drawing.Point(314, 486);
-            this.crimesTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.crimesTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.crimesTextBox.Multiline = true;
             this.crimesTextBox.Name = "crimesTextBox";
             this.crimesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -289,7 +289,7 @@
             // buildTextBox
             // 
             this.buildTextBox.Location = new System.Drawing.Point(314, 303);
-            this.buildTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buildTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.buildTextBox.Name = "buildTextBox";
             this.buildTextBox.Properties.Mask.BeepOnError = true;
             this.buildTextBox.Properties.Mask.EditMask = "n2";
@@ -310,7 +310,7 @@
             // hairTextBox
             // 
             this.hairTextBox.Location = new System.Drawing.Point(314, 384);
-            this.hairTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.hairTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.hairTextBox.Name = "hairTextBox";
             this.hairTextBox.Properties.Mask.BeepOnError = true;
             this.hairTextBox.Size = new System.Drawing.Size(254, 34);
@@ -329,7 +329,7 @@
             // heightTextBox
             // 
             this.heightTextBox.Location = new System.Drawing.Point(536, 303);
-            this.heightTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.heightTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.heightTextBox.Name = "heightTextBox";
             this.heightTextBox.Properties.Mask.BeepOnError = true;
             this.heightTextBox.Properties.Mask.EditMask = "n2";
@@ -349,7 +349,7 @@
             // simpleButton2
             // 
             this.simpleButton2.Location = new System.Drawing.Point(754, 802);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(6);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(210, 56);
             this.simpleButton2.TabIndex = 31;
@@ -359,7 +359,7 @@
             // eyesTextBox
             // 
             this.eyesTextBox.Location = new System.Drawing.Point(766, 303);
-            this.eyesTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.eyesTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.eyesTextBox.Name = "eyesTextBox";
             this.eyesTextBox.Size = new System.Drawing.Size(184, 33);
             this.eyesTextBox.TabIndex = 32;
@@ -367,7 +367,7 @@
             // jailNumberTextBox
             // 
             this.jailNumberTextBox.Location = new System.Drawing.Point(696, 224);
-            this.jailNumberTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.jailNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.jailNumberTextBox.Name = "jailNumberTextBox";
             this.jailNumberTextBox.Size = new System.Drawing.Size(268, 33);
             this.jailNumberTextBox.TabIndex = 33;
@@ -387,7 +387,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 917);
+            this.ClientSize = new System.Drawing.Size(1006, 917);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.jailNumberTextBox);
             this.Controls.Add(this.eyesTextBox);
@@ -418,7 +418,8 @@
             this.Controls.Add(this.birthdayDatePicker);
             this.Controls.Add(this.trialDayDatePicker);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "AddCase";
             this.Text = "Add Case";
             this.Load += new System.EventHandler(this.AddCase_Load);

@@ -70,7 +70,7 @@
             // firstNameTextBox
             // 
             this.firstNameTextBox.Location = new System.Drawing.Point(304, 81);
-            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(200, 34);
             this.firstNameTextBox.TabIndex = 1;
@@ -78,7 +78,7 @@
             // lastNameTextBox
             // 
             this.lastNameTextBox.Location = new System.Drawing.Point(516, 81);
-            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(468, 34);
             this.lastNameTextBox.TabIndex = 2;
@@ -96,7 +96,7 @@
             // emailTextBox
             // 
             this.emailTextBox.Location = new System.Drawing.Point(304, 231);
-            this.emailTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(680, 34);
             this.emailTextBox.TabIndex = 4;
@@ -124,7 +124,7 @@
             // empCodeTextBox
             // 
             this.empCodeTextBox.Location = new System.Drawing.Point(304, 316);
-            this.empCodeTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.empCodeTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.empCodeTextBox.Name = "empCodeTextBox";
             this.empCodeTextBox.Size = new System.Drawing.Size(200, 34);
             this.empCodeTextBox.TabIndex = 7;
@@ -132,7 +132,7 @@
             // departmentComboBox
             // 
             this.departmentComboBox.Location = new System.Drawing.Point(516, 316);
-            this.departmentComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.departmentComboBox.Margin = new System.Windows.Forms.Padding(6);
             this.departmentComboBox.Name = "departmentComboBox";
             this.departmentComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -180,7 +180,7 @@
             // 
             this.agreeCheckBox.AutoSize = true;
             this.agreeCheckBox.Location = new System.Drawing.Point(304, 570);
-            this.agreeCheckBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.agreeCheckBox.Margin = new System.Windows.Forms.Padding(6);
             this.agreeCheckBox.Name = "agreeCheckBox";
             this.agreeCheckBox.Size = new System.Drawing.Size(541, 29);
             this.agreeCheckBox.TabIndex = 14;
@@ -191,7 +191,7 @@
             // 
             this.signUpButton.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.signUpButton.Location = new System.Drawing.Point(515, 611);
-            this.signUpButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.signUpButton.Margin = new System.Windows.Forms.Padding(6);
             this.signUpButton.Name = "signUpButton";
             this.signUpButton.Size = new System.Drawing.Size(190, 71);
             this.signUpButton.TabIndex = 15;
@@ -211,7 +211,7 @@
             // addressTextBox
             // 
             this.addressTextBox.Location = new System.Drawing.Point(304, 156);
-            this.addressTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.addressTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(680, 34);
             this.addressTextBox.TabIndex = 16;
@@ -219,7 +219,7 @@
             // passwordTextBox
             // 
             this.passwordTextBox.Location = new System.Drawing.Point(304, 424);
-            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(676, 33);
@@ -229,7 +229,7 @@
             // retypePasswordTextBox
             // 
             this.retypePasswordTextBox.Location = new System.Drawing.Point(304, 518);
-            this.retypePasswordTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.retypePasswordTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.retypePasswordTextBox.Name = "retypePasswordTextBox";
             this.retypePasswordTextBox.PasswordChar = '*';
             this.retypePasswordTextBox.Size = new System.Drawing.Size(676, 33);
@@ -284,7 +284,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.departmentComboBox);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "SignUp";
             this.Text = "Sign Up";
             ((System.ComponentModel.ISupportInitialize)(this.firstNameTextBox.Properties)).EndInit();

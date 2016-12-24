@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.caseInformationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,7 +43,6 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.editOfficerButton = new DevExpress.XtraEditors.SimpleButton();
             this.label17 = new System.Windows.Forms.Label();
-            this.officerPictureBox = new System.Windows.Forms.PictureBox();
             this.officerLastNameTextBox = new DevExpress.XtraEditors.TextEdit();
             this.label14 = new System.Windows.Forms.Label();
             this.officerFirstNameTextBox = new DevExpress.XtraEditors.TextEdit();
@@ -66,13 +64,13 @@
             this.removeSuspectButton = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.caseInformationBindingSource)).BeginInit();
+            this.officerPictureBox = new System.Windows.Forms.PictureBox();
+            this.caseInformationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.officerPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officerLastNameTextBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officerFirstNameTextBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officerIDTextBox.Properties)).BeginInit();
@@ -83,11 +81,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.officerPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.caseInformationBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // caseInformationBindingSource
-            // 
-            this.caseInformationBindingSource.DataMember = "Case_Information";
             // 
             // dataGridView1
             // 
@@ -101,7 +97,7 @@
             this.gender,
             this.status});
             this.dataGridView1.Location = new System.Drawing.Point(234, 35);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 33;
@@ -148,9 +144,9 @@
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(24, 23);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
             this.groupBox1.Size = new System.Drawing.Size(1378, 419);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
@@ -169,7 +165,7 @@
             // comboBoxEdit2
             // 
             this.comboBoxEdit2.Location = new System.Drawing.Point(704, 365);
-            this.comboBoxEdit2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comboBoxEdit2.Margin = new System.Windows.Forms.Padding(6);
             this.comboBoxEdit2.Name = "comboBoxEdit2";
             this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -224,7 +220,7 @@
             // comboBoxEdit1
             // 
             this.comboBoxEdit1.Location = new System.Drawing.Point(1050, 371);
-            this.comboBoxEdit1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comboBoxEdit1.Margin = new System.Windows.Forms.Padding(6);
             this.comboBoxEdit1.Name = "comboBoxEdit1";
             this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -279,9 +275,9 @@
             this.groupBox4.Controls.Add(this.label16);
             this.groupBox4.Controls.Add(this.officerDepartmentComboBox);
             this.groupBox4.Location = new System.Drawing.Point(0, 37);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(6);
             this.groupBox4.Size = new System.Drawing.Size(690, 373);
             this.groupBox4.TabIndex = 49;
             this.groupBox4.TabStop = false;
@@ -290,7 +286,7 @@
             // editOfficerButton
             // 
             this.editOfficerButton.Location = new System.Drawing.Point(12, 273);
-            this.editOfficerButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.editOfficerButton.Margin = new System.Windows.Forms.Padding(6);
             this.editOfficerButton.Name = "editOfficerButton";
             this.editOfficerButton.Size = new System.Drawing.Size(224, 56);
             this.editOfficerButton.TabIndex = 42;
@@ -307,28 +303,16 @@
             this.label17.TabIndex = 49;
             this.label17.Text = "Deparment";
             // 
-            // officerPictureBox
-            // 
-            this.officerPictureBox.BackColor = System.Drawing.Color.White;
-            this.officerPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.officerPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.officerPictureBox.Location = new System.Drawing.Point(12, 33);
-            this.officerPictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.officerPictureBox.Name = "officerPictureBox";
-            this.officerPictureBox.Size = new System.Drawing.Size(222, 221);
-            this.officerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.officerPictureBox.TabIndex = 42;
-            this.officerPictureBox.TabStop = false;
-            // 
             // officerLastNameTextBox
             // 
             this.officerLastNameTextBox.Enabled = false;
             this.officerLastNameTextBox.Location = new System.Drawing.Point(260, 133);
-            this.officerLastNameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.officerLastNameTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.officerLastNameTextBox.Name = "officerLastNameTextBox";
             this.officerLastNameTextBox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.officerLastNameTextBox.Size = new System.Drawing.Size(280, 34);
             this.officerLastNameTextBox.TabIndex = 21;
+            this.officerLastNameTextBox.EditValueChanged += new System.EventHandler(this.officerLastNameTextBox_EditValueChanged);
             // 
             // label14
             // 
@@ -344,7 +328,7 @@
             // 
             this.officerFirstNameTextBox.Enabled = false;
             this.officerFirstNameTextBox.Location = new System.Drawing.Point(258, 58);
-            this.officerFirstNameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.officerFirstNameTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.officerFirstNameTextBox.Name = "officerFirstNameTextBox";
             this.officerFirstNameTextBox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.officerFirstNameTextBox.Size = new System.Drawing.Size(282, 34);
@@ -353,7 +337,7 @@
             // officerIDTextBox
             // 
             this.officerIDTextBox.Location = new System.Drawing.Point(258, 208);
-            this.officerIDTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.officerIDTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.officerIDTextBox.Name = "officerIDTextBox";
             this.officerIDTextBox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.officerIDTextBox.Size = new System.Drawing.Size(218, 34);
@@ -383,7 +367,7 @@
             // 
             this.officerDepartmentComboBox.Enabled = false;
             this.officerDepartmentComboBox.Location = new System.Drawing.Point(260, 283);
-            this.officerDepartmentComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.officerDepartmentComboBox.Margin = new System.Windows.Forms.Padding(6);
             this.officerDepartmentComboBox.Name = "officerDepartmentComboBox";
             this.officerDepartmentComboBox.Size = new System.Drawing.Size(374, 34);
             this.officerDepartmentComboBox.TabIndex = 50;
@@ -399,9 +383,9 @@
             this.groupBox2.Controls.Add(this.textEdit4);
             this.groupBox2.Controls.Add(this.textEdit3);
             this.groupBox2.Location = new System.Drawing.Point(704, 37);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(6);
             this.groupBox2.Size = new System.Drawing.Size(662, 292);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
@@ -450,7 +434,7 @@
             // textEdit1
             // 
             this.textEdit1.Location = new System.Drawing.Point(54, 67);
-            this.textEdit1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(6);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(590, 34);
             this.textEdit1.TabIndex = 0;
@@ -458,7 +442,7 @@
             // textEdit2
             // 
             this.textEdit2.Location = new System.Drawing.Point(54, 142);
-            this.textEdit2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textEdit2.Margin = new System.Windows.Forms.Padding(6);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -510,7 +494,7 @@
             // textEdit4
             // 
             this.textEdit4.Location = new System.Drawing.Point(54, 217);
-            this.textEdit4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textEdit4.Margin = new System.Windows.Forms.Padding(6);
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -555,7 +539,7 @@
             // textEdit3
             // 
             this.textEdit3.Location = new System.Drawing.Point(346, 217);
-            this.textEdit3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textEdit3.Margin = new System.Windows.Forms.Padding(6);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -590,7 +574,7 @@
             // addSuspectButton
             // 
             this.addSuspectButton.Location = new System.Drawing.Point(32, 37);
-            this.addSuspectButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.addSuspectButton.Margin = new System.Windows.Forms.Padding(6);
             this.addSuspectButton.Name = "addSuspectButton";
             this.addSuspectButton.Size = new System.Drawing.Size(192, 44);
             this.addSuspectButton.TabIndex = 14;
@@ -600,7 +584,7 @@
             // modifySuspectButton
             // 
             this.modifySuspectButton.Location = new System.Drawing.Point(32, 92);
-            this.modifySuspectButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.modifySuspectButton.Margin = new System.Windows.Forms.Padding(6);
             this.modifySuspectButton.Name = "modifySuspectButton";
             this.modifySuspectButton.Size = new System.Drawing.Size(192, 44);
             this.modifySuspectButton.TabIndex = 15;
@@ -610,7 +594,7 @@
             // removeSuspectButton
             // 
             this.removeSuspectButton.Location = new System.Drawing.Point(32, 148);
-            this.removeSuspectButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.removeSuspectButton.Margin = new System.Windows.Forms.Padding(6);
             this.removeSuspectButton.Name = "removeSuspectButton";
             this.removeSuspectButton.Size = new System.Drawing.Size(192, 44);
             this.removeSuspectButton.TabIndex = 16;
@@ -624,9 +608,9 @@
             this.groupBox3.Controls.Add(this.modifySuspectButton);
             this.groupBox3.Controls.Add(this.addSuspectButton);
             this.groupBox3.Location = new System.Drawing.Point(24, 444);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(6);
             this.groupBox3.Size = new System.Drawing.Size(1378, 342);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
@@ -634,13 +618,30 @@
             // 
             // simpleButton3
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(1206, 798);
-            this.simpleButton3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.simpleButton3.Location = new System.Drawing.Point(1194, 802);
+            this.simpleButton3.Margin = new System.Windows.Forms.Padding(6);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(196, 62);
             this.simpleButton3.TabIndex = 17;
             this.simpleButton3.Text = "Done";
             this.simpleButton3.Click += new System.EventHandler(this.btn_Submit_Click);
+            // 
+            // officerPictureBox
+            // 
+            this.officerPictureBox.BackColor = System.Drawing.Color.White;
+            this.officerPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.officerPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.officerPictureBox.Location = new System.Drawing.Point(12, 33);
+            this.officerPictureBox.Margin = new System.Windows.Forms.Padding(6);
+            this.officerPictureBox.Name = "officerPictureBox";
+            this.officerPictureBox.Size = new System.Drawing.Size(222, 221);
+            this.officerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.officerPictureBox.TabIndex = 42;
+            this.officerPictureBox.TabStop = false;
+            // 
+            // caseInformationBindingSource
+            // 
+            this.caseInformationBindingSource.DataMember = "Case_Information";
             // 
             // Crime
             // 
@@ -651,10 +652,9 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Crime";
             this.Text = "Crime";
-            ((System.ComponentModel.ISupportInitialize)(this.caseInformationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -662,7 +662,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.officerPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.officerLastNameTextBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.officerFirstNameTextBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.officerIDTextBox.Properties)).EndInit();
@@ -674,6 +673,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.officerPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.caseInformationBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

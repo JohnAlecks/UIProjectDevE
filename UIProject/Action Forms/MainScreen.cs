@@ -4,11 +4,14 @@ using DevExpress.XtraSplashScreen;
 using DevExpress.XtraBars.Ribbon;
 using UIProject.RibbonForm;
 using UIProject.Action_Forms;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace UIProject
 {
     public partial class UIProject : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        public string getId;
         public UIProject()
         {
             InitializeComponent();
@@ -16,6 +19,7 @@ namespace UIProject
             log.ShowMode = DevExpress.XtraSplashScreen.ShowMode.Form;
             log.ShowDialog();
             ribbonControl1.Minimized = true;
+            
             InitializeRibbonControl();
         }
         private void InitializeRibbonControl()
@@ -26,8 +30,59 @@ namespace UIProject
             var form = new Dashboard();
             form.Dock = DockStyle.Fill;
             xtraTabPage1.Controls.Add(form);
+            fillQueryIn();
+            fillQuery();
+        }
+        private void fillQueryIn() {
+            var appPath = Application.StartupPath;
+            Console.WriteLine(appPath + "Hello");
+            var constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" +
+                appPath + "\\CriminalRecord.mdf;Integrated Security=True";
+            var con = new SqlConnection(constring);
+
+            string sql = "SELECT * FROM Commit_Crime  ";
+            SqlCommand com = new SqlCommand(sql, con);
+
+            if (con.State != ConnectionState.Open)
+            {
+                con.Open();
+            }
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, con); //c.con is the connection string
+
+            SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
+            DataSet ds = new DataSet();
+            dataAdapter.Fill(ds);
+            caseDataGridView.ReadOnly = false;
+            caseDataGridView.DataSource = ds.Tables[0];
+            con.Close();
         }
 
+        private void fillQuery()
+        {
+            var appPath = Application.StartupPath;
+            Console.WriteLine(appPath + "Hello");
+            var constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" +
+                appPath + "\\CriminalRecord.mdf;Integrated Security=True";
+            var con = new SqlConnection(constring);
+
+            string sql = "SELECT * FROM Committed_Target  ";
+            SqlCommand com = new SqlCommand(sql, con);
+
+            if (con.State != ConnectionState.Open)
+            {
+                con.Open();
+            }
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, con); //c.con is the connection string
+
+            SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
+            DataSet ds = new DataSet();
+            dataAdapter.Fill(ds);
+            dataGridView1.ReadOnly = false;
+            dataGridView1.DataSource = ds.Tables[0];
+            con.Close();
+        }
         private void ExitButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Application.Exit();
@@ -36,8 +91,14 @@ namespace UIProject
         private void AddButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var ac = new Crime();
+            ac.FormClosed += new FormClosedEventHandler(acClose);
             ac.ShowDialog();
         }
+        private void acClose(object sender, FormClosedEventArgs e)
+        {
+            fillQueryIn();
+        }
+ 
 
         private void EditButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -143,6 +204,23 @@ namespace UIProject
                 ribbon.Minimized = false;
                 Application.DoEvents();
             }
+        }
+
+        private void xtraTabPage1_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void caseDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            getId = caseDataGridView.CurrentRow.Cells[0].Value.ToString();
+            Edit_Case ec = new Edit_Case(getId);
+            ec.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

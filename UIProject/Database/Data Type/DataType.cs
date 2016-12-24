@@ -8,7 +8,7 @@ namespace UIProject
     {
         private String email;
         private String password;
-
+        private String link;
         public int UserLogin { get; set; }
         public String Email
         {
@@ -24,7 +24,20 @@ namespace UIProject
                 }
             }
         }
-
+        public String Link
+        {
+            get
+            {
+                return link;
+            }
+            set
+            {
+                if (value != null && value != string.Empty)
+                {
+                    link = value;
+                }
+            }
+        }
         public String Password
         {
             get
