@@ -24,6 +24,7 @@ namespace UIProject.Action_Forms
         public static DataGridView dgv = new DataGridView();
         public static int index;
         public string getId = "";
+        public int officerID;
         public int current = 0;
         public Dictionary<int, Dictionary<string, string>> suspects = new Dictionary<int, Dictionary<string, string>>(); 
         public static SqlConnection getc()
@@ -39,7 +40,7 @@ namespace UIProject.Action_Forms
             officerLastNameTextBox.Text = Cookies.SessionInfo.UserName;
             officerIDTextBox.Text = Cookies.SessionInfo.UserID.ToString();
             officerDepartmentComboBox.Text = Cookies.SessionInfo.Department;
-
+            
         }
 
 
@@ -80,8 +81,8 @@ namespace UIProject.Action_Forms
 
             con.Open();
 
-            var sql = "INSERT INTO Commit_Crime (Date_Commit, Content, Criminal, Note, Information_ID, Context, Result)"
-                + "VALUES (@date_commit, @content, @criminal, @note, @id, @context, @result) ";
+            var sql = "INSERT INTO Commit_Crime (Date_Commit, Content, Criminal, Note, Information_ID, Context, Result, Officer_ID)"
+                + "VALUES (@date_commit, @content, @criminal, @note, @id, @context, @result, @officer_id) ";
             var command = new SqlCommand(sql, con);
             command.Parameters.Add("@date_commit", SqlDbType.DateTime).Value = DateTime.Now;
             command.Parameters.Add("@content", SqlDbType.VarChar, 38).Value = "123";
@@ -90,6 +91,13 @@ namespace UIProject.Action_Forms
             command.Parameters.Add("@id", SqlDbType.Int).Value = 1;
             command.Parameters.Add("@context", SqlDbType.VarChar).Value = "1";
             command.Parameters.Add("@result", SqlDbType.Int).Value = 1;
+            if (officerID == null || officerID == Cookies.SessionInfo.UserID)
+            {
+                command.Parameters.Add("@officer_ID", SqlDbType.Int).Value = Cookies.SessionInfo.UserID;
+            }
+            else {
+                command.Parameters.Add("@officer_ID", SqlDbType.Int).Value = officerID;
+            }
             command.ExecuteNonQuery();
             Console.WriteLine("COMPLETE");
 
@@ -103,6 +111,7 @@ namespace UIProject.Action_Forms
                 List<UserInfo> temp = DataQuery.runQuery(officerIDTextBox.Text);
                 try {
                     UserInfo officer = temp.First();
+                    officerID = officer.UserInfoID;
                     officerFirstNameTextBox.Text = officer.First_name;
                     officerLastNameTextBox.Text = officer.Last_name;
                     officerPictureBox.Image = ImageTools.Base64ToImage(officer.Link);
@@ -118,7 +127,6 @@ namespace UIProject.Action_Forms
                     var read = com.ExecuteReader();
                     while (read.Read()) {
                         officerDepartmentComboBox.Text = read.GetString(0);
-                        
                     }
                     con.Close();
                 } catch {
@@ -135,15 +143,31 @@ namespace UIProject.Action_Forms
 
         private void removeSuspectButton_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow item in dataGridView1.SelectedRows)
+            dataGridView1.Rows.RemoveAt(index);
+            dataGridView1.Refresh();
+            deleteCriminal(getId);
+        }
+
+        private void deleteCriminal(string id) {
+            var appPath = Application.StartupPath;
+            var constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" +
+                appPath + "\\CriminalRecord.mdf;Integrated Security=True;";
+            var con = new SqlConnection(constring);
+            if (con.State != ConnectionState.Open)
             {
-                dataGridView1.Rows.RemoveAt(item.Index);
+                con.Open();
             }
+            var sql = "DELETE FROM Committed_Target WHERE Committed_Target_ID = " + id;
+            var command = new SqlCommand(sql, con);
+            command.ExecuteNonQuery();
+            Console.Write("Delete COmplete");
+            con.Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             index = dataGridView1.CurrentRow.Index;
+            Console.WriteLine(index);
             getId = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             Console.Write(getId);
         }

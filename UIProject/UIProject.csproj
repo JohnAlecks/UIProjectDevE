@@ -119,6 +119,12 @@
     <Compile Include="Action Forms\Crime.Designer.cs">
       <DependentUpon>Crime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Action Forms\CriminalDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action Forms\CriminalDetail.Designer.cs">
+      <DependentUpon>CriminalDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Action Forms\Edit_Case.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Action Forms\Crime.resx">
       <DependentUpon>Crime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action Forms\CriminalDetail.resx">
+      <DependentUpon>CriminalDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Action Forms\Edit_Case.resx">
       <DependentUpon>Edit_Case.cs</DependentUpon>

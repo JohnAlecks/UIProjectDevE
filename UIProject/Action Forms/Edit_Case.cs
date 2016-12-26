@@ -39,13 +39,12 @@ namespace UIProject.Action_Forms
             var read = command.ExecuteReader();
             while (read.Read())
             {
-                textEdit1.Text = read.GetString(1);
-                textEdit2.Text = read.GetString(1);
-                textEdit3.Text = read.GetDateTime(2).ToString();
-                textEdit4.Text = read.GetString(9);
-                comboBoxEdit1.Text = read.GetDateTime(7).ToString();
-                comboBoxEdit2.Text = read.GetString(6);
-
+                textEdit1.Text = read.GetDateTime(1).ToString();
+                textEdit3.Text = read.GetString(2);
+                textEdit4.Text = read.GetString(4);
+                ///comboBoxEdit1.Text = read.GetDateTime(5).ToString();
+                //comboBoxEdit2.Text = read.GetString(5);
+                textEdit2.Text = read.GetString(6);
             }
             con.Close();
         }
