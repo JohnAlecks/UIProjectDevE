@@ -24,7 +24,7 @@ namespace UIProject
         }
         private void InitializeRibbonControl()
         {
-            var group1 = new RibbonPage("Test Group");
+            var group1 = new RibbonPage("Criminal List");
             ribbonControl1.Pages.Add(group1);
             xtraTabControl1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
             var form = new Dashboard();

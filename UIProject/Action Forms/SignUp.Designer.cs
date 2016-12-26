@@ -241,9 +241,9 @@
             this.editOfficerButton.Location = new System.Drawing.Point(15, 291);
             this.editOfficerButton.Margin = new System.Windows.Forms.Padding(6);
             this.editOfficerButton.Name = "editOfficerButton";
-            this.editOfficerButton.Size = new System.Drawing.Size(224, 56);
+            this.editOfficerButton.Size = new System.Drawing.Size(242, 56);
             this.editOfficerButton.TabIndex = 43;
-            this.editOfficerButton.Text = "Change Officer";
+            this.editOfficerButton.Text = "Choose Profile Picture";
             this.editOfficerButton.Click += new System.EventHandler(this.editOfficerButton_Click);
             // 
             // officerPictureBox
@@ -254,7 +254,7 @@
             this.officerPictureBox.Location = new System.Drawing.Point(15, 51);
             this.officerPictureBox.Margin = new System.Windows.Forms.Padding(6);
             this.officerPictureBox.Name = "officerPictureBox";
-            this.officerPictureBox.Size = new System.Drawing.Size(222, 221);
+            this.officerPictureBox.Size = new System.Drawing.Size(242, 221);
             this.officerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.officerPictureBox.TabIndex = 44;
             this.officerPictureBox.TabStop = false;

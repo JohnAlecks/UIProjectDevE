@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 using UIProject.Securities;
 using UIProject.Tools;
@@ -130,7 +129,7 @@ namespace UIProject
                 }
                 var appPath = Application.StartupPath;
                 Console.WriteLine(appPath);
-                var constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + appPath + "\\CriminalRecord.mdf;Integrated Security=True;Connect Timeout=30";
+                var constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + appPath + "\\CriminalRecord.mdf;Integrated Security=True";
                 var con = new SqlConnection(constring);
                 if (con.State != ConnectionState.Open)
                 {
