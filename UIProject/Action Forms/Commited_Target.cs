@@ -116,7 +116,6 @@ namespace UIProject
                 a.Add("id", idTextBox.Text);
                 a.Add("status", statusComboBox.Text);
                 parent.NotifyMe(a);
-
                 Close();
             }
         }

@@ -12,6 +12,7 @@ namespace UIProject
     public partial class UIProject : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         public string getId;
+        public int getIndex;
         public UIProject()
         {
             InitializeComponent();
@@ -19,7 +20,6 @@ namespace UIProject
             log.ShowMode = DevExpress.XtraSplashScreen.ShowMode.Form;
             log.ShowDialog();
             ribbonControl1.Minimized = true;
-            
             InitializeRibbonControl();
         }
         private void InitializeRibbonControl()
@@ -32,6 +32,7 @@ namespace UIProject
             xtraTabPage1.Controls.Add(form);
             fillQueryIn();
             fillQuery();
+            fillOfficer();
         }
         private void fillQueryIn() {
             var appPath = Application.StartupPath;
@@ -110,6 +111,9 @@ namespace UIProject
         {
             if (MessageBox.Show("Do you really want to delete this case ?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
+                caseDataGridView.Rows.RemoveAt(getIndex);
+                caseDataGridView.Refresh();
+                deleteCase(getId);
             }
         }
         public static void ShowLoading(Form ParentForm, String Caption)
@@ -214,6 +218,7 @@ namespace UIProject
         private void caseDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             getId = caseDataGridView.CurrentRow.Cells[0].Value.ToString();
+            getIndex = caseDataGridView.CurrentRow.Index;
             Edit_Case ec = new Edit_Case(getId);
             ec.Show();
         }
@@ -222,5 +227,60 @@ namespace UIProject
         {
 
         }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string criminalID = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            CriminalDetail ec = new CriminalDetail(criminalID);
+            ec.Show();
+        }
+
+        private void deleteCase(string id)
+        {
+            var appPath = Application.StartupPath;
+            var constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" +
+                appPath + "\\CriminalRecord.mdf;Integrated Security=True;";
+            var con = new SqlConnection(constring);
+            if (con.State != ConnectionState.Open)
+            {
+                con.Open();
+            }
+            var sql = "DELETE FROM Committed_Target WHERE Committed_Target_ID = " + id;
+            var command = new SqlCommand(sql, con);
+            command.ExecuteNonQuery();
+            Console.Write("Delete COmplete");
+            con.Close();
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void fillOfficer()
+        {
+            var appPath = Application.StartupPath;
+            Console.WriteLine(appPath + "Hello");
+            var constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" +
+                appPath + "\\CriminalRecord.mdf;Integrated Security=True";
+            var con = new SqlConnection(constring);
+
+            string sql = "SELECT * FROM UserInformations  ";
+            SqlCommand com = new SqlCommand(sql, con);
+
+            if (con.State != ConnectionState.Open)
+            {
+                con.Open();
+            }
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, con); //c.con is the connection string
+
+            SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
+            DataSet ds = new DataSet();
+            dataAdapter.Fill(ds);
+            dataGridView2.ReadOnly = false;
+            dataGridView2.DataSource = ds.Tables[0];
+            con.Close();
+        }
+
     }
 }
