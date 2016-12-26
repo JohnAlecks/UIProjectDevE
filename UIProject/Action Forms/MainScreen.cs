@@ -24,8 +24,6 @@ namespace UIProject
         }
         private void InitializeRibbonControl()
         {
-            var group1 = new RibbonPage("Test Group");
-            ribbonControl1.Pages.Add(group1);
             xtraTabControl1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
             var form = new Dashboard();
             form.Dock = DockStyle.Fill;
@@ -67,7 +65,7 @@ namespace UIProject
                 appPath + "\\CriminalRecord.mdf;Integrated Security=True";
             var con = new SqlConnection(constring);
 
-            string sql = "SELECT * FROM Committed_Target  ";
+            string sql = "SELECT * FROM Committed_Target";
             SqlCommand com = new SqlCommand(sql, con);
 
             if (con.State != ConnectionState.Open)
@@ -80,8 +78,8 @@ namespace UIProject
             SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
             DataSet ds = new DataSet();
             dataAdapter.Fill(ds);
-            dataGridView1.ReadOnly = false;
-            dataGridView1.DataSource = ds.Tables[0];
+            criminalGridView.ReadOnly = false;
+            criminalGridView.DataSource = ds.Tables[0];
             con.Close();
         }
         private void ExitButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -173,11 +171,14 @@ namespace UIProject
         private void ribbonControl1_SelectedPageChanged(object sender, EventArgs e)
         {
             var ribbon = sender as RibbonControl;
+            Console.WriteLine(ribbonControl1.Pages.Count);
             for (var i = 0; i < ribbonControl1.Pages.Count; i++)
             {
                 if (ribbon.SelectedPage == ribbonControl1.Pages[i])
                 {
                     xtraTabControl1.SelectedTabPageIndex = i;
+                    Console.WriteLine(i);
+                    
                 }
             }
         }
@@ -225,14 +226,14 @@ namespace UIProject
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            string criminalID = criminalGridView.CurrentRow.Cells[0].Value.ToString();
+            CriminalDetail ec = new CriminalDetail(criminalID);
+            ec.Show();
         }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string criminalID = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            CriminalDetail ec = new CriminalDetail(criminalID);
-            ec.Show();
+            
         }
 
         private void deleteCase(string id)
@@ -277,10 +278,16 @@ namespace UIProject
             SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
             DataSet ds = new DataSet();
             dataAdapter.Fill(ds);
-            dataGridView2.ReadOnly = false;
-            dataGridView2.DataSource = ds.Tables[0];
+            officerDataGridView.ReadOnly = false;
+            officerDataGridView.DataSource = ds.Tables[0];
             con.Close();
         }
 
+        private void criminalGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string criminalID = criminalGridView.CurrentRow.Cells[0].Value.ToString();
+            CriminalDetail ec = new CriminalDetail(criminalID);
+            ec.Show();
+        }
     }
 }

@@ -28,18 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UIProject));
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Fuck Police",
             "Fuck Police",
             "Fuck CS"}, -1);
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.barAndDockingController1 = new DevExpress.XtraBars.BarAndDockingController(this.components);
-            this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.barAndDockingController1 = new DevExpress.XtraBars.BarAndDockingController();
+            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.xtraTabbedMdiManager2 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
+            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.Page1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.SystemPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.UserPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.DatabasePageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.CasePageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.AddButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.EditButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.DeleteButtonIteem = new DevExpress.XtraBars.BarButtonItem();
@@ -51,40 +57,30 @@
             this.LogoutButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.ExitButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.HelpButtonItem = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.Page1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.CasePageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.DatabasePageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.UserPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.SystemPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.caseListView = new System.Windows.Forms.ListView();
+            this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.nameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dateColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.statusColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
-            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.caseListView = new System.Windows.Forms.ListView();
+            this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
+            this.officerDataGridView = new System.Windows.Forms.DataGridView();
+            this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
+            this.criminalGridView = new System.Windows.Forms.DataGridView();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.caseDataGridView = new System.Windows.Forms.DataGridView();
-            this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.xtraTabbedMdiManager2 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
-            this.xtraTabControl1.SuspendLayout();
+            this.xtraTabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.officerDataGridView)).BeginInit();
+            this.xtraTabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.criminalGridView)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.caseDataGridView)).BeginInit();
-            this.xtraTabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager2)).BeginInit();
-            this.xtraTabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
+            this.xtraTabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // barAndDockingController1
@@ -95,38 +91,69 @@
             this.barAndDockingController1.PropertiesBar.DefaultGlyphSize = new System.Drawing.Size(16, 16);
             this.barAndDockingController1.PropertiesBar.DefaultLargeGlyphSize = new System.Drawing.Size(32, 32);
             // 
-            // ribbonControl1
+            // xtraTabbedMdiManager2
             // 
-            this.ribbonControl1.Controller = this.barAndDockingController1;
-            this.ribbonControl1.ExpandCollapseItem.Id = 0;
-            this.ribbonControl1.ExpandCollapseItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.ribbonControl1.ExpandCollapseItem,
-            this.AddButtonItem,
-            this.EditButtonItem,
-            this.DeleteButtonIteem,
-            this.ConnectDatabaseButtonItem,
-            this.RefreshDatabaseButtonItem,
-            this.DisconnectDatabaseButtonItem,
-            this.ChangeUserButtonItem,
-            this.ChangePasswordButtonItem,
-            this.LogoutButtonItem,
-            this.ExitButtonItem,
-            this.HelpButtonItem});
-            this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(6);
-            this.ribbonControl1.MaxItemId = 1;
-            this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1,
-            this.Page1,
-            this.ribbonPage2,
-            this.ribbonPage3});
-            this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
-            this.ribbonControl1.Size = new System.Drawing.Size(1442, 253);
-            this.ribbonControl1.SelectedPageChanging += new DevExpress.XtraBars.Ribbon.RibbonPageChangingEventHandler(this.ribbonControl1_SelectedPageChanging);
-            this.ribbonControl1.SelectedPageChanged += new System.EventHandler(this.ribbonControl1_SelectedPageChanged);
-            this.ribbonControl1.MinimizedChanged += new System.EventHandler(this.ribbonControl1_MinimizedChanged);
+            this.xtraTabbedMdiManager2.Controller = this.barAndDockingController1;
+            this.xtraTabbedMdiManager2.MdiParent = this;
+            // 
+            // ribbonPage3
+            // 
+            this.ribbonPage3.Name = "ribbonPage3";
+            this.ribbonPage3.Text = "ribbonPage3";
+            // 
+            // ribbonPage2
+            // 
+            this.ribbonPage2.Name = "ribbonPage2";
+            this.ribbonPage2.Text = "ribbonPage2";
+            // 
+            // Page1
+            // 
+            this.Page1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.CasePageGroup,
+            this.DatabasePageGroup,
+            this.UserPageGroup,
+            this.SystemPageGroup});
+            this.Page1.Name = "Page1";
+            this.Page1.Text = "Main Menu";
+            // 
+            // SystemPageGroup
+            // 
+            this.SystemPageGroup.Glyph = ((System.Drawing.Image)(resources.GetObject("SystemPageGroup.Glyph")));
+            this.SystemPageGroup.ItemLinks.Add(this.HelpButtonItem);
+            this.SystemPageGroup.ItemLinks.Add(this.ExitButtonItem);
+            this.SystemPageGroup.Name = "SystemPageGroup";
+            this.SystemPageGroup.Text = "System";
+            // 
+            // UserPageGroup
+            // 
+            this.UserPageGroup.Glyph = ((System.Drawing.Image)(resources.GetObject("UserPageGroup.Glyph")));
+            this.UserPageGroup.ItemLinks.Add(this.ChangeUserButtonItem);
+            this.UserPageGroup.ItemLinks.Add(this.ChangePasswordButtonItem);
+            this.UserPageGroup.ItemLinks.Add(this.LogoutButtonItem);
+            this.UserPageGroup.Name = "UserPageGroup";
+            this.UserPageGroup.Text = "User";
+            // 
+            // DatabasePageGroup
+            // 
+            this.DatabasePageGroup.Glyph = ((System.Drawing.Image)(resources.GetObject("DatabasePageGroup.Glyph")));
+            this.DatabasePageGroup.ItemLinks.Add(this.ConnectDatabaseButtonItem);
+            this.DatabasePageGroup.ItemLinks.Add(this.RefreshDatabaseButtonItem);
+            this.DatabasePageGroup.ItemLinks.Add(this.DisconnectDatabaseButtonItem);
+            this.DatabasePageGroup.Name = "DatabasePageGroup";
+            this.DatabasePageGroup.Text = "Database";
+            // 
+            // CasePageGroup
+            // 
+            this.CasePageGroup.ItemLinks.Add(this.AddButtonItem);
+            this.CasePageGroup.ItemLinks.Add(this.EditButtonItem);
+            this.CasePageGroup.ItemLinks.Add(this.DeleteButtonIteem);
+            this.CasePageGroup.Name = "CasePageGroup";
+            this.CasePageGroup.Text = "Case";
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "Dashboard";
             // 
             // AddButtonItem
             // 
@@ -260,76 +287,38 @@
             this.HelpButtonItem.Name = "HelpButtonItem";
             this.HelpButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.HelpButtonItem_ItemClick);
             // 
-            // ribbonPage1
+            // ribbonControl1
             // 
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Dashboard";
-            // 
-            // Page1
-            // 
-            this.Page1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.CasePageGroup,
-            this.DatabasePageGroup,
-            this.UserPageGroup,
-            this.SystemPageGroup});
-            this.Page1.Name = "Page1";
-            this.Page1.Text = "Main Menu";
-            // 
-            // CasePageGroup
-            // 
-            this.CasePageGroup.ItemLinks.Add(this.AddButtonItem);
-            this.CasePageGroup.ItemLinks.Add(this.EditButtonItem);
-            this.CasePageGroup.ItemLinks.Add(this.DeleteButtonIteem);
-            this.CasePageGroup.Name = "CasePageGroup";
-            this.CasePageGroup.Text = "Case";
-            // 
-            // DatabasePageGroup
-            // 
-            this.DatabasePageGroup.Glyph = ((System.Drawing.Image)(resources.GetObject("DatabasePageGroup.Glyph")));
-            this.DatabasePageGroup.ItemLinks.Add(this.ConnectDatabaseButtonItem);
-            this.DatabasePageGroup.ItemLinks.Add(this.RefreshDatabaseButtonItem);
-            this.DatabasePageGroup.ItemLinks.Add(this.DisconnectDatabaseButtonItem);
-            this.DatabasePageGroup.Name = "DatabasePageGroup";
-            this.DatabasePageGroup.Text = "Database";
-            // 
-            // UserPageGroup
-            // 
-            this.UserPageGroup.Glyph = ((System.Drawing.Image)(resources.GetObject("UserPageGroup.Glyph")));
-            this.UserPageGroup.ItemLinks.Add(this.ChangeUserButtonItem);
-            this.UserPageGroup.ItemLinks.Add(this.ChangePasswordButtonItem);
-            this.UserPageGroup.ItemLinks.Add(this.LogoutButtonItem);
-            this.UserPageGroup.Name = "UserPageGroup";
-            this.UserPageGroup.Text = "User";
-            // 
-            // SystemPageGroup
-            // 
-            this.SystemPageGroup.Glyph = ((System.Drawing.Image)(resources.GetObject("SystemPageGroup.Glyph")));
-            this.SystemPageGroup.ItemLinks.Add(this.HelpButtonItem);
-            this.SystemPageGroup.ItemLinks.Add(this.ExitButtonItem);
-            this.SystemPageGroup.Name = "SystemPageGroup";
-            this.SystemPageGroup.Text = "System";
-            // 
-            // ribbonPage2
-            // 
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "ribbonPage2";
-            this.ribbonPage2.Visible = false;
-            // 
-            // caseListView
-            // 
-            this.caseListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.nameColumn,
-            this.dateColumn,
-            this.statusColumn});
-            this.caseListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
-            this.caseListView.Location = new System.Drawing.Point(676, 290);
-            this.caseListView.Margin = new System.Windows.Forms.Padding(6);
-            this.caseListView.Name = "caseListView";
-            this.caseListView.Size = new System.Drawing.Size(1590, 681);
-            this.caseListView.TabIndex = 1;
-            this.caseListView.UseCompatibleStateImageBehavior = false;
-            this.caseListView.View = System.Windows.Forms.View.Details;
+            this.ribbonControl1.Controller = this.barAndDockingController1;
+            this.ribbonControl1.ExpandCollapseItem.Id = 0;
+            this.ribbonControl1.ExpandCollapseItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.ribbonControl1.ExpandCollapseItem,
+            this.AddButtonItem,
+            this.EditButtonItem,
+            this.DeleteButtonIteem,
+            this.ConnectDatabaseButtonItem,
+            this.RefreshDatabaseButtonItem,
+            this.DisconnectDatabaseButtonItem,
+            this.ChangeUserButtonItem,
+            this.ChangePasswordButtonItem,
+            this.LogoutButtonItem,
+            this.ExitButtonItem,
+            this.HelpButtonItem});
+            this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(6);
+            this.ribbonControl1.MaxItemId = 11;
+            this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.ribbonPage1,
+            this.Page1,
+            this.ribbonPage2,
+            this.ribbonPage3});
+            this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
+            this.ribbonControl1.Size = new System.Drawing.Size(1442, 253);
+            this.ribbonControl1.SelectedPageChanging += new DevExpress.XtraBars.Ribbon.RibbonPageChangingEventHandler(this.ribbonControl1_SelectedPageChanging);
+            this.ribbonControl1.SelectedPageChanged += new System.EventHandler(this.ribbonControl1_SelectedPageChanged);
+            this.ribbonControl1.MinimizedChanged += new System.EventHandler(this.ribbonControl1_MinimizedChanged);
             // 
             // nameColumn
             // 
@@ -346,30 +335,56 @@
             this.statusColumn.Text = "Status";
             this.statusColumn.Width = 104;
             // 
-            // xtraTabControl1
+            // caseListView
             // 
-            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl1.Location = new System.Drawing.Point(0, 253);
-            this.xtraTabControl1.LookAndFeel.SkinName = "DevExpress Dark Style";
-            this.xtraTabControl1.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1442, 655);
-            this.xtraTabControl1.TabIndex = 8;
-            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage1,
-            this.xtraTabPage2,
-            this.xtraTabPage3,
-            this.xtraTabPage4});
+            this.caseListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.nameColumn,
+            this.dateColumn,
+            this.statusColumn});
+            this.caseListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
+            this.caseListView.Location = new System.Drawing.Point(676, 290);
+            this.caseListView.Margin = new System.Windows.Forms.Padding(6);
+            this.caseListView.Name = "caseListView";
+            this.caseListView.Size = new System.Drawing.Size(1590, 681);
+            this.caseListView.TabIndex = 1;
+            this.caseListView.UseCompatibleStateImageBehavior = false;
+            this.caseListView.View = System.Windows.Forms.View.Details;
             // 
-            // xtraTabPage1
+            // xtraTabPage4
             // 
-            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(4);
-            this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1430, 602);
-            this.xtraTabPage1.Text = "xtraTabPage1";
-            this.xtraTabPage1.DoubleClick += new System.EventHandler(this.xtraTabPage1_DoubleClick);
+            this.xtraTabPage4.Controls.Add(this.officerDataGridView);
+            this.xtraTabPage4.Name = "xtraTabPage4";
+            this.xtraTabPage4.Size = new System.Drawing.Size(1430, 602);
+            this.xtraTabPage4.Text = "xtraTabPage4";
+            // 
+            // officerDataGridView
+            // 
+            this.officerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.officerDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.officerDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.officerDataGridView.Name = "officerDataGridView";
+            this.officerDataGridView.RowTemplate.Height = 33;
+            this.officerDataGridView.Size = new System.Drawing.Size(1430, 602);
+            this.officerDataGridView.TabIndex = 0;
+            // 
+            // xtraTabPage3
+            // 
+            this.xtraTabPage3.Controls.Add(this.criminalGridView);
+            this.xtraTabPage3.Name = "xtraTabPage3";
+            this.xtraTabPage3.Size = new System.Drawing.Size(1430, 602);
+            this.xtraTabPage3.Text = "xtraTabPage3";
+            // 
+            // criminalGridView
+            // 
+            this.criminalGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.criminalGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.criminalGridView.Location = new System.Drawing.Point(0, 0);
+            this.criminalGridView.Name = "criminalGridView";
+            this.criminalGridView.RowTemplate.Height = 33;
+            this.criminalGridView.Size = new System.Drawing.Size(1430, 602);
+            this.criminalGridView.TabIndex = 0;
+            this.criminalGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.criminalGridView_CellContentClick);
             // 
             // xtraTabPage2
             // 
@@ -389,93 +404,49 @@
             this.caseDataGridView.Location = new System.Drawing.Point(0, 0);
             this.caseDataGridView.Margin = new System.Windows.Forms.Padding(6);
             this.caseDataGridView.Name = "caseDataGridView";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.MenuText;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 7.875F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.caseDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.875F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.caseDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.caseDataGridView.RowHeadersVisible = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.caseDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.caseDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.caseDataGridView.Size = new System.Drawing.Size(1430, 602);
             this.caseDataGridView.TabIndex = 2;
             this.caseDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.caseDataGridView_CellDoubleClick);
             // 
-            // xtraTabPage3
+            // xtraTabPage1
             // 
-            this.xtraTabPage3.Controls.Add(this.dataGridView1);
-            this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1430, 602);
-            this.xtraTabPage3.Text = "xtraTabPage3";
+            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.xtraTabPage1.Name = "xtraTabPage1";
+            this.xtraTabPage1.Size = new System.Drawing.Size(1430, 602);
+            this.xtraTabPage1.Text = "xtraTabPage1";
+            this.xtraTabPage1.DoubleClick += new System.EventHandler(this.xtraTabPage1_DoubleClick);
             // 
-            // dataGridView1
+            // xtraTabControl1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 7.875F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1430, 602);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // xtraTabbedMdiManager2
-            // 
-            this.xtraTabbedMdiManager2.Controller = this.barAndDockingController1;
-            this.xtraTabbedMdiManager2.MdiParent = this;
-            // 
-            // ribbonPage3
-            // 
-            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "ribbonPage3";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
-            // 
-            // xtraTabPage4
-            // 
-            this.xtraTabPage4.Controls.Add(this.dataGridView2);
-            this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(1430, 602);
-            this.xtraTabPage4.Text = "xtraTabPage4";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 33;
-            this.dataGridView2.Size = new System.Drawing.Size(1430, 602);
-            this.dataGridView2.TabIndex = 0;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraTabControl1.Location = new System.Drawing.Point(0, 253);
+            this.xtraTabControl1.LookAndFeel.SkinName = "DevExpress Dark Style";
+            this.xtraTabControl1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.xtraTabControl1.Name = "xtraTabControl1";
+            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
+            this.xtraTabControl1.Size = new System.Drawing.Size(1442, 655);
+            this.xtraTabControl1.TabIndex = 8;
+            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage1,
+            this.xtraTabPage2,
+            this.xtraTabPage3,
+            this.xtraTabPage4});
             // 
             // UIProject
             // 
@@ -495,28 +466,38 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UI Project";
             ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
-            this.xtraTabControl1.ResumeLayout(false);
+            this.xtraTabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.officerDataGridView)).EndInit();
+            this.xtraTabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.criminalGridView)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.caseDataGridView)).EndInit();
-            this.xtraTabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager2)).EndInit();
-            this.xtraTabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
+            this.xtraTabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
+        private DevExpress.XtraBars.BarAndDockingController barAndDockingController1;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager2;
+        private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
+        private System.Windows.Forms.DataGridView caseDataGridView;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
+        private System.Windows.Forms.DataGridView criminalGridView;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
+        private System.Windows.Forms.DataGridView officerDataGridView;
+        private System.Windows.Forms.ListView caseListView;
+        private System.Windows.Forms.ColumnHeader nameColumn;
+        private System.Windows.Forms.ColumnHeader dateColumn;
+        private System.Windows.Forms.ColumnHeader statusColumn;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage Page1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup CasePageGroup;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup DatabasePageGroup;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup UserPageGroup;
         private DevExpress.XtraBars.BarButtonItem AddButtonItem;
         private DevExpress.XtraBars.BarButtonItem EditButtonItem;
         private DevExpress.XtraBars.BarButtonItem DeleteButtonIteem;
@@ -528,25 +509,13 @@
         private DevExpress.XtraBars.BarButtonItem LogoutButtonItem;
         private DevExpress.XtraBars.BarButtonItem ExitButtonItem;
         private DevExpress.XtraBars.BarButtonItem HelpButtonItem;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup SystemPageGroup;
-        private System.Windows.Forms.ListView caseListView;
-        private System.Windows.Forms.ColumnHeader nameColumn;
-        private System.Windows.Forms.ColumnHeader dateColumn;
-        private System.Windows.Forms.ColumnHeader statusColumn;
-        private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage Page1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup CasePageGroup;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup DatabasePageGroup;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup UserPageGroup;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup SystemPageGroup;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.XtraBars.BarAndDockingController barAndDockingController1;
-        private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
-        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager2;
-        private System.Windows.Forms.DataGridView caseDataGridView;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
-        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
